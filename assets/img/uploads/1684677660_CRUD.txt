@@ -1,0 +1,23 @@
+CRUD/ OPEN TO CMD THEN TYPE COMPOSER update the enter
+
+-code .    to open vs apps
+
+duplicate
+.env
+
+-create database/ rename connction
+
+
+
+
+- php artisan key:generate
+enter
+
+php artisan migrate
+enter
+select yes
+
+after migrate
+php artisan serve
+
+run app/ control click link

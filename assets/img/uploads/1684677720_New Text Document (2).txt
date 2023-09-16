@@ -1,0 +1,17 @@
+  $("#login").on("click", function () {
+  
+         uservalidate();
+         passvalidate();
+  
+     if (uservalidate() === true
+        && passvalidate() === true
+  
+         ) {
+  
+  };
+  
+  
+  });
+  
+
+$2y$12$cRGy6YSPoS24N2x/3amJ6OCcZ84nBmzB9sinnG/KwfX2mwuxPDy76

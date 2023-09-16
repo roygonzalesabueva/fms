@@ -1,0 +1,291 @@
+<?php
+
+session_start();
+if (isset($_SESSION['username']) && isset($_SESSION['id']))
+
+	{ ?>
+
+
+http://192.168.1.66/dts/
+
+
+https://www.youtube.com/watch?v=4RhY1JJgLsM&list=PLe30vg_FG4OTxKekbWLABcpstdeCDA4LQ
+
+
+
+1. Laravel. doc
+2. composer installer - downlod
+3.nodejs
+4.xamp
+
+ dictory
+
+ terminal cmd
+
+install - laravel doc - copy
+composer global require laravel/installer
+paste to terminal cmd
+
+install laravel apps- and apps folder for system
+
+cd dddts
+php artisan serve
+
+view web site
+
+dddts - cmd
+
+htdocs link directory- cmd open type - code space dot
+
+open visual studio,( .env) connection and databse automatic - 
+
+open terminal - or shorcut key
+
+run server = php artisan serve
+
+package - breeze - paste (composer require laravel/breeze --dev)
+
+Create login - open new terminal  paste and enter
+
+php artisan breeze:install
+enter 0, no no,  dugay ang process
+
+step2
+download nodejs - dowload- select latest, install
+
+
+
+
+
+ paste - php artisan migrate
+enter
+yes
+
+
+Step 3
+CRUD APPLICATION
+
+
+
+templete- all assets, css, js imported to htdocs- dddts - public forder
+
+
+
+resources- route -visual studio - front end
+
+ resouces, views - paste front end,  
+
+vs - route, web.php
+
+
+
+
+Change login profile  and   line 18
+
+
+sign out
+
+use sidebar.blade.php for login modify
+for sign out - Views, Layouts, navigation find sign out  (195 line)   form csrf
+
+
+
+ Step control admin part
+
+create adminController for for admin users
+/ select empty
+
+app directory/ http/controller/admincontroller.php
+
+delete admin contrler sa directory
+
+php artisan make:controller AdminController -r
+
+
+routes dir/ web.php
+
+return view(admin.dashboard) and paste to app/http/controller, addmin controler
+
+
+next Step migration
+
+Database dir/ migaration.php
+modify table
+2014_10_12.php -table create
+
+
+modify modify / app/model dir/users.php
+
+
+next step
+database/seeders
+php artisan make:seeder UserTableSeedres - create seeders
+
+create default user sa usertableSeeders
+
+e call and tableseeders sa main tableseeders
+
+next step terminal
+php artisan migrate:refresh --seed
+
+
+admin.dashboard- -- delete admin  -  web.php dir
+
+
+next step, create middle ware
+
+ php artisan make:middleware Role   - locate sa middleware folder
+all middle ware register to kernel.php
+
+  protected $routeMiddleware = [
+        'auth' => \App\Http\Middleware\Authenticate::class,
+        'role' => \App\Http\Middleware\Role::class,
+
+
+- role.php
+
+
+ public function handle(Request $request, Closure $next, $role):Response
+    {
+
+            if  ($request->user()->role !== $Role){
+
+
+            }
+
+        return $next($request);
+    }
+}
+
+
+
+
+next step
+      web.php
+
+Route::middleware('Auth', 'role:admin')->group(function(){
+    Route::get('admin/dashboard',[AdminController::class, 'index'])->name('admin.dashboard');
+
+
+
+next step, Requests  dir.
+
+LoginRequest.php 
+
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+$user=User::where('email', $this->email)->first();   -45 line
+
+run application laravel
+
+next step
+
+Controller/ Auth/AuthenticationSessionController.ph
+
+ $url='';
+        if($request->user()->role==='admin'){
+            $url='admin/dashboard';
+
+        }else{
+
+            $url='/dashboard';
+        }
+
+        return redirect()->intended($url);
+
+
+web.php
+
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
+
+
+next create CRUD
+new terminal
+
+php artisan make:model Employee -mrc
+
+create table
+    $table->id();
+            $table->string('emp_no');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email')->unique();
+            $table->string('image');
+            $table->string('type_of_employee')->nullable();
+            $table->timestamps();
+
+
+ php artisan migrate
+
+
+next step
+- loading sa font_end data from Demo8
+
+-resoures/views/admin/paste front_end - rename
+
+list.blade.php
+
+create employee.blade.php
+
+@extends('admin.layout.app') sa   employee.blade.php from dashboard.php
+
+web.php
+ Route::get('admin/employees',[EmployeeController::class, 'index'])->name('admin.employees');
+
+AdminController
+return view('admin.dashboard');
+
+
+paste
+
+
+return view('admin.employees');
+
+use App\Http\Controllers\EmployeeController;
+
+
+display employees list
+
+views/layout/apps.php
+
+ <script src="assets/js/custom/apps/user-management/users/list/add.js"></script>
+
+ <script src="{{ asset('assets/js/custom/apps/user-management/users/list/add.js') }}"></script>
+
+
+
+Next step modify add user modal
+
+employees.blade.php
+
+kt_modal_add_user
+
+create form - input/label
+
+
+
+next step
+-CRUD PART/ upload sa ddts folder gawas sa htdocs
+products-laravel-crud-ajax-main
+
+sulod ta sa dir. type cmd
+
+
+type composer update
+
+dir /cmd 
+
+-database connection
+-php artisan migrate
+
+-php artisan key:generate /run
+
+code .
+
+.env    php create  then enter
+
+
+
+
