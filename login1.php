@@ -444,7 +444,7 @@ h3 {
 
 
 
-          <img src="DAVAOSUR.png" width="340" height="140">
+          <img src="DAVAOSUR.png" width="340" height="150">
 
             
 
