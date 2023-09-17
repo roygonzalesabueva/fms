@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","fms_db");
+$conn = mysqli_connect("localhost","root","@DavaosurDB2023","fms_db");
 $sql = "SELECT * FROM `chat` ORDER BY mem_id ASC";
 $result = mysqli_query($conn,$sql);
 ?>
@@ -58,7 +58,7 @@ if(isset($_POST['search']))
     
     function filterTable($query)
     {
-        $connect = mysqli_connect("localhost", "root", "", "fms_db");
+        $connect = mysqli_connect("localhost", "root", "@DavaosurDB2023", "fms_db");
         $filter_Result = mysqli_query($connect, $query);
         return $filter_Result;
     }
