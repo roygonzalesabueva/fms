@@ -3,7 +3,7 @@
 <?php
 
 
-$conn = mysqli_connect('localhost','root','');
+$conn = mysqli_connect('localhost','root','@DavaosurDB2023');
 mysqli_select_db($conn, 'fms_db');
 
 

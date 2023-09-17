@@ -3,7 +3,7 @@
 
 <?php 
 
-$conn=mysqli_connect('localhost','root','','fms_db');
+$conn=mysqli_connect('localhost','root','@DavaosurDB2023','fms_db');
 
 //or die("Could not connect to mysql".mysqli_error($con));
 

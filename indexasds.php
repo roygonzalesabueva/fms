@@ -38,7 +38,7 @@ if(isset($_POST['search']))
     
     function filterTable($query)
     {
-        $connect = mysqli_connect("localhost", "root", "", "db_transfer");
+        $connect = mysqli_connect("localhost", "root", "@DavaosurDB2023", "db_transfer");
         $filter_Result = mysqli_query($connect, $query);
         return $filter_Result;
     }
