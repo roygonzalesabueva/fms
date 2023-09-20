@@ -26,8 +26,12 @@
      $username = verify($_POST['username']);
       $password = verify($_POST['password']);
 
+     
+
+    
+
     //sql statement
-    $sql = "SELECT * FROM usersasds WHERE username='$username' && password='$password'";
+    $sql = "SELECT * FROM user_tbl WHERE username='$username' and password='$password'";
  
     //Db Connection
     require_once('conn.php');
@@ -37,173 +41,91 @@
     $count = mysqli_num_rows($qry);
     if($count==1)
     {
-      $_SESSION['user']= $username;
+      $row=mysqli_fetch_assoc($qry);
+
+      $_SESSION['id']= $row['id'];
+      $_SESSION['username']= $row['username'];
+      $_SESSION['email']= $row['email'];
+      $_SESSION['password']= $row['password'];
+      $_SESSION['status']= $row['status'];
+      $_SESSION['role']= $row['role'];
+      $_SESSION['department_id']= $row['department_id'];
+
+      if ($_SESSION['department_id'] == 1) {
+        header("location: filesscnhs.php");
+      }
+      elseif ($_SESSION['department_id'] == 2) {
+        header("location: filesscces.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 3) {
+        header("location: filessnhs.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 4) {
+        header("location: indexqueue.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 5) {
+        header("location: filesfnhs.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 6) {
+        header("location: filespnhs.php");
+      }
+      elseif ($_SESSION['department_id'] == 7) {
+        header("location: filesmnhs.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 8) {
+        header("location: indexacct.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 10) {
+        header("location: indexsupply.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 11) {
+        header("location: indexbudget.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 12) {
+        header("location: indexcashier.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 13) {
+        header("location: indexlegal.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 14) {
+        header("location: indexdpsu.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 15) {
+        header("location: index_trans.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 16) {
+        header("location: home.php");
+      }
+
+
+
       //header("location: dashboard.php");
-      header("location: filesscnhs.php");
+      // header("location: index.php");
       
     }
 
-
-    if($count<>1);
+    if($count===1);
     {
       $_SESSION['user']= $username;
       //header("location: dashboard.php");
     //  header("location: index.php");
   echo"<script>alert('Error=Incorrect User Name or password.')</script>";
    
+
+
     }
-
-
-
-
-
-  {
-
-    //sql statement
-    $sql = "SELECT * FROM usersscces WHERE username='$username' && password='$password'";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-      header("location: filesscces.php");
-      
-      
-    }
-   
-  }
-
-
-
-
-  
-  {
-
-    //sql statement
-    $sql = "SELECT * FROM usersadmin WHERE username='$username' && password='$password'";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-      header("location: index.php?page=files2");
-      
-      
-    }
-   
-  }
-
-
-
-  {
-
-    //sql statement
-    $sql = "SELECT * FROM userspnhs WHERE username='$username' && password='$password'";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-      header("location: filespnhs.php");
-      
-      
-    }
-   
-  }
-
-
-
-  {
-
-    //sql statement
-    $sql = "SELECT * FROM usersmnhs WHERE username='$username' && password='$password'";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-      header("location: filesmnhs.php");
-      
-      
-    }
-   
-  }
-
-
-
-
-  {
-
-    //sql statement
-    $sql = "SELECT * FROM userssnhs WHERE username='$username' && password='$password'";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-      header("location: filessnhs.php");
-      
-      
-    }
-   
-  }
-
-
-
-
-
-  {
-
-    //sql statement
-    $sql = "SELECT * FROM usersfnhs WHERE username='$username' && password='$password'";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-      header("location: filesfnhs.php");
-      
-      
-    }
-   
-  }
-
 
 
   {
@@ -227,6 +149,29 @@
     }
    
   }
+
+  {
+
+    //sql statement
+    $sql = "SELECT * FROM users WHERE username='$username' && password='$password'";
+ 
+    //Db Connection
+    require_once('conn.php');
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $_SESSION['user']= $username;
+      //header("location: dashboard.php");
+      header("location: files2.php");
+      
+      
+    }
+   
+  }
+
 
 
 

@@ -17,7 +17,7 @@ $result = mysqli_query($conn,$sql);
 <?php
 	
   if(!isset($_SESSION['login_id']))
-    header('location:login.php');
+    header('location:login1.php');
  include('./header.php'); 
  //include('./auth.php'); 
  ?>
