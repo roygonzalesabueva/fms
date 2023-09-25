@@ -389,7 +389,7 @@ h3 {
 
 
 
-          <img src="DAVAOSUR.png" width="340" height="150">
+          <img src="davsur2.png" width="330" height="80">
 
             
 
@@ -402,7 +402,8 @@ h3 {
     
    
    
-    <h3><label><font color="BLUE" size="5"> Sign In </font></label></h3>
+             <h1><label><font color="Black" size="4"> <B></B>Sign in with your M.E.M.O. account</B> </font></label></h1>
+
 
     
  

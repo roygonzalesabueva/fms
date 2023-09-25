@@ -23,7 +23,7 @@
 		
 		mysqli_query($conn, "DELETE FROM `filesscces` WHERE `id`='$id'") or die(mysqli_error());
 		
-		echo"<script>alert('Data successfully transfer')</script>";
+		// echo"<script>alert('Data successfully transfer')</script>";
 		echo"<script>window.location='filesscces.php'</script>";
 	}
 

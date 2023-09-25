@@ -21,7 +21,7 @@
 		
 		mysqli_query($conn, "DELETE FROM `filesfnhs_history` WHERE `id`='$id'") or die(mysqli_error());
 		
-		echo"<script>alert('Data successfully Deleted')</script>";
+		// echo"<script>alert('Data successfully Deleted')</script>";
 		echo"<script>window.location='filesfnhs_history.php'</script>";
 	}
 

@@ -23,7 +23,7 @@
 		
 		mysqli_query($conn, "DELETE FROM `filespnhs_history` WHERE `id`='$id'") or die(mysqli_error());
 		
-		echo"<script>alert('Memorandum successfully deleted')</script>";
+		// echo"<script>alert('Memorandum successfully deleted')</script>";
 		echo"<script>window.location='filespnhs_history.php'</script>";
 	}
 

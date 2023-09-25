@@ -18,7 +18,7 @@
 		//mysqli_query($conn, "INSERT INTO `memberclient` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 		mysqli_query($conn, "DELETE FROM `files` WHERE `id`='$id'") or die(mysqli_error());
 		
-		echo"<script>alert('Files successfully deleted')</script>";
+		// echo"<script>alert('Files successfully deleted')</script>";
 		echo"<script>window.location='index.php?page=files2'</script>";
 	}
 ?>

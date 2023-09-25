@@ -235,6 +235,13 @@ function myTimer() {
 
 
 
+<!--supply allert-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
 
 
 
@@ -427,24 +434,25 @@ h4 {
 
 
 </head>
-<body style="background-color:white;">
-  
+<body style="height:1500px">
+
+
+
+<div class="container">
 
 
 
 
+</div>
 
 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <!--<nav class="navbar navbar-inverse">-->
+    <div class="container-fluid">
+        <div class="navbar-header">
 
-
-<nav class="navbar " style="padding:0;">
-
-
-  <div class="container-fluid mt-2 mb-2">
-  	
-  
-
-  <img src="DAVAOSUR.png" width="140" height="70">
+        <img src="davsur2.png" width="290" height="70">
+        </div>
 
   
 
@@ -602,7 +610,11 @@ h4 {
 
 
             <td>
-            <a  href="indexdown.php?file_id=<?php echo $row['id']?>"><i class="fa fa-download" style="font-size:14px"></i>Download</a>
+            <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-primary"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
+
+
+
+            <!-- <a  href="indexdown.php?file_id=<?php //echo $row['id']?>"><i class="fa fa-download" style="font-size:14px"></i>Download</a> -->
             </td>
 
             <td>
@@ -612,12 +624,14 @@ h4 {
 
 
 
-            <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>DELETE</button>
+            <!-- <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>DELETE</button> -->
+            <a onclick="delete_data('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i><font color="white">DELETE</font></a>
 
 
 
 
 
+<!-- 
 
 <div class="modal fade" id="modal_confirm" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered">
@@ -630,12 +644,12 @@ h4 {
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-    <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+    
         <a type="button" class="btn btn-success" href="transfersnhs_historydel.php?id=<?php echo $row['id']?>">Okay</a>
     </div>
 </div>
 </div>
-</div>
+</div> -->
 
 
 
@@ -665,8 +679,30 @@ h4 {
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
 
 
+
+<!-- Supply alert -->
+<script>
+
+function delete_data(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transfersnhs_historydel.php?id=" + data_id);        
+        }
+    })
+}
+</script>
 
 
 

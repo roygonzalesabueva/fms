@@ -244,6 +244,16 @@ function myTimer() {
 
 
 
+<!--supply allert-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+
+
+
 
 
 
@@ -434,21 +444,25 @@ h4 {
 
 
 </head>
-<body style="background-color:white;">
-  
+<body style="height:1500px">
 
 
 
-<nav class="navbar  " style="padding:0;">
+<div class="container">
 
 
 
-  <div class="container-fluid mt-2 mb-2">
-  	
-  <!--<h4><font color="White"><B>M.E.M.O.| Division of Davao del Sur</B></font></h4>-->
-  
 
-  <img src="DAVAOSUR.png" width="140" height="70">
+</div>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <!--<nav class="navbar navbar-inverse">-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+        <img src="davsur2.png" width="290" height="70">
+        </div>
 
 
 
@@ -598,11 +612,14 @@ h4 {
 
   
 <div class="dropdown-content">
-<!--<a href="transferscnhs.php?id=<?php echo $row['id']?>">Upload</a>-->
-<a  href="indexdown.php?file_id=<?php echo $row['id']?>">DOWNLOAD</a>
-<!-- <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+<!--<a href="transferscnhs.php?id=<?php //echo $row['id']?>">Upload</a>-->
+<!-- <a  href="indexdown.php?file_id=<?php //echo $row['id']?>">DOWNLOAD</a> -->
+<!-- <a href="transferscnhs_history.php?id=<?php //echo $row['id']?>">Save to Drive</a>-->
+<a  class=" btn btn-sm btn-link" href="indexdown.php?file_id=<?php echo $row['id']?>"><font color="Blue"></i>DOWNLOAD</font></a>
 
- <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>SAVE</button>
+
+ <!-- <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>SAVE</button> -->
+ <a onclick="drive('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-save" style="font-size:12px;color:blue"></i><font color="blue">SAVE TO DRIVE</font></a>
 
 
 
@@ -617,22 +634,27 @@ h4 {
 
 
             <td>
-            <a  href="indexdown.php?file_id=<?php echo $row['id']?>"><i class="fa fa-download" style="font-size:14px"></i>DOWNLOAD</a>
-            </td>
+            <!-- <a  href="indexdown.php?file_id=<?php// echo $row['id']?>"><i class="fa fa-download" style="font-size:14px"></i>DOWNLOAD</a> -->
+            <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-primary"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
+
+          
+          
+          </td>
             <td>
            <!-- <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
 
 
           <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
         
-            <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>SAVE</button>
+            <!-- <button type="button" class="btn btn-link" data-target="#modal_confirm" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>SAVE</button> -->
+            <a onclick="drive('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-success"> <i class="fa fa-save" style="font-size:12px;color:white"></i><font color="White">SAVE TO DRIVE</font></a>
 
 
 
 
 
 
-            <div class="modal fade" id="modal_confirm" aria-hidden="true">
+            <!-- <div class="modal fade" id="modal_confirm" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -643,12 +665,12 @@ h4 {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                <!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
+                
                     <a type="button" class="btn btn-success" href="transfermnhs_history.php?id=<?php echo $row['id']?>">Okay</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -671,8 +693,33 @@ h4 {
    
 
 
+<!-- SUpply alert -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
 
 
+
+
+<!-- Supply alert -->
+<script>
+
+function drive(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, save to drive!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transfermnhs_history.php?id=" + data_id);        
+        }
+    })
+}
+</script>
 
 
 

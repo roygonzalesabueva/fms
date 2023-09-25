@@ -21,7 +21,7 @@
 		
 		mysqli_query($conn, "DELETE FROM `filesfnhs` WHERE `id`='$id'") or die(mysqli_error());
 		
-		echo"<script>alert('Data successfully transfer')</script>";
+		// echo"<script>alert('Data successfully transfer')</script>";
 		echo"<script>window.location='filesfnhs.php'</script>";
 	}
 

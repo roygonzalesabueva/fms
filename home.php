@@ -123,6 +123,11 @@ if(isset($_POST['search']))
 
 
 
+<!--supply allert-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
 
 
@@ -237,19 +242,6 @@ body {
          
 <div class="topnav-right">
     
-<!--        
-    <font color="Black"><B><a <p id="demo"></p></a>  |</B></font> 
-    <a href="chat_scces.php"><font color="Black"><B>Chat Room</a> | </B></font> -->
-   <!-- <a href="filesscces_history.php">  <font color="White"> <B> History </a> | </B> </font>-->
-  
-      <!--<a href="login.php">	<font color="White"><i class='far fa-user-circle' style='font-size:14px'></i>Login	</a></font>||-->
-  
-   <!-- <a href="#"> <font color="Black"> <B> <i class="fa fa-fw fa-user"></i> <span class="nav-profile-name"> <?php echo $_SESSION['user'];?> </span></a> | </B></font> 
-  
-   <h8><a href="logout1.php"><font color="Black"><B> Logout</B></a></font></h8>
-    -->
-
- 
   
    </div>
 
@@ -276,7 +268,7 @@ body {
                 
                 <input type="file" name="myfile" >  
                 
-                 <button type="submit" name="save"><i class="fa fa-upload" style="font-size:14px;color:red"></i>Upload</button>
+                 <button type="submit" name="save"><i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload</button>
                      
        
                      <br>
@@ -354,8 +346,9 @@ body {
 <div class="dropdown-content">
 <!--<a href="transferscnhs.php?id=<?php echo $row['id']?>">Upload to Schools</a>-->
 
-<button type="button" class="btn btn-link" data-target="#modal_confirmupload" data-toggle="modal">Upload to Schools</button>
+<!-- <button type="button" class="btn btn-link" data-target="#modal_confirmupload" data-toggle="modal">Upload to Schools</button> -->
 
+<a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a>
 
 
 
@@ -370,16 +363,17 @@ body {
 
 
 <td>
-<a href="indexdown.php?file_id=<?php echo $row['id']?>"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
+<a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
 </td>
 
 <td>
 
-<button type="button" class="btn btn-link" data-target="#modal_confirmdel" data-toggle="modal"><i class='far fa-trash-alt' style='font-size:12px;color:red'></i>DELETE</button>
+<!-- <button type="button" class="btn btn-link" data-target="#modal_confirmdel" data-toggle="modal"><i class='far fa-trash-alt' style='font-size:12px;color:red'></i>DELETE</button> -->
+<a onclick="delete_data('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i><font color="white">DELETE</font></a>
 
 <!--delete-->
 
-<div class="modal fade" id="modal_confirmdel" aria-hidden="true">
+<!-- <div class="modal fade" id="modal_confirmdel" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered">
 <div class="modal-content">
 <div class="modal-header">
@@ -390,34 +384,15 @@ body {
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-<!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-<a type="button" class="btn btn-success" href="del.php?id=<?php echo $row['id']?>">Yes</a>
+
+<a type="button" class="btn btn-success" href="del.php?id=<?php //echo $row['id']?>">Yes</a>
 </div>
 </div>
 </div>
-</div>
+</div> -->
 
 
 
-<!--delete-->
-
-<div class="modal fade" id="modal_confirmupload" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-<div class="modal-content">
-<div class="modal-header">
-<h3 class="modal-title">Upload Memoradum </h3>
-</div>
-<div class="modal-body">
-<center><h4>Are you sure you want to upload memorandum to schools?</h4></center>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-<!--  <a href="transferscnhs_history.php?id=<?php echo $row['id']?>">Save to Drive</a>-->
-<a type="button" class="btn btn-success" href="transferscnhs.php?id=<?php echo $row['id']?>">Yes</a>
-</div>
-</div>
-</div>
-</div>
 
 
 
@@ -448,6 +423,63 @@ body {
 
 
 </table>
+
+
+
+<!-- SUpply alert -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
+
+
+
+
+
+<!-- Supply alert -->
+<script>
+
+function delete_data(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("del.php?id=" + data_id);        
+        }
+    })
+}
+</script>
+
+
+
+
+
+<!-- Supply alert -->
+<script>
+
+function upload(data_id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, upload it!',
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location = ("transferscnhs.php?id=" + data_id);        
+        }
+    })
+}
+</script>
+
 
 
 

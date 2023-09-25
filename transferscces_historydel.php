@@ -23,7 +23,7 @@
 		
 		mysqli_query($conn, "DELETE FROM `filesscces_history` WHERE `id`='$id'") or die(mysqli_error());
 		
-		echo"<script>alert('Data successfully deleted')</script>";
+		// echo"<script>alert('Data successfully deleted')</script>";
 		echo"<script>window.location='filesscces_history.php'</script>";
 	}
 
