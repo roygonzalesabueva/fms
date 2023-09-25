@@ -34,7 +34,7 @@
 
 
 <?php
-include_once("session.php")
+//include_once("session.php")
 ?>
 
 
@@ -62,11 +62,11 @@ include_once("session.php")
 
   <title>M.E.M.O | Division of Davao del Sur</title>
  
-<?php include('./header.php'); ?>
+<?php //include('./header.php'); ?>
 <?php 
-session_start();
-if(isset($_SESSION['login_id']))
-header("location:index.php?page=home");
+//session_start();
+//if(isset($_SESSION['login_id']))
+//header("location:index.php?page=home");
 ?>
 
 

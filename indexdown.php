@@ -12,10 +12,10 @@
 <?php
 
  
-	session_start();
-  if(!isset($_SESSION['login_id']))
-    header('location:login1.php');
- include('./header.php'); 
+	//session_start();
+ // if(!isset($_SESSION['login_id']))
+  //  header('location:login1.php');
+ //include('./header.php'); 
  // include('./auth.php'); 
  ?>
 
