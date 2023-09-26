@@ -22,17 +22,17 @@
     return $data;
   }
 
-  if(isset($_POST['login1'])){
+  if(isset($_POST['login2'])){
     //getting the form data
      $username = verify($_POST['username']);
-      // $password = verify($_POST['password']);
+      $password = verify($_POST['password']);
 
      
 
     
 
     //sql statement
-    $sql = "SELECT * FROM user_tbl WHERE username='$username'";
+    $sql = "SELECT * FROM user_tbl WHERE username='$username' and password='$password'";
  
     //Db Connection
     require_once('conn.php');
@@ -132,7 +132,7 @@
   {
 
     //sql statement
-    $sql = "SELECT * FROM userschat WHERE username='$username'";
+    $sql = "SELECT * FROM userschat WHERE username='$username' && password='$password'";
  
     //Db Connection
     require_once('conn.php');
@@ -154,7 +154,7 @@
   {
 
     //sql statement
-    $sql = "SELECT * FROM users WHERE username='$username'";
+    $sql = "SELECT * FROM users WHERE username='$username' && password='$password'";
  
     //Db Connection
     require_once('conn.php');
@@ -363,13 +363,6 @@ h3 {
 
 
 
-<style> 
-  
-body {
-  background-image: url("bg.png");
-}
-</style> 
-
 
 
 
@@ -377,28 +370,7 @@ body {
 
 <body>
 
-
-
-
-
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  
-  
-    <ul class="nav navbar-nav navbar-right">
-     
-      <li> <a href="login2.php"><font color="White" size="4"><B>Login</B></font></a></li>
-    </ul>
-
-  
-</nav>
-
-
-
-
-
-
-
+<br>
 
 
 
@@ -413,18 +385,17 @@ body {
           <div class="col-lg- 100 mx-auto">
 
 
-          <br> 
-          
+
+
 
 
 
           <img src="davsur2.png" width="330" height="80">
 
-            <br>    
+            
 
-            <br>  
        
-             <form class="pt-3" method="post" name="login1" action="login1.php">
+             <form class="pt-3" method="post" name="login2" action="login2.php">
 
 
 
@@ -432,7 +403,7 @@ body {
     
    
    
-             <h1><label><font color="White" size="4"> <B>CHOOSE SCHOOL / DISTRICT</B> </font></label></h1>
+             <h1><label><font color="Black" size="4"> <B></B>Sign in with your M.E.M.O. account</B> </font></label></h1>
 
 
     
@@ -440,42 +411,30 @@ body {
 
 
 
-             
+
 
            
-         
-             <div class="input-container">
+              <B><label>USERNAME</label></B><br>
+              <div class="input-container">
                   
-                  <!-- <i class="fa fa-user icon"></i> -->
-
-                  <select type="text" name="username" class="form-control" required="required"/>
-
-                  <!-- <select type="text" name="username" value="<?php // echo $username;    ?> class="form-control" required="required"/> -->
- 
-        <option type="text" value="<?php  echo $username;?>"</option>   
-        <option value="SCNHS">SCNHS</option>
-        <option value="SCCES">SCCES</option>
-          <option value="SNHS">SNHS</option>
-          <option value="PNHS">PNHS</option>
-          <option value="MNHS">MNHS</option>
-          <option value="FNHS">FNHS</option>
-          
-        </select>
-</div>
+                  <i class="fa fa-user icon"></i>
+                  <input type="text" name="username" class="form-control form-control-lg" id="username" placeholder="Username" 
+                  value="<?php if(isset($_COOKIE['uname'])) echo $_COOKIE['uname'];?>">
+                </div>
                 
-               <!-- <B> <label>PASSWORD</label></B>
+               <B> <label>PASSWORD</label></B>
                <div class="input-container">
     <i class="fa fa-key icon"></i>
                
                   <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Password"
                    value="<?php if(isset($_COOKIE['upass'])) echo $_COOKIE['upass'];?>">
-                </div> -->
+                </div>
                 <div class="mt-3">
-             <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Continue" /> 
+             <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login2"  value="LOGIN" /> 
                 </div><br>
-                <!-- <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button> -->
+                <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button>
            
-                <!-- <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button> -->
+                <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button>
            
                
                 
