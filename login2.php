@@ -403,7 +403,7 @@ h3 {
     
    
    
-             <h1><label><font color="Black" size="4"> <B></B>Sign in with your M.E.M.O. account</B> </font></label></h1>
+             <!-- <h1><label><font color="Black" size="4"> <B></B>Sign in with your M.E.M.O. account</B> </font></label></h1> -->
 
 
     

@@ -14,7 +14,7 @@
   <div class="container-fluid mt-2 mb-2">
   	
   		
-			  <h4><font color="ORANGE">Memorandum in Electronic Media Online (M.E.M.O)</font></h4>
+			  <h3><font color="ORANGE">Memorandum in Electronic Media Online (M.E.M.O)</font></h3>
   			<a href="logout1.php"><i class="glyphicon glyphicon-remove">Logout</i>	</a>
 	 
 	    </div>

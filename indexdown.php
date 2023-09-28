@@ -1,9 +1,6 @@
 
 
 
-<?php
-include_once("session.php")
-?>
 
 
 <?php include 'fileslogic.php';?>

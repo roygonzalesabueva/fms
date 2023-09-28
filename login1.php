@@ -230,6 +230,24 @@
 
 <link rel="icon" href="modal\css1\images\favicon.ico" type="image" />
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+<!--supply allert-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+
+
+
+
+
+
 
 
 
@@ -387,7 +405,7 @@ body {
   
     <ul class="nav navbar-nav navbar-right">
      
-      <li> <a href="login2.php"><font color="White" size="4"><B>Login</B></font></a></li>
+      <!-- <li> <a href="login2.php"><font color="White" size="4"><B>Login</B></font></a></li> -->
     </ul>
 
   
@@ -417,6 +435,9 @@ body {
           
 
 
+          <br>    
+
+<br>  
 
           <img src="davsur2.png" width="330" height="80">
 
@@ -432,37 +453,19 @@ body {
     
    
    
-             <h1><label><font color="White" size="4"> <B>CHOOSE SCHOOL / DISTRICT</B> </font></label></h1>
-
-
-    
- 
-
-
+             <!-- <h1><label><font color="White" size="4"> <B>Go to M.E.M.O.</B> </font></label></h1> -->
 
              
+<a href="memo.php" class="btn btn-primary btn-block btn-lg"> DIVISION MEMO</a>
+
+           
+
+
+<a href="login2.php" class="btn btn-primary btn-block btn-lg"> SCHOOL DASHBOARD</a>
 
            
          
-             <div class="input-container">
-                  
-                  <!-- <i class="fa fa-user icon"></i> -->
-
-                  <select type="text" name="username" class="form-control" required="required"/>
-
-                  <!-- <select type="text" name="username" value="<?php // echo $username;    ?> class="form-control" required="required"/> -->
- 
-        <option type="text" value="<?php  echo $username;?>"</option>   
-        <option value="SCNHS">SCNHS</option>
-        <option value="SCCES">SCCES</option>
-          <option value="SNHS">SNHS</option>
-          <option value="PNHS">PNHS</option>
-          <option value="MNHS">MNHS</option>
-          <option value="FNHS">FNHS</option>
-          
-          
-        </select>
-</div>
+            
                 
                <!-- <B> <label>PASSWORD</label></B>
                <div class="input-container">
@@ -471,9 +474,9 @@ body {
                   <input type="password" name="password" class="form-control form-control-lg" id="password" placeholder="Password"
                    value="<?php if(isset($_COOKIE['upass'])) echo $_COOKIE['upass'];?>">
                 </div> -->
-                <div class="mt-3">
+                <!-- <div class="mt-3">
              <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Continue" /> 
-                </div><br>
+                </div><br> -->
                 <!-- <button type="button" class="btn btn-link" data-target="#form_modal" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Create Account</button> -->
            
                 <!-- <button type="button" class="btn btn-link" data-target="#form_modal2" data-toggle="modal"><span class="glyphicon glyphicon-save" ></span>Forgot Your Password? </button> -->
@@ -663,6 +666,7 @@ body {
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
 
 
 

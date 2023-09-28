@@ -213,7 +213,13 @@ body {
 
 
 
+<style>
 
+
+h5 {
+  text-align: right;
+}
+</style>
 
 
 
@@ -262,26 +268,24 @@ body {
 <!--  Downlod-->
 
 
-      <br>  <br>   <br>  <br>  
-           
-<form action="home.php" method="post" enctype="multipart/form-data">
+      <br>  <br>  
+          
+<form action="memo.php" method="post" enctype="multipart/form-data">
                 
-                <input type="file" name="myfile" >  
+                <!-- <input type="file" name="myfile" >  
                 
                  <button type="submit" name="save"><i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload</button>
-                     
+                      -->
        
                      <br>
                      
-                     <br>
-       
+                            
        
                        <input type="text" name="valueToSearch"> 
                
                        <button type="submit" name="search" value="Search"><i class="fa fa-search"></i>Search</button>
-                       
-       
-           </form>
+                      
+           </form> 
        
 
             
@@ -316,7 +320,7 @@ body {
         <th>DATE UPLOADED</th>
         <th>UPLOAD</th>
         <th>DOWNLOAD</th>
-        <th>DELETE</th>
+        <!-- <th>DELETE</th> -->
 
     </thead>
 
@@ -366,10 +370,10 @@ body {
 <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
 </td>
 
-<td>
+<!-- <td> -->
 
 <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmdel" data-toggle="modal"><i class='far fa-trash-alt' style='font-size:12px;color:red'></i>DELETE</button> -->
-<a onclick="delete_data('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i><font color="white">DELETE</font></a>
+<!-- <a onclick="delete_data('<?php //echo $row['id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i><font color="white">DELETE</font></a> -->
 
 <!--delete-->
 
@@ -405,9 +409,9 @@ body {
 
 
 
+<!-- 
 
-
-</td>
+</td> -->
 
 
            
@@ -435,7 +439,7 @@ body {
 
 
 <!-- Supply alert -->
-<script>
+<!-- <script>
 
 function delete_data(data_id) {
     Swal.fire({
@@ -453,7 +457,7 @@ function delete_data(data_id) {
         }
     })
 }
-</script>
+</script> -->
 
 
 
