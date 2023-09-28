@@ -456,7 +456,7 @@ body {
              <!-- <h1><label><font color="White" size="4"> <B>Go to M.E.M.O.</B> </font></label></h1> -->
 
              
-<a href="memo.php" class="btn btn-primary btn-block btn-lg"> DIVISION MEMO</a>
+<a href="http://202.137.126.59/fms/memo.php" class="btn btn-primary btn-block btn-lg"> DIVISION MEMO</a>
 
            
 
