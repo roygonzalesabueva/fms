@@ -44,7 +44,7 @@
 			  <h3><font color="WHITE"><B>Memorandum in Electronic Media Online (M.E.M.O)</B></font></h3>
   			
         <font color="White" size="4"><B><a <p id="demo"></p></a></B></font> 
-        <a href="http://202.137.126.58/Default"><font color="WHITE " size="4"><B>LOGOUT</B></a></font>
+        <a href="http://202.137.126.58/Logout"><font color="WHITE " size="4"><B>LOGOUT</B></a></font>
        
     <!-- <a href="chat_admin.php"> <font color="White" size="4"><B>Chat Room</a></B></font>
 	  		<a href="ajax.php?action=logout"><font color="White" size="4"><B><?php echo $_SESSION['username'] ?></B></font> <i class="fa fa-power-off"></i></a>
