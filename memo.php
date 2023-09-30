@@ -275,7 +275,7 @@ h5 {
                  <button type="submit" name="save"><i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload</button>
                       -->
        
-                     <br>
+                     <br> <br> <br>
                      
                             
        
@@ -316,7 +316,7 @@ h5 {
         <th>REFERENCE NUMBER</th>
         <th>DESCRIPTION</th>
         <th>DATE UPLOADED</th>
-        <th>UPLOAD</th>
+         <th>NOTIFICATION</th> 
         <th>DOWNLOAD</th>
         <!-- <th>DELETE</th> -->
 
@@ -339,19 +339,20 @@ h5 {
            
             <td><?php echo $row['date_updated'];?></td>
             
-	<td>
+	 <td> 
 
-<div class="dropdown">
+ <div class="dropdown">
                     <a href="#" class="notification"><i class='far fa-bell' style='font-size:20px'></i><span class="badge">1</span></a>
-            
+             
                 
-<div class="dropdown-content">
+<div class="dropdown-content"> 
 <!--<a href="transferscnhs.php?id=<?php echo $row['id']?>">Upload to Schools</a>-->
 
 <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmupload" data-toggle="modal">Upload to Schools</button> -->
 
-<a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a>
+<!-- <a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a> -->
 
+<a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-link"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
 
 
 
@@ -359,7 +360,7 @@ h5 {
 </div>
 </div>
 
-</td>		
+</td>		 
 
 
 
