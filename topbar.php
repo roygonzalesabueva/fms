@@ -15,13 +15,17 @@
 
 
 
+<?php
+  session_start();
 
+  if(!isset($_SESSION['username'])){
 
+    header("Location: http://202.137.126.58/");
+    exit();
 
+  }
 
-
-
-
+?>
 
 
 
@@ -42,8 +46,15 @@
   	
   <img src="davsur2.png" width="220" height="60">
 			  <h3><font color="WHITE"><B>Memorandum in Electronic Media Online (M.E.M.O)</B></font></h3>
+
+
+
+        
+
   			
         <font color="White" size="4"><B><a <p id="demo"></p></a></B></font> 
+
+        <a href="#"><font color="WHITE " size="4"><B><?=$_SESSION['username']?></B></a></font>
         <a href="http://202.137.126.58/Logout"><font color="WHITE " size="4"><B>LOGOUT</B></a></font>
        
     <!-- <a href="chat_admin.php"> <font color="White" size="4"><B>Chat Room</a></B></font>
