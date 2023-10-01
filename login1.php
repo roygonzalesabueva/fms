@@ -413,14 +413,14 @@ body {
 <nav class="navbar navbar-inverse navbar-fixed-top">
   
 <div class="topnav-right">
-    <ul class="nav navbar-nav navbar-right">
+  
 
   
 
-    <li>  <a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font></li>
+   <a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
      
       <!-- <li> <a href="login2.php"><font color="White" size="4"><B>Login</B></font></a></li> -->
-    </ul>
+   
 </div>
   
 </nav>
