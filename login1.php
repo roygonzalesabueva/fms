@@ -414,7 +414,7 @@ body {
   
 <div class="topnav-right">
   
-<a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
+<a href="#"><font color="WHITE " size="2"><h3><B><?=$_SESSION['username']?></h3></B></a></font>
   
 
      
