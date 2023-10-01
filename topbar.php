@@ -28,6 +28,14 @@
 ?>
 
 
+<style>
+
+
+h3 {
+  text-align: right;
+}
+</style>
+
 
 
 <style>
@@ -54,7 +62,7 @@
   			
         <font color="White" size="2"><B><a <p id="demo"></p></a></B></font> 
 
-        <a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
+        <h3><a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font></h3>
         <a href="http://202.137.126.58/"><font color="WHITE " size="2"><B>Logout</B></a></font>
        
     <!-- <a href="chat_admin.php"> <font color="White" size="4"><B>Chat Room</a></B></font>
