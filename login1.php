@@ -417,7 +417,6 @@ body {
 
   
 
-   <a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
      
       <!-- <li> <a href="login2.php"><font color="White" size="4"><B>Login</B></font></a></li> -->
    
@@ -455,6 +454,7 @@ body {
 
           <img src="davsur2.png" width="330" height="80">
 
+          <a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
             <br>    
 
             <br>  
