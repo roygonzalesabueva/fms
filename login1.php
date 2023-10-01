@@ -414,7 +414,7 @@ body {
   
 <div class="topnav-right">
   
-
+<a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
   
 
      
@@ -454,7 +454,7 @@ body {
 
           <img src="davsur2.png" width="330" height="80">
 
-          <a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
+          
             <br>    
 
             <br>  
