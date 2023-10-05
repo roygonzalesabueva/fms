@@ -70,8 +70,8 @@
         $stmt2->fetch();
         $stmt2->close();
         if ($school_id) {
-            // echo $school_id." ".$emp_no;
-            echo"<script>alert('.$school_id.')</script>";
+             echo $school_id." ".$emp_no;
+            // echo"<script>alert('.$school_id.')</script>";
         } else {
             echo "No employment record found for the provided emp_no.";
         }
@@ -88,15 +88,15 @@
 
 
       require_once('conn.php');
-      echo"<script>alert('.$school_id.')</script>";
+      // echo"<script>alert('.$school_id.')</script>";
     //sql statement
-    $sql3 = "SELECT * FROM user_tbl WHERE school_id='$school_id'";
+    $sql = "SELECT * FROM user_tbl WHERE username='$username'";
  
     //Db Connection
    
 
     //qry
-    $qry = mysqli_query ($conn, $sql3) or die ("Login problem");
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
     $count = mysqli_num_rows($qry);
     if($count==1)
     {
