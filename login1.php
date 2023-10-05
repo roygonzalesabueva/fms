@@ -70,7 +70,8 @@
         $stmt2->fetch();
         $stmt2->close();
         if ($school_id) {
-             echo $school_id." ".$emp_no;
+            //  echo $school_id." ".$emp_no;
+             $_SESSION['schoolid']=$school_id;
             // echo"<script>alert('.$school_id.')</script>";
         } else {
             echo "No employment record found for the provided emp_no.";
@@ -90,7 +91,10 @@
       require_once('conn.php');
       // echo"<script>alert('.$school_id.')</script>";
     //sql statement
-    $sql = "SELECT * FROM user_tbl WHERE username='$username'";
+    $schoolid = $_SESSION['schoolid'];
+    $username = $_SESSION['username'];
+
+    $sql = "SELECT * FROM user_tbl WHERE school_id='$schoolid'";
  
     //Db Connection
    
