@@ -489,7 +489,7 @@ h4 {
       
        <a href="#"> <font color="Black"><B>  <i class="fa fa-fw fa-user"></i> <span class="nav-profile-name"> <?php echo $_SESSION['user'];?>  |  </B></span></a></font> 
       
-      <a href="logout1.php"><font color="Black"><B>Logout</a></B></font>
+      <a href="http://202.137.126.58"><font color="Black"><B>Home</a></B></font>
       </div>
 
 
