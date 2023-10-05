@@ -70,7 +70,8 @@
         $stmt2->fetch();
         $stmt2->close();
         if ($school_id) {
-            echo $school_id." ".$emp_no;
+            // echo $school_id." ".$emp_no;
+            echo"<script>alert('.$school_id.')</script>";
         } else {
             echo "No employment record found for the provided emp_no.";
         }
