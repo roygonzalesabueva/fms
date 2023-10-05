@@ -411,11 +411,19 @@ body {
 
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
+
+<div class="container-fluid">
+        <div class="navbar-header">
+
+       
+        </div>
   
-<div class="topnav-right">
+        <ul class="nav navbar-nav navbar-right">
+
   
-<a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
-  
+        <li><a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
+<a href="http://202.137.126.58"><font color="White" size="2"><B>   |    Home</B></font></a> <li> 
+      </ul>
 
      
       <!-- <li> <a href="login2.php"><font color="White" size="4"><B>Login</B></font></a></li> -->
@@ -475,10 +483,10 @@ body {
            
 
 
-<a href="login2.php" class="btn btn-primary btn-block btn-lg"> SCHOOL DASHBOARD</a>
+<!-- <a href="login2.php" class="btn btn-primary btn-block btn-lg"> SCHOOL DASHBOARD</a> -->
 
                 
-<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="DEPARTMENTAL DASHBOARD" /> 
+<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="SCHOOL DASHBOARD" /> 
      
          
             
