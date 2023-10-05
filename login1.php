@@ -90,13 +90,13 @@
       require_once('conn.php');
       $school_id=$_SESSION['school_id'];
     //sql statement
-    $sql2 = "SELECT * FROM user_tbl WHERE school_id='$school_id'";
+    $sql = "SELECT * FROM user_tbl WHERE school_id='$school_id'";
  
     //Db Connection
    
 
     //qry
-    $qry = mysqli_query ($conn, $sql2) or die ("Login problem");
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
     $count = mysqli_num_rows($qry);
     if($count==1)
     {
