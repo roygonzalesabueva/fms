@@ -34,18 +34,18 @@
 
   if(isset($_POST['login1'])){
     //getting the form data
-     $username = verify($_POST['username']);
+    // $username = verify($_POST['username']);
       // $password = verify($_POST['password']);
-
+      $username=strtolower($_SESSION['user_role']);
      
 
-    
+      require_once('conn.php');
 
     //sql statement
     $sql = "SELECT * FROM user_tbl WHERE username='$username'";
  
     //Db Connection
-    require_once('conn.php');
+   
 
     //qry
     $qry = mysqli_query ($conn, $sql) or die ("Login problem");
@@ -55,7 +55,7 @@
       $row=mysqli_fetch_assoc($qry);
 
       $_SESSION['id']= $row['id'];
-      $_SESSION['username']= $row['username'];
+      //$_SESSION['username']= $row['username'];
       $_SESSION['email']= $row['email'];
       $_SESSION['password']= $row['password'];
       $_SESSION['status']= $row['status'];
@@ -477,7 +477,9 @@ body {
 
 <a href="login2.php" class="btn btn-primary btn-block btn-lg"> SCHOOL DASHBOARD</a>
 
-           
+                
+<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="DEPARTMENTAL DASHBOARD" /> 
+     
          
             
                 
