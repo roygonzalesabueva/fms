@@ -10,8 +10,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
   session_start();
+
+  if(!isset($_SESSION['username'])){
+
+    header("Location: http://202.137.126.58/");
+    exit();
+
+  }
+
+
+  
 
   function verify($data){
     $data = trim($data);
@@ -19,6 +61,11 @@
     $data = stripslashes($data );
     return $data;
   }
+
+
+
+
+
 
   if(isset($_POST['login2'])){
     //getting the form data
@@ -77,7 +124,6 @@
   
   } 
 
-?>  
 
 
 
@@ -101,31 +147,6 @@
 
 
 
-
-
-
-
-
-
-<?php
-  session_start();
-
-  if(!isset($_SESSION['username'])){
-
-    header("Location: http://202.137.126.58/");
-    exit();
-
-  }
-
-
-  
-
-  function verify($data){
-    $data = trim($data);
-    $data = htmlspecialchars($data );
-    $data = stripslashes($data );
-    return $data;
-  }
 
 
 
