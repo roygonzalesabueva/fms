@@ -125,8 +125,8 @@
         header("location: filessnhs.php");
       }
 
-      elseif ($_SESSION['department_id'] == 4) {
-        header("location: indexqueue.php");
+      elseif ($_SESSION['department_id'] == 299) {
+        header("location: filesscces.php");
       }
 
       elseif ($_SESSION['department_id'] == 5) {
