@@ -115,7 +115,7 @@
       $_SESSION['department_id']= $row['department_id'];
 
       if ($_SESSION['department_id'] == 1) {
-        header("location: filesscnhs.php");
+        header("location: home.php");
       }
       elseif ($_SESSION['department_id'] == 2) {
         header("location: filesscces.php");
