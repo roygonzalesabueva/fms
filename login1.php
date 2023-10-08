@@ -70,7 +70,7 @@
   if(isset($_POST['login2'])){
     //getting the form data
      $username = verify($_POST['username']);
-      $password = verify($_POST['password']);
+    
 
      
 
