@@ -67,7 +67,7 @@
 
 
 
-  if(isset($_POST['login2'])){
+  if(isset($_POST['login1'])){
     //getting the form data
      $username = verify($_POST['username']);
     
@@ -613,7 +613,7 @@ body {
         <li><a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
 <a href="http://202.137.126.58"><font color="White" size="2"><B>   |    Home</B></font></a> <li> 
 
-<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login2"  value="Admin" /> 
+<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Admin" /> 
 
 
       </ul>
