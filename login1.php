@@ -12,36 +12,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
   session_start();
 
@@ -61,95 +31,6 @@
     $data = stripslashes($data );
     return $data;
   }
-
-
-
-
-
-
-  if(isset($_POST['login1'])){
-    //getting the form data
-     $username = verify($_POST['username']);
-    
-
-     
-
-    
-
-    //sql statement
-    $sql = "SELECT * FROM user_tbl WHERE username='$username'";
- 
-    //Db Connection
-    require_once('conn.php');
-
-    //qry
-    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
-    $count = mysqli_num_rows($qry);
-    if($count==1)
-    {
-      $row=mysqli_fetch_assoc($qry);
-
-      $_SESSION['id']= $row['id'];
-      $_SESSION['username']= $row['username'];
-      $_SESSION['email']= $row['email'];
-      $_SESSION['password']= $row['password'];
-      $_SESSION['status']= $row['status'];
-      $_SESSION['role']= $row['role'];
-      $_SESSION['department_id']= $row['department_id'];
-
-      if ($_SESSION['department_id'] == 1) {
-        header("location: filesscnhs.php");
-      }
-     
-
-      elseif ($_SESSION['department_id'] == 16) {
-        header("location: home.php");
-      }
-
-
-
-      
-    }
-
-    if($count===1);
-    {
-      $_SESSION['user']= $username;
-      //header("location: dashboard.php");
-    //  header("location: index.php");
-  echo"<script>alert('Error=Incorrect User Name or password.')</script>";
-   
-
-
-    }
-  
-  } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   if(isset($_POST['login1'])){
     //getting the form data
@@ -310,20 +191,6 @@
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   {
 
     //sql statement
@@ -345,10 +212,6 @@
     }
    
   }
-
-
-
-
 
   {
 
@@ -612,10 +475,6 @@ body {
   
         <li><a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
 <a href="http://202.137.126.58"><font color="White" size="2"><B>   |    Home</B></font></a> <li> 
-
-<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Admin" /> 
-
-
       </ul>
 
      
