@@ -114,7 +114,7 @@
       $_SESSION['role']= $row['role'];
       $_SESSION['department_id']= $row['department_id'];
 
-      if ($_SESSION['department_id'] == 1) {
+      if ($_SESSION['department_id'] == 255) {
         header("location: home.php");
       }
       elseif ($_SESSION['department_id'] == 2) {
