@@ -32,7 +32,7 @@
     
 
     //sql statement
-    $sql = "SELECT * FROM user_tbl WHERE username='$username' and password='$password'";
+    $sql = "SELECT * FROM user_tbl WHERE username='$username'";
  
     //Db Connection
     require_once('conn.php');
@@ -132,7 +132,7 @@
   {
 
     //sql statement
-    $sql = "SELECT * FROM userschat WHERE username='$username' && password='$password'";
+    $sql = "SELECT * FROM userschat WHERE username='$username'";
  
     //Db Connection
     require_once('conn.php');
@@ -154,7 +154,7 @@
   {
 
     //sql statement
-    $sql = "SELECT * FROM users WHERE username='$username' && password='$password'";
+    $sql = "SELECT * FROM users WHERE username='$username'";
  
     //Db Connection
     require_once('conn.php');

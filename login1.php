@@ -118,7 +118,7 @@
       $_SESSION['department_id']= $row['department_id'];
 
       if ($_SESSION['department_id'] == 1) {
-        header("location: home.php");
+        header("location: filesscnhs.php");
       }
       elseif ($_SESSION['department_id'] == 2) {
         header("location: filesscces.php");
@@ -496,6 +496,10 @@ body {
   
         <li><a href="#"><font color="WHITE " size="2"><B><?=$_SESSION['username']?></B></a></font>
 <a href="http://202.137.126.58"><font color="White" size="2"><B>   |    Home</B></font></a> <li> 
+
+<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login2"  value="Admin" /> 
+
+
       </ul>
 
      
