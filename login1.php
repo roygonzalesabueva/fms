@@ -191,6 +191,61 @@
     }
 
 
+
+
+
+    {
+
+      //sql statement
+      $sql = "SELECT * FROM user_tbl WHERE username='$username'";
+   
+      //Db Connection
+      require_once('conn.php');
+  
+      
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $row=mysqli_fetch_assoc($qry);
+
+      $_SESSION['id']= $row['id'];
+      //$_SESSION['username']= $row['username'];
+      $_SESSION['email']= $row['email'];
+      $_SESSION['password']= $row['password'];
+      $_SESSION['status']= $row['status'];
+      $_SESSION['role']= $row['role'];
+      $_SESSION['department_id']= $row['department_id'];
+
+      if ($_SESSION['department_id'] == 1) {
+        header("location: filesscnhs.php");
+      }
+      
+
+      elseif ($_SESSION['department_id'] == 16) {
+        header("location: home.php");
+      }
+
+
+
+      //header("location: dashboard.php");
+      // header("location: index.php");
+      
+    }
+     
+    }
+
+
+
+
+
+
+
+
+
+
+
   {
 
     //sql statement
@@ -212,6 +267,10 @@
     }
    
   }
+
+
+
+
 
   {
 
