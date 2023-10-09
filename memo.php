@@ -98,6 +98,7 @@ if(isset($_POST['search']))
        
     <title>Division of Davao del Sur|M.E.M.O</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -128,6 +129,13 @@ if(isset($_POST['search']))
 
 
 
+
+
+
+
+
+
+  
 
   <style>
 * {
@@ -351,12 +359,6 @@ h5 {
 
 
       
-
-
-
-
-
-
 
 
 
