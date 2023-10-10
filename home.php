@@ -263,6 +263,8 @@ body {
 
 
       <br>  <br>   
+
+      <div class="row">
            
 <form action="home.php" method="post" enctype="multipart/form-data">
                 
