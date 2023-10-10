@@ -334,7 +334,7 @@ h5 {
 
       <center><p>
 
-<h4> <B>Downloadable Division Memorandum</B></h4><p></center>
+<h4> <B>Division of Davao del Sur Memorandum</B></h4><p></center>
 
   
 
