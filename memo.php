@@ -330,6 +330,24 @@ h5 {
 
 
       <br>  <br>  
+
+
+
+
+
+      <p>
+
+<h4> <B>Downloadable Memorandum</B></h4><p>
+
+  
+
+
+
+
+
+
+
+
       <div class="row">
           
 <form action="memo.php" method="post" enctype="multipart/form-data">
