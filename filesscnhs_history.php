@@ -512,7 +512,7 @@ h4 {
 <h4> <B>
 
 <i class="material-icons" style="font-size:48px;color:Blue">cloud_queue</i> Cloud Storage of
-<?php echo $_SESSION['school_name'];?> 
+<?php echo $_SESSION['school_id'];?> 
 
   </B></h4>
 
