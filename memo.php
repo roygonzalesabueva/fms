@@ -332,9 +332,9 @@ h5 {
 
 
 
-      <p>
+      <center><p>
 
-<h4> <B>Downloadable Memorandum</B></h4><p>
+<h4> <B>Downloadable Memorandum</B></h4><p></center>
 
   
 
