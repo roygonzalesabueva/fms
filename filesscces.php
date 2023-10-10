@@ -469,7 +469,7 @@ h4 {
       
        <a href="#"> <font color="Black"> <B> <i class="fa fa-fw fa-user"></i> <span class="nav-profile-name"> <?php echo $_SESSION['user'];?> </span></a> | </B></font> 
       
-       <h8><a href="logout1.php"><font color="Black"><B> Logout</B></a></font></h8>
+       <h8><a href="logout1.php"><font color="Black"><B> Home</B></a></font></h8>
        
   
      
