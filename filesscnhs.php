@@ -511,7 +511,7 @@ h4 {
 
 <p>
 
-<h4> <B>Downloadable Memorandum <?php echo $_SESSION['school_name'];?>  </B></h4><p>
+<h4> <B><?php echo $_SESSION['school_name'];?>  </B></h4><p>
 
   
 
