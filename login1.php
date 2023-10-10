@@ -108,6 +108,7 @@
 
       $_SESSION['id']= $row['id'];
       //$_SESSION['username']= $row['username'];
+      $_SESSION['school_name']= $row['school_name'];
       $_SESSION['email']= $row['email'];
       $_SESSION['password']= $row['password'];
       $_SESSION['status']= $row['status'];
