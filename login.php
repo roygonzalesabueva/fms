@@ -60,7 +60,7 @@ include_once("session.php")
 
 
 
-  <title>M.E.M.O | Division of Davao del Sur</title>
+  <title>Project DavaoSur -M.E.M.O.</title>
  
 <?php include('./header.php'); ?>
 <?php 

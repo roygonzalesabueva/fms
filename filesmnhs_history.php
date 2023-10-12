@@ -212,7 +212,7 @@ function myTimer() {
 
 
 
-  <title>M.E.M.O | Division of Davao del Sur</title>
+  <title>Project DavaoSur -M.E.M.O.</title>
 
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
 

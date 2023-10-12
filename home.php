@@ -98,7 +98,7 @@ if(isset($_POST['search']))
 <html>  
     <head>
        
-    <title>Division of Davao del Sur|M.E.M.O</title>
+    <title>Project DavaoSur - M.E.M.O</title>
 
 
 
