@@ -118,58 +118,58 @@
       if ($_SESSION['department_id'] == 255) {
         header("location: filesscnhs.php");
       }
-      elseif ($_SESSION['department_id'] == 2) {
+      elseif ($_SESSION['department_id'] == 194) {
         header("location: filesscces.php");
       }
 
-      elseif ($_SESSION['department_id'] == 3) {
+      elseif ($_SESSION['department_id'] == 258) {
         header("location: filessnhs.php");
       }
 
-      elseif ($_SESSION['department_id'] == 299) {
-        header("location: filesscces.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 5) {
-        header("location: filesfnhs.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 6) {
+      elseif ($_SESSION['department_id'] == 248) {
         header("location: filespnhs.php");
       }
-      elseif ($_SESSION['department_id'] == 7) {
+
+      elseif ($_SESSION['department_id'] == 243) {
         header("location: filesmnhs.php");
       }
 
-      elseif ($_SESSION['department_id'] == 8) {
+      elseif ($_SESSION['department_id'] == 249) {
+        header("location: filesfnhs.php");
+      }
+      elseif ($_SESSION['department_id'] == 0) {
+        header("location: filesmnhs.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: indexacct.php");
       }
 
-      elseif ($_SESSION['department_id'] == 10) {
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: indexsupply.php");
       }
 
-      elseif ($_SESSION['department_id'] == 11) {
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: indexbudget.php");
       }
 
-      elseif ($_SESSION['department_id'] == 12) {
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: indexcashier.php");
       }
 
-      elseif ($_SESSION['department_id'] == 13) {
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: indexlegal.php");
       }
 
-      elseif ($_SESSION['department_id'] == 14) {
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: indexdpsu.php");
       }
 
-      elseif ($_SESSION['department_id'] == 15) {
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: index_trans.php");
       }
 
-      elseif ($_SESSION['department_id'] == 16) {
+      elseif ($_SESSION['department_id'] == 0) {
         header("location: home.php");
       }
 
