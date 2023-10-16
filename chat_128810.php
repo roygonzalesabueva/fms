@@ -9,7 +9,7 @@ $result = mysqli_query($conn,$sql);
 
 
 <?php
-//include_once("session.php")
+include_once("session.php")
 ?>
 
 
