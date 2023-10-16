@@ -137,8 +137,8 @@
       elseif ($_SESSION['department_id'] == 249) {
         header("location: filesfnhs.php");
       }
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: filesmnhs.php");
+      elseif ($_SESSION['department_id'] == 1) {
+        header("location: 128810.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
