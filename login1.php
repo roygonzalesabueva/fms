@@ -149,8 +149,8 @@
         header("location: 128811.php");
       }
 
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: indexbudget.php");
+      elseif ($_SESSION['department_id'] == 3) {
+        header("location: 128812.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
