@@ -145,8 +145,8 @@
         header("location: home.php");
       }
 
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: indexsupply.php");
+      elseif ($_SESSION['department_id'] == 2) {
+        header("location: 128811.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
