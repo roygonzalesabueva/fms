@@ -74,7 +74,7 @@ if(isset($_POST['search']))
     
 }
     else {
-        $query ="SELECT * FROM `files`ORDER BY id ASC";
+        $query ="SELECT * FROM `files`ORDER BY id DESC";
         $search_result = filterTable($query);
         
     }
