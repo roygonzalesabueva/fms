@@ -153,8 +153,8 @@
         header("location: 128812.php");
       }
 
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: indexcashier.php");
+      elseif ($_SESSION['department_id'] == 4) {
+        header("location: 128813.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
