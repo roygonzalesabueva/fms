@@ -4,7 +4,7 @@
 	if(ISSET($_REQUEST['id'])){
 		$id=$_REQUEST['id'];
 		
-		$query=mysqli_query($conn, "SELECT * FROM `files128810_history` WHERE `id`='$id'") or die(mysqli_error());
+		$query=mysqli_query($conn, "SELECT * FROM `128810_history` WHERE `id`='$id'") or die(mysqli_error());
 		$row=mysqli_fetch_array($query);
 		
 		$id=$row['id'];
@@ -19,10 +19,10 @@
 	
 		//mysqli_query($conn, "INSERT INTO `filesrecords` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		
-		mysqli_query($conn, "DELETE FROM `files128810_history` WHERE `id`='$id'") or die(mysqli_error());
+		mysqli_query($conn, "DELETE FROM `128810_history` WHERE `id`='$id'") or die(mysqli_error());
 		
 		// echo"<script>alert('Data successfully Deleted')</script>";
-		echo"<script>window.location='files128810_history.php'</script>";
+		echo"<script>window.location='128810_history.php'</script>";
 	}
 
 
