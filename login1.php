@@ -161,8 +161,8 @@
         header("location: 128814.php");
       }
 
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: indexdpsu.php");
+      elseif ($_SESSION['department_id'] == 6) {
+        header("location: 128815.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
