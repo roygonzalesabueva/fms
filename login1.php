@@ -157,8 +157,8 @@
         header("location: 128813.php");
       }
 
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: indexlegal.php");
+      elseif ($_SESSION['department_id'] == 5) {
+        header("location: 128814.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
