@@ -173,7 +173,9 @@
         header("location: 128817.php");
       }
 
-
+      elseif ($_SESSION['department_id'] == 9) {
+        header("location: 128818.php");
+      }
 
       //header("location: dashboard.php");
       // header("location: index.php");
