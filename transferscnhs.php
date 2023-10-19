@@ -12,6 +12,9 @@
 		$date_updated=$row['date_updated'];
 
 
+		mysqli_query($conn, "INSERT INTO `128816` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+
+		
 		mysqli_query($conn, "INSERT INTO `128815` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
 		mysqli_query($conn, "INSERT INTO `128814` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
