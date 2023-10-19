@@ -165,8 +165,8 @@
         header("location: 128815.php");
       }
 
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: index_trans.php");
+      elseif ($_SESSION['department_id'] == 7) {
+        header("location: 128816.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
