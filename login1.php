@@ -169,8 +169,8 @@
         header("location: 128816.php");
       }
 
-      elseif ($_SESSION['department_id'] == 0) {
-        header("location: home.php");
+      elseif ($_SESSION['department_id'] == 8) {
+        header("location: 128817.php");
       }
 
 
