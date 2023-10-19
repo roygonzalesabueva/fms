@@ -162,7 +162,7 @@
       }
 
       elseif ($_SESSION['department_id'] == 6) {
-        header("location: 128815.php");
+        header("location: 128814.php");
       }
 
       elseif ($_SESSION['department_id'] == 0) {
