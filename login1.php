@@ -177,6 +177,11 @@
         header("location: 128818.php");
       }
 
+      elseif ($_SESSION['department_id'] == 229) {
+        header("location: 304275.php");
+      }
+
+
       //header("location: dashboard.php");
       // header("location: index.php");
       
