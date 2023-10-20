@@ -13,6 +13,54 @@ include_once("session.php")
 
 
 
+<?php
+
+
+require_once('db_tis.php');
+ $selectedSchoolId = $_GET['school_id'];
+
+$sql = "SELECT pi.emp_no, pp.image
+                    FROM personal_info AS pi
+                    INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
+                    WHERE e.school_id = ?";
+
+		if ($stmt = $conn->prepare($sql)) {
+                $stmt->bind_param("i", $selectedSchoolId);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                
+	        while ($row = $result->fetch_assoc()) {
+                    
+                    
+                    $image = $row['image'];
+                    $imageUrl = "../heroes/admin/$image";
+          }
+        } else {
+          echo "No teachers found for the selected school.";
+      }
+  
+      $stmt->close();
+  } else {
+      echo "Error in preparing the SQL statement.";
+
+                     }             
+                     
+                     ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php
 // Your PHP code and processing here
@@ -514,6 +562,8 @@ h4 {
 <h4> <B><?php echo $_SESSION['school_name'];?>  </B></h4><p>
 
   
+<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 150px;">
+
 
   
  
