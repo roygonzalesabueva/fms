@@ -17,7 +17,7 @@ include_once("session.php")
 
 
 require_once('db_tis.php');
- $selectedSchoolId = $_GET['school_id'];
+// $selectedSchoolId = $_GET['school_id'];
 
 $sql = "SELECT pi.emp_no, pp.image
                     FROM personal_info AS pi
