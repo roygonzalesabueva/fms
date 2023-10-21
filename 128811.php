@@ -508,12 +508,9 @@ h4 {
 
 
 
-
 <p>
 
-<h4> <B><?php echo $_SESSION['school_name'];?>  </B></h4><p>
-
-  
+<h4> <B><?php echo $_SESSION['school_id'];?> <?php echo $_SESSION['school_name'];?>  </B></h4><p>
 
   
  
