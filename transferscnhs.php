@@ -13,6 +13,9 @@
 
 		mysqli_query($conn, "INSERT INTO `304275` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
+
+		mysqli_query($conn, "INSERT INTO `128822` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+
 		mysqli_query($conn, "INSERT INTO `128821` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
 		mysqli_query($conn, "INSERT INTO `128820` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
