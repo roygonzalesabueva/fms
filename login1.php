@@ -201,6 +201,14 @@
         header("location: 128824.php");
       }
 
+      elseif ($_SESSION['department_id'] == 16) {
+        header("location: 128825.php");
+      }
+
+      elseif ($_SESSION['department_id'] == 17) {
+        header("location: 128826.php");
+      }
+
 
       elseif ($_SESSION['department_id'] == 229) {
         header("location: 304275.php");
