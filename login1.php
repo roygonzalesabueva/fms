@@ -573,8 +573,9 @@ body {
              
 <a href="memo.php" class="btn btn-primary btn-block btn-lg"> DIVISION MEMO</a>
 
-            
-<a href="memoschool.php" class="btn btn-primary btn-block btn-lg">SCHOOL DASHBOARD</a>
+<<input type="submit" href="memoschool.php" class="btn btn-primary btn-block btn-lg"  name ="login1" >SCHOOL DASHBOARD</a>
+         
+<!-- <a href="memoschool.php" class="btn btn-primary btn-block btn-lg"  name ="login1" >SCHOOL DASHBOARD</a> -->
            
 
 
