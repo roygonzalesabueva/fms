@@ -23,7 +23,7 @@ function myTimer() {
   //if(!isset($_SESSION['login_id']))
     //header('location:login.php');
  include('./header.php'); 
- include('./topbar_davsur.php'); 
+ include('./topbar_public.php'); 
  //include('./auth.php'); 
  ?>
 
