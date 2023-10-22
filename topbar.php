@@ -58,7 +58,7 @@
         <a href="chat_index.php"><font color="White" size="3"><B>Chat Room</a> | </B></font>
   	
 
-        <a href="#"><font color="WHITE " size="3"><B><?=$_SESSION['username']?></a> | </B></font>
+        <a href="#"><font color="WHITE " size="3"><i class="fa fa-fw fa-user"></i><B><?=$_SESSION['username']?></a> | </B></font>
         <a href="http://202.137.126.58/"><font color="WHITE " size="3"><B>Home</B></a></font>
         </div>
     <!-- <a href="chat_admin.php"> <font color="White" size="4"><B>Chat Room</a></B></font>
