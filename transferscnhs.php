@@ -11,57 +11,57 @@
 		$name=$row['name'];
 		$date_updated=$row['date_updated'];
 
-		mysqli_query($conn, "INSERT INTO `304275` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `304275` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128826` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128826` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128825` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128825` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128824` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128824` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128823` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128823` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128822` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128822` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128821` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128821` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128820` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128820` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128820` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128820` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128820` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128820` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128819` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128819` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128818` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128818` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128817` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128817` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128816` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128816` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 
-		mysqli_query($conn, "INSERT INTO `128815` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128815` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
-		mysqli_query($conn, "INSERT INTO `128814` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128814` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
-		mysqli_query($conn, "INSERT INTO `128813` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128813` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
-		mysqli_query($conn, "INSERT INTO `128812` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128812` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
-		mysqli_query($conn, "INSERT INTO `128811` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128811` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
-		mysqli_query($conn, "INSERT INTO `128810` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `128810` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
-		mysqli_query($conn, "INSERT INTO `filesfnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `filesfnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		
-		mysqli_query($conn, "INSERT INTO `filesmnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `filesmnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		
-		mysqli_query($conn, "INSERT INTO `filessnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `filessnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 	
 		mysqli_query($conn, "INSERT INTO `filesscnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		
-		mysqli_query($conn, "INSERT INTO `filesscces` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `filesscces` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 			
-		mysqli_query($conn, "INSERT INTO `filespnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
+		// mysqli_query($conn, "INSERT INTO `filespnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		
 		//mysqli_query($conn, "INSERT INTO `filesrecords` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		

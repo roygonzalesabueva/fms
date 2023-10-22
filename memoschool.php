@@ -351,7 +351,7 @@ h5 {
 
       <div class="row">
           
-<form action="memo.php" method="post" enctype="multipart/form-data">
+<form action="memoschool.php" method="post" enctype="multipart/form-data">
                 
                 <!-- <input type="file" name="myfile" >  
                 
