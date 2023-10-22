@@ -118,6 +118,11 @@
       if ($_SESSION['department_id'] ) {
         header("location: memoschool.php");
       }
+
+      elseif ($_SESSION['department_id'] == 259) {
+        header("location: home.php");
+        }
+
       // elseif ($_SESSION['department_id'] == 194) {
       //   header("location: filesscces.php");
       // }
@@ -141,9 +146,9 @@
       //   header("location: 128810.php");
       // }
 
-      // elseif ($_SESSION['department_id'] == 259) {
-      //   header("location: home.php");
-      // }
+      //  elseif ($_SESSION['department_id'] == 259) {
+      //  header("location: home.php");
+      //  }
 
       // elseif ($_SESSION['department_id'] == 2) {
       //   header("location: 128811.php");

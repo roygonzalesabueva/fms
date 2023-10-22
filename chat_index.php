@@ -372,7 +372,7 @@ function myTimer() {
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
 
-                    <li> <a href="filesscnhs.php">Close</a></li>
+                    <li> <a href="memoschool.php">Close</a></li>
                 </ul>
 
 
