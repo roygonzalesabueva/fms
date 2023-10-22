@@ -116,7 +116,7 @@
       $_SESSION['department_id']= $row['department_id'];
 
       if ($_SESSION['department_id'] ) {
-        header("location: memmoschool.php");
+        header("location: memoschool.php");
       }
       // elseif ($_SESSION['department_id'] == 194) {
       //   header("location: filesscces.php");
