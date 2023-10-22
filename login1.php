@@ -115,12 +115,12 @@
       $_SESSION['role']= $row['role'];
       $_SESSION['department_id']= $row['department_id'];
 
-      if ($_SESSION['department_id'] ) {
-        header("location: memoschool.php");
+      if ($_SESSION['department_id'] == 259) {
+        header("location: home.php");
       }
 
-      elseif ($_SESSION['department_id'] == 259) {
-        header("location: home.php");
+      elseif ($_SESSION['department_id']) {
+        header("location: memoschool.php");
         }
 
       // elseif ($_SESSION['department_id'] == 194) {
