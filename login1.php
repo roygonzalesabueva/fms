@@ -115,104 +115,104 @@
       $_SESSION['role']= $row['role'];
       $_SESSION['department_id']= $row['department_id'];
 
-      if ($_SESSION['department_id'] == 255) {
-        header("location: filesscnhs.php");
+      if ($_SESSION['department_id'] ) {
+        header("location: memmoschool.php");
       }
-      elseif ($_SESSION['department_id'] == 194) {
-        header("location: filesscces.php");
-      }
+      // elseif ($_SESSION['department_id'] == 194) {
+      //   header("location: filesscces.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 258) {
-        header("location: filessnhs.php");
-      }
+      // elseif ($_SESSION['department_id'] == 258) {
+      //   header("location: filessnhs.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 248) {
-        header("location: filespnhs.php");
-      }
+      // elseif ($_SESSION['department_id'] == 248) {
+      //   header("location: filespnhs.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 243) {
-        header("location: filesmnhs.php");
-      }
+      // elseif ($_SESSION['department_id'] == 243) {
+      //   header("location: filesmnhs.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 249) {
-        header("location: filesfnhs.php");
-      }
-      elseif ($_SESSION['department_id'] == 1) {
-        header("location: 128810.php");
-      }
+      // elseif ($_SESSION['department_id'] == 249) {
+      //   header("location: filesfnhs.php");
+      // }
+      // elseif ($_SESSION['department_id'] == 1) {
+      //   header("location: 128810.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 259) {
-        header("location: home.php");
-      }
+      // elseif ($_SESSION['department_id'] == 259) {
+      //   header("location: home.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 2) {
-        header("location: 128811.php");
-      }
+      // elseif ($_SESSION['department_id'] == 2) {
+      //   header("location: 128811.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 3) {
-        header("location: 128812.php");
-      }
+      // elseif ($_SESSION['department_id'] == 3) {
+      //   header("location: 128812.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 4) {
-        header("location: 128813.php");
-      }
+      // elseif ($_SESSION['department_id'] == 4) {
+      //   header("location: 128813.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 5) {
-        header("location: 128814.php");
-      }
+      // elseif ($_SESSION['department_id'] == 5) {
+      //   header("location: 128814.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 6) {
-        header("location: 128815.php");
-      }
+      // elseif ($_SESSION['department_id'] == 6) {
+      //   header("location: 128815.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 7) {
-        header("location: 128816.php");
-      }
+      // elseif ($_SESSION['department_id'] == 7) {
+      //   header("location: 128816.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 8) {
-        header("location: 128817.php");
-      }
+      // elseif ($_SESSION['department_id'] == 8) {
+      //   header("location: 128817.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 9) {
-        header("location: 128818.php");
-      }
+      // elseif ($_SESSION['department_id'] == 9) {
+      //   header("location: 128818.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 10) {
-        header("location: 128819.php");
-      }
+      // elseif ($_SESSION['department_id'] == 10) {
+      //   header("location: 128819.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 11) {
-        header("location: 128820.php");
-      }
+      // elseif ($_SESSION['department_id'] == 11) {
+      //   header("location: 128820.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 12) {
-        header("location: 128821.php");
-      }
+      // elseif ($_SESSION['department_id'] == 12) {
+      //   header("location: 128821.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 13) {
-        header("location: 128822.php");
-      }
+      // elseif ($_SESSION['department_id'] == 13) {
+      //   header("location: 128822.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 14) {
-        header("location: 128823.php");
-      }
+      // elseif ($_SESSION['department_id'] == 14) {
+      //   header("location: 128823.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 15) {
-        header("location: 128824.php");
-      }
+      // elseif ($_SESSION['department_id'] == 15) {
+      //   header("location: 128824.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 16) {
-        header("location: 128825.php");
-      }
+      // elseif ($_SESSION['department_id'] == 16) {
+      //   header("location: 128825.php");
+      // }
 
-      elseif ($_SESSION['department_id'] == 17) {
-        header("location: 128826.php");
-      }
+      // elseif ($_SESSION['department_id'] == 17) {
+      //   header("location: 128826.php");
+      // }
 
 
-      elseif ($_SESSION['department_id'] == 229) {
-        header("location: 304275.php");
-      }
+      // elseif ($_SESSION['department_id'] == 229) {
+      //   header("location: 304275.php");
+      // }
 
 
       //header("location: dashboard.php");
@@ -573,10 +573,7 @@ body {
              
 <a href="memo.php" class="btn btn-primary btn-block btn-lg"> DIVISION MEMO</a>
 
-<<input type="submit" href="memoschool.php" class="btn btn-primary btn-block btn-lg"  name ="login1" >SCHOOL DASHBOARD</a>
-         
-<!-- <a href="memoschool.php" class="btn btn-primary btn-block btn-lg"  name ="login1" >SCHOOL DASHBOARD</a> -->
-           
+        
 
 
 <!-- <a href="login2.php" class="btn btn-primary btn-block btn-lg"> SCHOOL DASHBOARD</a> -->
