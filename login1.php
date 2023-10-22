@@ -573,6 +573,8 @@ body {
              
 <a href="memo.php" class="btn btn-primary btn-block btn-lg"> DIVISION MEMO</a>
 
+            
+<a href="memoschool.php" class="btn btn-primary btn-block btn-lg">SCHOOL DASHBOARD</a>
            
 
 
