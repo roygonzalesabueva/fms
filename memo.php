@@ -41,21 +41,8 @@ function myTimer() {
 
 
 
+
 <?php
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
