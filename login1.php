@@ -261,7 +261,7 @@
                         
                         
                         $image = $row['image'];
-                        $imageUrl = "../heroes/admin/$image";
+                        $imageUrl = "/heroes/admin/$image";
               }
             } else {
               echo "No teachers found for the selected school.";
