@@ -340,7 +340,8 @@ h5 {
 
  </center>
 
-  
+ <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 150px;">
+
 
 
 

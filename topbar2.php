@@ -49,8 +49,7 @@
   <img src="davsur2.png" width="220" height="60">
 			  <h5><font color="WHITE"><B>Memorandum in Electronic Media Online (M.E.M.O)</B></font></h5>
 
-        <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 150px;">
-
+      
 
         <div class="topnav-right">
 
