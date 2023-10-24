@@ -340,11 +340,11 @@ h5 {
 
  </center>
 
- <center>
+ <!-- <center>
                         <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 75px;">
 
                       
-                        </center>
+                        </center> -->
 
 
 
