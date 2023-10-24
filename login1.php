@@ -272,22 +272,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     if($count===1);
     {
       $_SESSION['user']= $username;
