@@ -230,7 +230,7 @@
 
 
  {
-
+  
 
     require_once('db_tis.php');
      $selectedSchoolId = $_GET['school_id'];
@@ -252,11 +252,14 @@
                         
                         $image = $row['image'];
                         $imageUrl = "../heroes/admin/$image";
-
-                       
-                        
+         
         
               }
+
+                      
+
+
+
             } else {
               echo "No teachers found for the selected school.";
           }
@@ -270,7 +273,6 @@
                        
                         }      
     
-
 
 
 
@@ -634,7 +636,9 @@ body {
 
 
 
-            
+             <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 75px;">
+
+             
     
    
    
