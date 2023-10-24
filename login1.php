@@ -229,7 +229,7 @@
 
 
 
- 
+ {
 
 
     require_once('db_tis.php');
@@ -252,6 +252,10 @@
                         
                         $image = $row['image'];
                         $imageUrl = "../heroes/admin/$image";
+
+                       
+                        
+        
               }
             } else {
               echo "No teachers found for the selected school.";
@@ -263,8 +267,8 @@
     
                          }             
                          
-                         
-                        
+                       
+                        }      
     
 
 
