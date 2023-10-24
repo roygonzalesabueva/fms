@@ -229,8 +229,7 @@
 
 
 
- {
-  
+ 
 
     require_once('db_tis.php');
      $selectedSchoolId = $_GET['school_id'];
@@ -271,7 +270,7 @@
                          }             
                          
                        
-                        }      
+                         
     
 
 
@@ -635,8 +634,6 @@ body {
              <form class="pt-3" method="post" name="login1" action="login1.php">
 
 
-
-             <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 75px;">
 
              
     
