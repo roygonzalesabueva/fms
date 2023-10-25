@@ -368,6 +368,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                 while ($row = $result->fetch_assoc()) {
                     $image = $row['image'];
                     $imageUrl = "../heroes/admin/$image";
+                    $fname = $row['firstname'];
                     // Output or process $imageUrl as needed
                 }
             } else {
@@ -392,7 +393,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 <center><img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 75px;"></center>
-
+<center><label><?php echo $fname; ?> </label></center>
 
 
 
