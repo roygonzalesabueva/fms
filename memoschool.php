@@ -360,7 +360,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
             WHERE e.school_id = ? AND pp.emp_no =?";
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("i", $selectedSchoolId, $selectedemp_no);
+        $stmt->bind_param("i", $selectedSchoolId, $selectedEmpNo);
         if ($stmt->execute()) {
             $result = $stmt->get_result();
 
