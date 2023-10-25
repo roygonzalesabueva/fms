@@ -1,6 +1,101 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+$conn = mysqli_connect("localhost","root","@DavaosurDB2023","fms_db");
+$sql = "SELECT * FROM `chat` ORDER BY mem_id ASC";
+$result = mysqli_query($conn,$sql);
+?>
+
+
+
+
+
+<?php
+include_once("session.php")
+?>
+
+
+<?php
+// Your PHP code and processing here
+
+// Refresh the page after 3 seconds (adjust the value as needed)
+$refreshDelay = 15;
+header("refresh: $refreshDelay");
+
+// The rest of your PHP code and HTML content
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+
+
+
+if(isset($_POST['search']))
+{
+    $valueToSearch = $_POST['valueToSearch'];
+	$query = "SELECT * FROM `chat` WHERE  CONCAT(`trackid`)LIKE '%".$valueToSearch."%'";
+  //  $query = "SELECT * FROM `membertracking` WHERE  CONCAT(`mem_id`, `trackid`, `firstname`, `lastname`, `address`)LIKE '%".$valueToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+    else {
+        $query ="SELECT * FROM `chat` ORDER BY mem_id DESC";
+        $search_result = filterTable($query);
+        
+    }
+    
+    function filterTable($query)
+    {
+        $connect = mysqli_connect("localhost", "root", "@DavaosurDB2023", "fms_db");
+        $filter_Result = mysqli_query($connect, $query);
+        return $filter_Result;
+    }
+        
+    
+    
+
+?>
+
+
+
+
+
+
+
+
+
+
+
 <?php
   
 
@@ -305,81 +400,6 @@
 
 
 
-
-
-
-
-
-
-<?php
-$conn = mysqli_connect("localhost","root","@DavaosurDB2023","fms_db");
-$sql = "SELECT * FROM `chat` ORDER BY mem_id ASC";
-$result = mysqli_query($conn,$sql);
-?>
-
-
-
-
-
-<?php
-include_once("session.php")
-?>
-
-
-<?php
-// Your PHP code and processing here
-
-// Refresh the page after 3 seconds (adjust the value as needed)
-$refreshDelay = 15;
-header("refresh: $refreshDelay");
-
-// The rest of your PHP code and HTML content
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-
-
-
-if(isset($_POST['search']))
-{
-    $valueToSearch = $_POST['valueToSearch'];
-	$query = "SELECT * FROM `chat` WHERE  CONCAT(`trackid`)LIKE '%".$valueToSearch."%'";
-  //  $query = "SELECT * FROM `membertracking` WHERE  CONCAT(`mem_id`, `trackid`, `firstname`, `lastname`, `address`)LIKE '%".$valueToSearch."%'";
-    $search_result = filterTable($query);
-    
-}
-    else {
-        $query ="SELECT * FROM `chat` ORDER BY mem_id DESC";
-        $search_result = filterTable($query);
-        
-    }
-    
-    function filterTable($query)
-    {
-        $connect = mysqli_connect("localhost", "root", "@DavaosurDB2023", "fms_db");
-        $filter_Result = mysqli_query($connect, $query);
-        return $filter_Result;
-    }
-        
-    
-    
-
-?>
 
 
 
