@@ -348,10 +348,10 @@ h5 {
 require_once('db_tis.php');
 
 // Check if school_id is provided in the GET request
-if (isset($_GET['school_id'])) {
-    $selectedSchoolId = $_GET['school_id'];
-   
-    $_SESSION['emp_no']=$emp_no;
+if (isset($_GET['school_id'], $_GET['emp_no'])) {
+  // Your code to handle both school_id and emp_no
+  $selectedSchoolId = $_GET['school_id'];
+  $selectedEmpNo = $_GET['emp_no'];
    
    $sql = "SELECT pi.emp_no, pp.image
             FROM personal_info AS pi
@@ -360,7 +360,7 @@ if (isset($_GET['school_id'])) {
             WHERE e.school_id = ? AND pp.emp_no =?";
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("i", $selectedSchoolId, $emp_no);
+        $stmt->bind_param("i", $selectedSchoolId, $selectedemp_no);
         if ($stmt->execute()) {
             $result = $stmt->get_result();
 
