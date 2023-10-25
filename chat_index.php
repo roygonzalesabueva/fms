@@ -390,7 +390,7 @@ function myTimer() {
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
 
                     <li> <a href="memoschool.php">Close</a></li>
-                    <li><a href="memoschool.php?school_id=<?php echo $row['school_id']?>">Close</a></li>
+                    <li><a href="memoschool.php?school_id">Close</a></li>
                     <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />  -->
                 
                   
