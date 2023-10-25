@@ -391,7 +391,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 75px;">
+<center><img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 75px;"></center>
 
 
 
