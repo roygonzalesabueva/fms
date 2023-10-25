@@ -350,15 +350,17 @@ require_once('db_tis.php');
 // Check if school_id is provided in the GET request
 if (isset($_GET['school_id'])) {
     $selectedSchoolId = $_GET['school_id'];
-
-    $sql = "SELECT pi.emp_no, pp.image
+   
+    $_SESSION['emp_no']=$emp_no;
+   
+   $sql = "SELECT pi.emp_no, pp.image
             FROM personal_info AS pi
             INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
             INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
-            WHERE e.school_id = ?";
+            WHERE e.school_id = ? AND pp.emp_no =?";
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("i", $selectedSchoolId);
+        $stmt->bind_param("i", $selectedSchoolId, $emp_no);
         if ($stmt->execute()) {
             $result = $stmt->get_result();
 

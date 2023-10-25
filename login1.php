@@ -53,6 +53,8 @@
         $stmt->close();
         if ($emp_no) {
             echo "";
+            $_SESSION['emp_no']=$emp_no;
+
         } else {
             echo "No result found for the provided email.";
         }
@@ -83,53 +85,6 @@
     }
     
     
-
-
-  
-
-    require_once('db_tis.php');
-
-    // Assuming you have already set $user_name from the session
-
-    // Prepare the SQL statement
-    $sql = "SELECT emp_no FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-
-    if ($stmt) {
-        $stmt->bind_param("s", $user_name);
-        $stmt->execute();
-        $stmt->bind_result($emp_no);
-        $stmt->fetch();
-        $stmt->close();
-        if ($emp_no) {
-            echo $emp_no;
-        } else {
-            echo "No result found for the provided email.";
-        }
-    } else {
-        
-        echo "Error preparing the statement.";
-    }
-
-    $sql2 = "SELECT school_id FROM employment_record WHERE emp_no = ?";
-    $stmt2 = $conn->prepare($sql2);
-    
-    if ($stmt2) {
-        $stmt2->bind_param("s", $emp_no);
-        $stmt2->execute();
-        $stmt2->bind_result($school_id);
-        $stmt2->fetch();
-        $stmt2->close();
-        if ($school_id) {
-            echo $school_id." ".$emp_no;
-        } else {
-            echo "No employment record found for the provided emp_no.";
-        }
-    } else {
-        echo "Error preparing the statement.";
-    }
-    
-  
 
 
 
