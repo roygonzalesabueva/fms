@@ -353,7 +353,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
   $selectedSchoolId = $_GET['school_id'];
   $selectedEmpNo = $_GET['emp_no'];
    
-   $sql = "SELECT pi.firstname, pi.lastname, pi.middlename pi.emp_no, pp.image
+   $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
             FROM personal_info AS pi
             INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
             INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
