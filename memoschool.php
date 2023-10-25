@@ -354,7 +354,8 @@ if (isset($_GET['school_id'])) {
     $sql = "SELECT pi.emp_no, pp.image
             FROM personal_info AS pi
             INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
-            WHERE pi.school_id = ?";
+            INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
+            WHERE e.school_id = ?";
 
     if ($stmt = $conn->prepare($sql)) {
         $stmt->bind_param("i", $selectedSchoolId);
