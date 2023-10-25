@@ -387,9 +387,9 @@ function myTimer() {
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
 
-                    <li> <a href="memoschool.php?school_id=" . $schoolid . "&emp_no=" . $emp_no;">Close</a></li>
+                    <li> <a href="memoschool.php">Close</a></li>
 
-                    <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" /> 
+                    <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />  -->
 
                 </ul>
 
