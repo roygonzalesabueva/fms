@@ -120,7 +120,7 @@
       }
 
       elseif ($_SESSION['department_id']) {
-        header("location: memoschool.php");
+        header("Location: memoschool.php?school_id=" . $schoolid);
         }
 
       // elseif ($_SESSION['department_id'] == 194) {
