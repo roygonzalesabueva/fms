@@ -345,44 +345,45 @@ h5 {
 
 
  <?php
-
-
 require_once('db_tis.php');
- $selectedSchoolId = $_GET['school_id'];
 
-$sql = "SELECT pi.emp_no, pp.image
-                    FROM personal_info AS pi
-                    INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
-                    WHERE pi.school_id = ?";
+// Check if school_id is provided in the GET request
+if (isset($_GET['school_id'])) {
+    $selectedSchoolId = $_GET['school_id'];
 
-		if ($stmt = $conn->prepare($sql)) {
-                $stmt->bind_param("i", $selectedSchoolId);
-                $stmt->execute();
-                $result = $stmt->get_result();
+    $sql = "SELECT pi.emp_no, pp.image
+            FROM personal_info AS pi
+            INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
+            WHERE pi.school_id = ?";
 
-                if ($result->num_rows > 0) {
-                
-	        while ($row = $result->fetch_assoc()) {
-                    
-                    
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("i", $selectedSchoolId);
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
                     $image = $row['image'];
                     $imageUrl = "../heroes/admin/$image";
-                   
-                 
+                    // Output or process $imageUrl as needed
+                }
+            } else {
+                echo "No teachers found for the selected school.";
+            }
 
-
-          }
+            $stmt->close();
         } else {
-          echo "No teachers found for the selected school.";
-      }
-  
-      $stmt->close();
-  } else {
-      echo "Error in preparing the SQL statement.";
+            echo "Error in executing the SQL statement.";
+        }
+    } else {
+        echo "Error in preparing the SQL statement.";
+    }
 
-                     }             
-                     
-                     ?>
+    // Close the database connection here if needed
+} else {
+    echo "No school_id provided in the GET request.";
+}
+?>
 
 
 
