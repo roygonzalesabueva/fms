@@ -33,6 +33,9 @@
 
   if(isset($_POST['login1'])){
     //getting the form data
+
+
+    
     require_once('db_tis.php');
     // $username=strtolower($_SESSION['user_role']);
     $user_name = $_SESSION['username'];
