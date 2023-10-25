@@ -353,7 +353,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
   $selectedSchoolId = $_GET['school_id'];
   $selectedEmpNo = $_GET['emp_no'];
    
-   $sql = "SELECT pi.firstname, pi.lastname, pi.emp_no, pp.image
+   $sql = "SELECT pi.firstname, pi.lastname, pi.middlename pi.emp_no, pp.image
             FROM personal_info AS pi
             INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
             INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
@@ -370,6 +370,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                     $imageUrl = "../heroes/admin/$image";
                     $fname = $row['firstname'];
                     $lname = $row['lastname'];
+                    $mname = $row['middlename'];
                     // Output or process $imageUrl as needed
                 }
             } else {
@@ -394,7 +395,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 <center><img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 75px;"></center>
-<center><label><?php echo $fname." ".$lname; ?> </label></center>
+<center><label><?php echo $fname." ".$mname." ".$lname; ?> </label></center>
 
 
 
