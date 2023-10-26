@@ -471,8 +471,15 @@ function myTimer() {
                         <div class="col-lg-12  float-right mt-5">
                             <div class="col-lg-10"></div>
                             <div class="col-lg-2 justify-end ">
-                              <button type="submit" class="btn btn-primary mt-5 float-right"
-                                    name="save"><span class="glyphicon glyphicon-save"></span> Send</button>
+                            <form method="post" action="chat_index.php">
+    <input type="hidden" name="school_id" value="<?php echo $schoolid; ?>">
+    <input type="hidden" name="emp_no" value="<?php echo $emp_no; ?>">
+    <!-- Your other form fields here -->
+    <button type="submit" class="btn btn-primary mt-5 float-right" name="save">
+        <span class="glyphicon glyphicon-save"></span> Send
+    </button>
+</form>
+
                                   </div>
 
 
