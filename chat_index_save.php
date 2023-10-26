@@ -24,7 +24,7 @@ $_SESSION['emp_no'] = $emp_no;
 		
 		
 	
-		header("location: chat_index.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>");
+		header("location: chat_index.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
 		
 	}
 ?>
