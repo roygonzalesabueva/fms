@@ -385,7 +385,10 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
   // Your code to handle both school_id and emp_no
   $selectedSchoolId = $_GET['school_id'];
   $selectedEmpNo = $_GET['emp_no'];
-   
+ $_SESSION['selSchoolId']=$selectedSchoolId;
+ $_SESSION['selEmNo']=$selectedEmpNo;
+
+
    $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
             FROM personal_info AS pi
             INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
@@ -453,10 +456,9 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-
       <div class="row">
           
-<form action="memoschool.php" method="post" enctype="multipart/form-data">
+<form action="memoschool.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data">
                 
                 <!-- <input type="file" name="myfile" >  
                 
