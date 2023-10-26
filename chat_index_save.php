@@ -64,6 +64,8 @@
             //  echo $school_id." ".$emp_no;
              $_SESSION['schoolid']=$school_id;
             // echo"<script>alert('.$school_id.')</script>";
+			echo $school_id;
+echo $emp_no;
         } else {
             echo "No employment record found for the provided emp_no.";
         }
@@ -76,8 +78,7 @@
 
 
 
-echo $school_id;
-echo $emp_no;
+
 
 	require_once'conn.php';
 	
