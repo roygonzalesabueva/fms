@@ -76,9 +76,8 @@
 
 
 
-
-echo "school id" . $schoolid;
-echo "emp ".$emp_no;
+echo $school_id;
+echo $emp_no;
 
 	require_once'conn.php';
 	
