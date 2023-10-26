@@ -3,7 +3,6 @@
 
 
 <?php
-  session_start();
 
   if(!isset($_SESSION['username'])){
 
@@ -113,7 +112,7 @@
       }
 
       elseif ($_SESSION['department_id']) {
-        header("Location: memoschool.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
+        //header("Location: memoschool.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
         }
 
       // elseif ($_SESSION['department_id'] == 194) {
