@@ -19,6 +19,7 @@ if(ISSET($_POST['save'])){
     // Perform your database operations here
 	mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$trackid', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
     // Redirect back to chat_index.php
-    header("location: chat_index.php");
+    header("location: chat_index.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
+
 }
 ?>
