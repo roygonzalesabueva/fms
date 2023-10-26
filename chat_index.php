@@ -389,7 +389,7 @@ function myTimer() {
 
 
 
-            <!-- <div class="card"> -->
+           <div class="card"> 
 
 
 
@@ -617,7 +617,7 @@ function myTimer() {
             </div>
 
        
-            <!-- </div> -->
+             </div> 
 
         </center>
 
