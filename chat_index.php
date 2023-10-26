@@ -41,7 +41,13 @@ header("refresh: $refreshDelay");
 
 
 
+<?php
+            $schoolid = $_GET['school_id'];
+            $emp_no = $_GET['emp_no'];
 
+            //echo "School ID" .$schoolid;
+            //echo "Employee Number" .$emp_no;
+        ?>
 
 
 
@@ -398,13 +404,7 @@ function myTimer() {
                     <li><a href="#"><i class="fa fa-fw fa-user"></i> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
-                    <!-- <?php
-            $schoolid = $_GET['school_id'];
-            $emp_no = $_GET['emp_no'];
-
-            //echo "School ID" .$schoolid;
-            //echo "Employee Number" .$emp_no;
-        ?> -->
+                  
                     <li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
