@@ -57,12 +57,12 @@
             $schoolid = $_GET['school_id'];
             $emp_no = $_GET['emp_no'];
 
-            echo "School ID" .$schoolid;
-            echo "Employee Number" .$emp_no;
+            //echo "School ID" .$schoolid;
+            //echo "Employee Number" .$emp_no;
         ?>
   			
         <font color="White" size="3"><B><a <p id="demo"></p></a> | </B></font> 
-        <a href="chat_index.php"><font color="White" size="3"><B>Chat Room</a> | </B></font>
+        <a href="chat_index.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font color="White" size="3"><B>Chat Room</a> | </B></font>
   	
 
         <a href="#"><font color="WHITE " size="3"><i class="fa fa-fw fa-user"></i><B><?=$_SESSION['username']?></a> | </B></font>
