@@ -50,7 +50,7 @@ if ($schoolid !== null && $emp_no !== null) {
     // ...
 } else {
     // Handle the case when the keys are not present, for example, by displaying an error message or redirecting to another page.
-    echo "School ID and/or Employee Number are not provided.";
+    echo "";
 }
 ?>
 
