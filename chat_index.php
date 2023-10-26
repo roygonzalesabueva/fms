@@ -42,12 +42,18 @@ header("refresh: $refreshDelay");
 
 
 <?php
-            $schoolid = $_GET['school_id'];
-            $emp_no = $_GET['emp_no'];
+$schoolid = isset($_GET['school_id']) ? $_GET['school_id'] : null;
+$emp_no = isset($_GET['emp_no']) ? $_GET['emp_no'] : null;
 
-            //echo "School ID" .$schoolid;
-            //echo "Employee Number" .$emp_no;
-        ?>
+if ($schoolid !== null && $emp_no !== null) {
+    // Your code when the keys exist
+    // ...
+} else {
+    // Handle the case when the keys are not present, for example, by displaying an error message or redirecting to another page.
+    echo "School ID and/or Employee Number are not provided.";
+}
+?>
+
 
 
 
