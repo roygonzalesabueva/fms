@@ -1,15 +1,4 @@
-<?php
-$schoolid = isset($_GET['school_id']) ? $_GET['school_id'] : null;
-$emp_no = isset($_GET['emp_no']) ? $_GET['emp_no'] : null;
 
-if ($schoolid !== null && $emp_no !== null) {
-    // Your code when the keys exist
-    // ...
-} else {
-    // Handle the case when the keys are not present, for example, by displaying an error message or redirecting to another page.
-    echo "";
-}
-?>
 <?php
 	require_once'conn.php';
 	
@@ -28,6 +17,8 @@ if ($schoolid !== null && $emp_no !== null) {
 		mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$trackid', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 		//mysqli_query($conn, "INSERT INTO `memberclient` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 		
+		$schoolid = $_GET['school_id'];
+		$emp_no = $_GET['emp_no'];
 	
 		header("location: chat_index.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>");
 		
