@@ -1,114 +1,52 @@
 <?php
-  session_start();
+session_start();
 
-  if(!isset($_SESSION['username'])){
-
+if (!isset($_SESSION['username'])) {
     header("Location: http://202.137.126.58/");
     exit();
+}
 
-  }
-
-
-  
-
-  function verify($data){
+function verify($data){
     $data = trim($data);
-    $data = htmlspecialchars($data );
-    $data = stripslashes($data );
+    $data = htmlspecialchars($data);
+    $data = stripslashes($data);
     return $data;
-  }
+}
 
-  if(isset($_POST['login1'])){
-    //getting the form data
+if (isset($_POST['login1'])) {
+    // Getting the form data
+    // ... your existing login code ...
 
+    // Ensure that $_SESSION['emp_no'] and $_SESSION['schoolid'] are properly set.
 
-    
-    require_once('db_tis.php');
-    // $username=strtolower($_SESSION['user_role']);
-    $user_name = $_SESSION['username'];
-
-
-
-    $sql = "SELECT emp_no FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-
-    if ($stmt) {
-        $stmt->bind_param("s", $user_name);
-        $stmt->execute();
-        $stmt->bind_result($emp_no);
-        $stmt->fetch();
-        $stmt->close();
-        if ($emp_no) {
-            echo "";
-            $_SESSION['emp_no']=$emp_no;
-
-        } else {
-            echo "No result found for the provided email.";
-        }
+    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
+        // Your login code successfully set emp_no and schoolid in the session.
     } else {
-        
-        echo "Error preparing the statement.";
-    }
-     
-
-    $sql2 = "SELECT school_id FROM employment_record WHERE emp_no = ?";
-    $stmt2 = $conn->prepare($sql2);
-    
-    if ($stmt2) {
-        $stmt2->bind_param("s", $emp_no);
-        $stmt2->execute();
-        $stmt2->bind_result($school_id);
-        $stmt2->fetch();
-        $stmt2->close();
-        if ($school_id) {
-            //  echo $school_id." ".$emp_no;
-             $_SESSION['schoolid']=$school_id;
-            // echo"<script>alert('.$school_id.')</script>";
-			echo "school id" . $school_id;
-echo $emp_no;
-        } else {
-            echo "No employment record found for the provided emp_no.";
-        }
-    } else {
-        echo "Error preparing the statement.";
+        // Handle the case where emp_no or schoolid is not set.
+        echo "Emp_no and/or schoolid is not set in the session.";
     }
 }
-    ?>
-<?php
 
+require_once 'conn.php';
 
+if (isset($_POST['save'])) {
+    $trackid = verify($_POST['trackid']);
+    $date_created = verify($_POST['date_created']);
+    $firstname = verify($_POST['firstname']);
+    $lastname = verify($_POST['lastname']);
+    $section = verify($_POST['section']);
+    $address = verify($_POST['address']);
 
+    // Ensure emp_no and schoolid are available in the session.
+    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
+        $emp_no = $_SESSION['emp_no'];
+        $school_id = $_SESSION['schoolid'];
+        
+        mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$trackid', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 
-
-	require_once'conn.php';
-	
-	if(ISSET($_POST['save'])){
-		
-		$trackid=$_POST['trackid'];
-		$date_created=$_POST['date_created'];
-		$firstname=$_POST['firstname'];
-		$lastname=$_POST['lastname'];
-		$section=$_POST['section'];
-		$address=$_POST['address'];
-		
-		
-		
-		//mysqli_query($conn, "INSERT INTO `membertracking` VALUES ('', '$trackid', '$firstname', '$lastname', '', '$address')") or die(mysqli_error());
-		mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$trackid', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
-		//mysqli_query($conn, "INSERT INTO `memberclient` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
-		
-		
-	
-		header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
-		
-	}
+        header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
+    } else {
+        echo "Emp_no and/or schoolid is not set in the session.";
+    }
+}
 ?>
-
-
-
-	
-	
-
-
-
-
