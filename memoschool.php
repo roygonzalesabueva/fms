@@ -84,7 +84,6 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 } else {
     echo "No school_id provided in the GET request.";
 }
-?>
 
 
 
@@ -95,7 +94,8 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-<?php
+
+
 
 if(isset($_POST['search']))
 {
