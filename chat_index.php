@@ -406,12 +406,11 @@ function myTimer() {
                     <li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
-                   
-                </ul>
-              
 
 
-                <?php
+
+
+                      <?php
 require_once('db_tis.php');
 
 // Check if school_id is provided in the GET request
@@ -465,8 +464,21 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                         <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+<li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li>
                       
+
+
+
+
+
+
+
+
+                   
+                </ul>
+              
+
+
 
 
 
