@@ -399,11 +399,10 @@ function myTimer() {
 
 
 
-                    <li><a href="#"><i class="fa fa-fw fa-user"></i> <span
+                    <li><a href="#"> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
                   
-                    <li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
 
@@ -467,7 +466,8 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 <li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li>
                       
 
-
+<li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
+                
 
 
 
