@@ -578,7 +578,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                        <option value=" <?php echo $imageUrl; ?>"> <?php echo $imageUrl; ?></option>
+                        <option img src="<?php echo $imageUrl; ?>"> <?php echo $imageUrl; ?></option>
                         <!-- <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option> -->
 
                      
