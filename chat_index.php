@@ -423,7 +423,7 @@ function myTimer() {
 
 
 
-                <form method="POST" action="chat_index_save.php">
+                <form method="POST" action="chat_index_save.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>">
 
 
 
