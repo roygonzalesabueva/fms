@@ -399,7 +399,8 @@ function myTimer() {
 
 
 
-                    <li><a href="#"><i class="fa fa-fw fa-user"></i> <span
+                    <li><a href="#"> <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+                      <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
                   
@@ -465,8 +466,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                         <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-                      
+                        
 
 
 
