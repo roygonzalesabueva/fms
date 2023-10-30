@@ -490,7 +490,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                <form method="POST" action="chat_index_save.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>">
+                <form method="POST" action="chat_index_save.php">
 
 
 
