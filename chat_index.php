@@ -516,7 +516,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="firstname" placeholder="" class="form-control" required="required"
                             readonly />
 
-                        <option img src="<?php echo $imageUrl; ?>"> <?php echo $imageUrl; ?></option>
+                        <option value=" <?php echo $imageUrl; ?>"> <?php echo $imageUrl; ?></option>
                         <!-- <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option> -->
 
                      
