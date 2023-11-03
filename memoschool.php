@@ -625,3 +625,7 @@ function upload(data_id) {
      
  </body>
 </html>
+
+
+<script src="assets/DataTables/DataTables-1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="assets/DataTables/DataTables-1.10.21/js/dataTables.bootstrap4.min.js"></script>
