@@ -4,6 +4,14 @@
 
 
 
+
+
+
+
+
+
+
+
 <?php
 $conn = mysqli_connect("localhost","root","@DavaosurDB2023","fms_db");
 $sql = "SELECT * FROM `chat` ORDER BY mem_id ASC";
@@ -399,160 +407,19 @@ function myTimer() {
 
 
 
-                    <li><a href="#"> <span
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
                   
+                    <li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
-                      <?php
-require_once('db_tis.php');
-require_once('conn.php');
-
-// Check if school_id is provided in the GET request
-if (isset($_GET['school_id'], $_GET['emp_no'])) {
-  // Your code to handle both school_id and emp_no
-  $selectedSchoolId = $_GET['school_id'];
-  $selectedEmpNo = $_GET['emp_no'];
- $_SESSION['selSchoolId']=$selectedSchoolId;
- $_SESSION['selEmNo']=$selectedEmpNo;
-
-
-    $sql2 = "SELECT c.firstname, c.lastname, c.date_created FROM chat AS c WHERE $selectedEmpNo = c.emp_no = ?";
-
-    if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("iii", $selectedEmpNo);
-        if ($stmt->execute()) {
-            $result1 = $stmt->get_result();
-
-            if ($result1->num_rows > 0) {
-                while ($row = $result1->fetch_assoc()) {
-
-                    $image = $row['image'];
-                    $imageUrl = "../heroes/admin/$image";
-                    $fname = $row['firstname'];
-                    $lname = $row['lastname'];
-                    $mname = $row['middlename'];
-
-                }
-            } else {
-                echo "No teachers found for the selected school.";
-            }
-
-            $stmt->close();
-        } else {
-            echo "Error in executing the SQL statement.";
-        }
-    } else {
-        echo "Error in preparing the SQL statement.";
-    }
-
-    // Close the database connection here if needed
-} else {
-    echo "No school_id provided in the GET request.";
-}
-
-
-
-   $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
-            FROM personal_info AS pi
-            INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
-            INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
-            WHERE e.school_id = ? AND pp.emp_no =?";
-
-    if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
-        if ($stmt->execute()) {
-            $result = $stmt->get_result();
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $image = $row['image'];
-                    $imageUrl = "../heroes/admin/$image";
-                    $fname = $row['firstname'];
-                    $lname = $row['lastname'];
-                    $mname = $row['middlename'];
-                    // Output or process $imageUrl as needed
-                            ?>
-                    <table class="table table-bordered">
-                    <thead class="alert-info">
-                         <tr>
-                         
-                             <th>Sender</th>
-                             <th>Message</th>
-                             <th>Date/Time</th>
-                             <!--<th>Transaction_ID</th>
-                     
-                         <th>Sender</th>
-                         <th>Message</th>
-                         <th>Receiver</th>
-                         <th>Remarks</th>
-                         <th>Date/Time</th>
-                         <th>Notification</th>
-                         <th>Action</th>
-                         <th>Update</th>-->
- 
-                         </tr>
-                     </thead>
-                     <tbody>
- 
-                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
-                         <tr>
-                            
-                         <!--	<td><?php echo $fetch['trackid']?></td>-->
- 
-                             <td><?php echo $row['firstname'];?></td>
-                             <td><?php echo $fetch['lastname']?></td>
-                            <td><?php echo $fetch['date_created']?></td>
- 
- 
-                         </tr>
-                         <?php endwhile;?>
-                     </tbody>
- 
-                 </table>
-                           <?
-                
-                
-            } else {
-                echo "No teachers found for the selected school.";
-            }
-
-            $stmt->close();
-        } else {
-            echo "Error in executing the SQL statement.";
-        }
-    } else {
-        echo "Error in preparing the SQL statement.";
-    }
-
-    // Close the database connection here if needed
-} else {
-    echo "No school_id provided in the GET request.";
-}
-?>
-
-
-
-
-
-<li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li>
-                 
-
-
-     
-
-<li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
-                
-
-
-
-
-
-
                    
                 </ul>
               
+
+
+
 
 
 
@@ -593,15 +460,8 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="firstname" placeholder="" class="form-control" required="required"
                             readonly />
 
+                        <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
 
-
-                            <!-- <li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li> -->
-                 
-
-
-          <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
-
-                     
                         </select>
 
                     </div>
@@ -631,10 +491,33 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                     </div>
                 </form>
 
-                <!-- <table class="table table-bordered">
-                   <thead class="alert-info">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <table class="table table-bordered">
+
+
+
+
+
+
+
+
+
+
+
+                    <thead class="alert-info">
                         <tr>
-                        
                             <th>Sender</th>
                             <th>Message</th>
                             <th>Date/Time</th>
@@ -649,18 +532,27 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 						<th>Action</th>
 						<th>Update</th>-->
 
+
+
+
+
                         </tr>
                     </thead>
                     <tbody>
 
+
+
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
-                           
-                        <!--	<td><?php echo $fetch['trackid']?></td>-->
+                            <!--	<td><?php echo $fetch['trackid']?></td>-->
 
-                            <td><?php echo $row['firstname'];?></td>
+                            <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
+
+
                             <!--	<td><?php echo $fetch['section']?></td>
+
+
 						
 						<td><?php echo $fetch['address']?></td>-->
                             <td><?php echo $fetch['date_created']?></td>
@@ -713,7 +605,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <?php endwhile;?>
                     </tbody>
 
-                </table> -->
+                </table>
 
 
 
