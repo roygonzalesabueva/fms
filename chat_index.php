@@ -407,6 +407,7 @@ function myTimer() {
                 
                       <?php
 require_once('db_tis.php');
+require_once('conn.php');
 
 // Check if school_id is provided in the GET request
 if (isset($_GET['school_id'], $_GET['emp_no'])) {
@@ -415,6 +416,42 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
   $selectedEmpNo = $_GET['emp_no'];
  $_SESSION['selSchoolId']=$selectedSchoolId;
  $_SESSION['selEmNo']=$selectedEmpNo;
+
+
+    $sql2 = "SELECT c.firstname, c.lastname, c.date_created FROM chat AS c WHERE $selectedEmpNo = c.emp_no = ?";
+
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("iii", $selectedEmpNo);
+        if ($stmt->execute()) {
+            $result1 = $stmt->get_result();
+
+            if ($result1->num_rows > 0) {
+                while ($row = $result1->fetch_assoc()) {
+
+                    $image = $row['image'];
+                    $imageUrl = "../heroes/admin/$image";
+                    $fname = $row['firstname'];
+                    $lname = $row['lastname'];
+                    $mname = $row['middlename'];
+
+                }
+            } else {
+                echo "No teachers found for the selected school.";
+            }
+
+            $stmt->close();
+        } else {
+            echo "Error in executing the SQL statement.";
+        }
+    } else {
+        echo "Error in preparing the SQL statement.";
+    }
+
+    // Close the database connection here if needed
+} else {
+    echo "No school_id provided in the GET request.";
+}
+
 
 
    $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
@@ -436,7 +473,47 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                     $lname = $row['lastname'];
                     $mname = $row['middlename'];
                     // Output or process $imageUrl as needed
-                }
+                            ?>
+                    <table class="table table-bordered">
+                    <thead class="alert-info">
+                         <tr>
+                         
+                             <th>Sender</th>
+                             <th>Message</th>
+                             <th>Date/Time</th>
+                             <!--<th>Transaction_ID</th>
+                     
+                         <th>Sender</th>
+                         <th>Message</th>
+                         <th>Receiver</th>
+                         <th>Remarks</th>
+                         <th>Date/Time</th>
+                         <th>Notification</th>
+                         <th>Action</th>
+                         <th>Update</th>-->
+ 
+                         </tr>
+                     </thead>
+                     <tbody>
+ 
+                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
+                         <tr>
+                            
+                         <!--	<td><?php echo $fetch['trackid']?></td>-->
+ 
+                             <td><?php echo $row['firstname'];?></td>
+                             <td><?php echo $fetch['lastname']?></td>
+                            <td><?php echo $fetch['date_created']?></td>
+ 
+ 
+                         </tr>
+                         <?php endwhile;?>
+                     </tbody>
+ 
+                 </table>
+                           <?
+                
+                
             } else {
                 echo "No teachers found for the selected school.";
             }
@@ -554,31 +631,8 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                     </div>
                 </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-                <table class="table table-bordered">
-
-
-
-
-
-
-
-
-
-
-
-                    <thead class="alert-info">
+                <!-- <table class="table table-bordered">
+                   <thead class="alert-info">
                         <tr>
                         
                             <th>Sender</th>
@@ -595,21 +649,13 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 						<th>Action</th>
 						<th>Update</th>-->
 
-
-
-
-
                         </tr>
                     </thead>
                     <tbody>
 
-
-
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                            
-                        
-                        
                         <!--	<td><?php echo $fetch['trackid']?></td>-->
 
                             <td><?php echo $row['firstname'];?></td>
@@ -667,7 +713,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <?php endwhile;?>
                     </tbody>
 
-                </table>
+                </table> -->
 
 
 
