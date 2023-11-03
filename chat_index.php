@@ -444,6 +444,7 @@ function myTimer() {
 
 if (isset($_POST['save'])) {
     $trackid = verify($_POST['trackid']);
+    $emp_no = verify($_POST['emp_no']);
     $image = verify($_POST['image']);
     $date_created = verify($_POST['date_created']);
     $firstname = verify($_POST['firstname']);
