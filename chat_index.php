@@ -454,6 +454,15 @@ function myTimer() {
 
 
 
+                        <label>Sender</label>
+                        <select type="text" name="iamge" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                        <option value="<?php echo $row['image'];?>"><?php echo $row['image'];?></option>
+
+                        </select>
+
+
 
 
                         <label>Sender</label>
