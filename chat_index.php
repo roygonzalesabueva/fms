@@ -516,10 +516,10 @@ echo "No school_id provided in the GET request.";
 
 
 
-                            <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+<li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li>
 
 
-                    <li><a href="#"><i class="fa fa-fw fa-user"></i> <span
+                    <li><a href="#"> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
                               
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
