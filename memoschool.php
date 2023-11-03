@@ -433,17 +433,14 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
       
 
 
+<div class="table-responsive">
+
+
+<table class="table table-bordered">
 
 
 
-
-           <div class="table-responsive">
-    <table class="table table-bordered table-hover table-lg table-condensed" id="dataTable" width="100%" cellspacing="0">
-        <thead class="bg-primary text-light">
-
-
-
-
+<thead class="alert-info">
         <th>REFERENCE NUMBER</th>
         <th>DESCRIPTION</th>
         <th>DATE UPLOADED</th>
@@ -558,7 +555,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 </table>
 
-
+</div>
 
 <!-- SUpply alert -->
 
