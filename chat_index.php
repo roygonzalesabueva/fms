@@ -469,7 +469,7 @@ function myTimer() {
                         <select type="text" name="firstname" placeholder="" class="form-control" required="required"
                             readonly />
 
-                        <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
+                        <option value="<?php echo $imageUrl; ?>"><?php echo $imageUrl; ?></option>
 
                         </select>
 
@@ -555,7 +555,7 @@ function myTimer() {
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                             <!--	<td><?php echo $fetch['trackid']?></td>-->
-                            <td><?php echo $fetch['image']?></td>
+                            <td><?php echo $imageUrl; ?></td>
 
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
