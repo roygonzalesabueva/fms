@@ -518,9 +518,9 @@ function myTimer() {
 
                     <thead class="alert-info">
                         <tr>
-                            <th>Sender</th>
+                            <!-- <th>Sender</th>
                             <th>Message</th>
-                            <th>Date/Time</th>
+                            <th>Date/Time</th> -->
                             <!--<th>Transaction_ID</th>
 					
 						<th>Sender</th>
