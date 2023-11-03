@@ -689,9 +689,13 @@ echo "No school_id provided in the GET request.";
                         <tr>
                         <!-- <th>emp_no</th>
                             <th>image</th> -->
+
+<!-- 
                             <th>Sender</th>
                             <th>Message</th>
-                            <th>Date/Time</th>
+                            <th>Date/Time</th> -->
+
+
                             <!--<th>Transaction_ID</th>
 					
 						<th>Sender</th>
