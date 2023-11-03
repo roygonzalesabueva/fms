@@ -495,7 +495,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $image = $fetch['image'];
+                    $image = $row['image'];
                     $imageUrl = "../heroes/admin/$image";
                     $fname = $row['firstname'];
                     $lname = $row['lastname'];
