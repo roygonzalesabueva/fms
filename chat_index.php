@@ -555,7 +555,9 @@ function myTimer() {
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                             <!--	<td><?php echo $fetch['trackid']?></td>-->
-                            <td><?php echo $imageUrl; ?></td>
+                            <td>
+<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;">
+</td>
 
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
