@@ -516,12 +516,12 @@ echo "No school_id provided in the GET request.";
 
 
 
-<li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li>
 
 
                     <li><a href="#"> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
-                              
+                                <li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li>
+
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
                   
                     <li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
