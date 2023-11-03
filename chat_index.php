@@ -438,7 +438,7 @@ function myTimer() {
 
 
 
-
+                <?php
 
                 require_once 'conn.php';
 
@@ -469,7 +469,7 @@ if (isset($_POST['save'])) {
 
 
 
-<?php
+
 require_once('db_tis.php');
 
 // Check if school_id is provided in the GET request
