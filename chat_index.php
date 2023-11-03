@@ -518,6 +518,7 @@ function myTimer() {
 
                     <thead class="alert-info">
                         <tr>
+                            <th>image</th>
                             <th>Sender</th>
                             <th>Message</th>
                             <th>Date/Time</th>
@@ -545,6 +546,7 @@ function myTimer() {
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                             <!--	<td><?php echo $fetch['trackid']?></td>-->
+                            <td><?php echo $fetch['image']?></td>
 
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
