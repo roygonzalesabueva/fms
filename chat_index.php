@@ -486,7 +486,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
             FROM personal_info AS pi
             INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
             INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
-            WHERE e.school_id = ? AND pp.emp_no =?";
+            WHERE e.school_id = ? AND pp.emp_no =?"; 
 
     if ($stmt = $conn->prepare($sql)) {
         $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
@@ -547,6 +547,10 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <label>Date/Time</label>
                         <select type="text" name="date_created" placeholder="" class="form-control" required="required"
                             readonly />
+
+                            <label>Date/Time</label>
+                        <select type="text" name="emp_no" placeholder="" class="form-control">
+
 
 
                         <option value="<?php echo " " . date("Y/m/d") . "";?>"><?php echo " " . date("Y/m/d") . "";?>
