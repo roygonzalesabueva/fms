@@ -656,7 +656,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <tr>
                             <!--	<td><?php echo $fetch['trackid']?></td>-->
                             <td>
-<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;">
+<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 </td>
 
                             <td><?php echo $fetch['firstname']?></td>
