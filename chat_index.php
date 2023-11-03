@@ -687,9 +687,9 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                             <!--	<td><?php echo $fetch['trackid']?></td>-->
-                            <td><?php echo $emp_no; ?></td>
+                            <td><?php echo $fetch['emp_no'] ?></td>
                             <td>
-<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+<img src="<?php echo $fetch['image'] ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 </td>
 
                             <td><?php echo $fetch['firstname']?></td>
