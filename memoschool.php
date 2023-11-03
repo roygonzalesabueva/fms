@@ -106,7 +106,7 @@ if(isset($_POST['search']))
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-
+  <link href="assets/DataTables/DataTables-1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 
 
