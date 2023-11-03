@@ -548,8 +548,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="date_created" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <label>Date/Time</label>
-                        <select type="text" name="emp_no" placeholder="" class="form-control">
+                            
 
 
 
@@ -559,13 +558,40 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
+
+
+                        <label>Emp_no</label>
+                        <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                            <option value="<?php echo $row['emp_no'];; ?>"><?php echo $row['emp_no'];; ?></option>
+
+                        </select>
+
+
+
+
+
+
+
+
                         <label>Sender</label>
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                        <option value="<?php echo $imageUrl; ?>"><?php echo $imageUrl; ?></option>
+                            <option value="<?php echo $imageUrl; ?>"><?php echo $imageUrl; ?></option>
 
                         </select>
+
+
+
+
+
+
+
+
+
+
 
 
 
