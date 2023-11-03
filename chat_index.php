@@ -518,8 +518,11 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
+                            <li>   <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"></li>
+                 
 
-          <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
+
+          <!-- <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option> -->
 
                      
                         </select>
