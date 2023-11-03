@@ -399,7 +399,7 @@ function myTimer() {
 
 
 
-                <div class="topnav-right">
+               
 
 
 
@@ -534,7 +534,7 @@ echo "No school_id provided in the GET request.";
                     <li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
-                      </div>
+                     
                 </ul>
               
 
