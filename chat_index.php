@@ -493,9 +493,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
             $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
-                // while ($row = $result->fetch_assoc()) 
-                
-while($row = mysqli_fetch_array($search_result)){
+                while ($row = $result->fetch_assoc()) {
                     $image = $row['image'];
                     $imageUrl = "../heroes/admin/$image";
                     $fname = $row['firstname'];
