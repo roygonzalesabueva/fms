@@ -18,7 +18,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
             FROM personal_info AS pi
             INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
             INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
-            INNER JOIN chat AS c ON pi.emp_no = e.emp_no
+            INNER JOIN chat AS c ON pp.emp_no = e.emp_no
             WHERE e.school_id = ? AND pp.emp_no =?";
 
     if ($stmt = $conn->prepare($sql)) {
