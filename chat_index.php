@@ -687,13 +687,13 @@ echo "No school_id provided in the GET request.";
 
                     <thead class="alert-info">
                         <tr>
-                        <!-- <th>emp_no</th>
-                            <th>image</th> -->
+                        <th>emp_no</th>
+                            <th>image</th> 
 
-<!-- 
+
                             <th>Sender</th>
                             <th>Message</th>
-                            <th>Date/Time</th> -->
+                            <th>Date/Time</th> 
 
 
                             <!--<th>Transaction_ID</th>
@@ -720,11 +720,11 @@ echo "No school_id provided in the GET request.";
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                             <!--	<td><?php echo $fetch['trackid']?></td>-->
-                            <!-- <td><?php echo $emp_no; ?></td>
-                            <td>
+                            <td><?php echo $fetch['emp_no']?></td>
+                            <!-- <td>
 <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-</td> -->
-
+</td>  -->
+                           <td><?php echo $fetch['image']?></td>
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
 
