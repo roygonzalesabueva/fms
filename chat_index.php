@@ -608,7 +608,7 @@ echo "No school_id provided in the GET request.";
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $_SESSION['image']; ?>"><?php echo $_SESSION['image']; ?></option>
+                            <option value="<?php echo $imageUrl; ?>"><?php echo $imageUrl; ?></option>
 
                         </select>
 
