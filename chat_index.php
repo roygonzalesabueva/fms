@@ -589,11 +589,11 @@ echo "No school_id provided in the GET request.";
 
 
 
-                        <!-- <label>Emp_no</label>
+                        <label>Emp_no</label>
                         <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $row['emp_no']; ?>"><?php echo $row['emp_no']; ?></option>
+                            <option value="<?php echo $_SESSION['emp_no']; ?>"><?php echo $_SESSION['emp_no']; ?></option>
 
                         </select>
 
@@ -608,9 +608,9 @@ echo "No school_id provided in the GET request.";
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $row['image']; ?>"><?php echo $row['image']; ?></option>
+                            <option value="<?php echo $_SESSION['image']; ?>"><?php echo $_SESSION['image']; ?></option>
 
-                        </select> -->
+                        </select>
 
 
 
@@ -688,7 +688,7 @@ echo "No school_id provided in the GET request.";
                     <thead class="alert-info">
                         <tr>
                         <th>emp_no</th>
-                            <!-- <th>image</th>  -->
+                            <th>image</th> 
 
 
                             <th>Sender</th>
