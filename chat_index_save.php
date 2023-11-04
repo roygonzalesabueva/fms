@@ -1,36 +1,8 @@
+
+
+
+
 <?php
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    header("Location: http://202.137.126.58/");
-    exit();
-}
-
-function verify($data){
-    $data = trim($data);
-    $data = htmlspecialchars($data);
-    $data = stripslashes($data);
-    return $data;
-}
-
-if (isset($_POST['login1'])) {
-    // Getting the form data
-    // ... your existing login code ...
-
-    // Ensure that $_SESSION['emp_no'] and $_SESSION['schoolid'] are properly set.
-
-    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
-        // Your login code successfully set emp_no and schoolid in the session.
-    } else {
-        // Handle the case where emp_no or schoolid is not set.
-        echo "Emp_no and/or schoolid is not set in the session.";
-    }
-}
-
-
-
-
-
 require_once('db_tis.php');
 
 // Check if school_id is provided in the GET request
@@ -82,6 +54,51 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: http://202.137.126.58/");
+    exit();
+}
+
+function verify($data){
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    $data = stripslashes($data);
+    return $data;
+}
+
+if (isset($_POST['login1'])) {
+    // Getting the form data
+    // ... your existing login code ...
+
+    // Ensure that $_SESSION['emp_no'] and $_SESSION['schoolid'] are properly set.
+
+    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
+        // Your login code successfully set emp_no and schoolid in the session.
+    } else {
+        // Handle the case where emp_no or schoolid is not set.
+        echo "Emp_no and/or schoolid is not set in the session.";
+    }
+}
 
 
 
