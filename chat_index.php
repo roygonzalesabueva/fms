@@ -795,7 +795,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                             <td><?php echo $row['emp_no']?></td>
                             
 
-                            <td><?php echo $row['image']?></td>
+                            <td><?php echo $imageUrl?></td>
                             <td><?php echo $row['firstname']?></td>
                             <td><?php echo $row['lastname']?></td>
 
