@@ -590,15 +590,6 @@ echo "No school_id provided in the GET request.";
 
 
 
-                        <label>Sender</label>
-                        <select type="text" name="image" placeholder="" class="form-control" required="required"
-                            readonly />
-
-                            <option value="<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-"><img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-</option>
-
-                        </select>
 
 
 
@@ -624,6 +615,15 @@ echo "No school_id provided in the GET request.";
 
 
 
+                        <label>Sender</label>
+                        <select type="text" name="image" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                            <option value="img src="<?php echo $imageUrl; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+"> <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+</option>
+
+                        </select>
 
 
 
@@ -733,12 +733,13 @@ echo "No school_id provided in the GET request.";
 
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
-                            <!--	<td><?php echo $fetch['trackid']?></td>-->
+                           
                             <td><?php echo $fetch['emp_no']?></td>
                             <!-- <td>
 <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 </td>  -->
-                           <td><?php echo $fetch['image']?></td>
+                           <td> <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+</td>
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
 
