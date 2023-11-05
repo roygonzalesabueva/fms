@@ -433,7 +433,7 @@ $lastname = verify($_POST['lastname']);
 
 
 // Ensure emp_no and schoolid are available in the session.
-if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['schoolid'])) {
+if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
 $emp_no = $_SESSION['emp_no'];
 $image = $_SESSION['image'];
 $school_id = $_SESSION['schoolid'];
