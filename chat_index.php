@@ -458,8 +458,6 @@ $selectedSchoolId = $_GET['school_id'];
 $selectedEmpNo = $_GET['emp_no'];
 $_SESSION['selSchoolId']=$selectedSchoolId;
 $_SESSION['selEmNo']=$selectedEmpNo;
-$_SESSION['emp_no']= $row['emp_no'];
-      $_SESSION['schoolid']= $row['schoolid'];
 
 $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
 FROM personal_info AS pi
