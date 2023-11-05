@@ -735,11 +735,9 @@ echo "No school_id provided in the GET request.";
                         <tr>
                            
                             <td><?php echo $fetch['emp_no']?></td>
-                            <!-- <td>
-<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-</td>  -->
-                           <td> <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-</td>
+                            
+
+                            <td><?php echo $fetch['image']?></td>
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
 
