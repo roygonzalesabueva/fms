@@ -589,6 +589,28 @@ echo "No school_id provided in the GET request.";
 
 
 
+
+                        <label>Sender</label>
+                        <select type="text" name="image" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                            <option value="<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+"><img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+</option>
+
+                        </select>
+
+
+
+
+
+
+
+
+
+
+
+
                         <label>Emp_no</label>
                         <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
                             readonly />
@@ -602,16 +624,6 @@ echo "No school_id provided in the GET request.";
 
 
 
-
-
-                        <label>Sender</label>
-                        <select type="text" name="image" placeholder="" class="form-control" required="required"
-                            readonly />
-
-                            <option value="<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-"><?php echo $imageUrl; ?></option>
-
-                        </select>
 
 
 
