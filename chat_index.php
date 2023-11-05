@@ -789,15 +789,15 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                        <?php while($fetch = mysqli_fetch_array($search_result)): ?>
+                        <?php while($row = mysqli_fetch_array($search_result)): ?>
                         <tr>
                            
-                            <td><?php echo $fetch['emp_no']?></td>
+                            <td><?php echo $row['emp_no']?></td>
                             
 
-                            <td><?php echo $fetch['image']?></td>
-                            <td><?php echo $fetch['firstname']?></td>
-                            <td><?php echo $fetch['lastname']?></td>
+                            <td><?php echo $row['image']?></td>
+                            <td><?php echo $row['firstname']?></td>
+                            <td><?php echo $row['lastname']?></td>
 
 
                             <!--	<td><?php echo $fetch['section']?></td>
@@ -805,7 +805,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 						
 						<td><?php echo $fetch['address']?></td>-->
-                            <td><?php echo $fetch['date_created']?></td>
+                            <td><?php echo $row['date_created']?></td>
 
                             <!--	<td>
 
