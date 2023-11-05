@@ -688,9 +688,9 @@ echo "No school_id provided in the GET request.";
 
                     <thead class="alert-info">
                         <tr>
-                        
+                        <th>emp_no</th>
                             <th>image</th> 
-                            <th>emp_no</th>
+                            
 
 
                             <th>Sender</th>
