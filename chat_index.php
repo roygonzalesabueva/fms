@@ -428,6 +428,8 @@ $firstname = verify($_POST['firstname']);
 $lastname = verify($_POST['lastname']);
 // $section = verify($_POST['section']);
 // $address = verify($_POST['address']);
+$emp_no = verify($_POST['emp_no']);
+    $schoolid = verify($_POST['schoolid']);
 
 
 
