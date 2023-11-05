@@ -426,77 +426,15 @@ $image = verify($_POST['image']);
 $date_created = verify($_POST['date_created']);
 $firstname = verify($_POST['firstname']);
 $lastname = verify($_POST['lastname']);
-// $section = verify($_POST['section']);
-// $address = verify($_POST['address']);
-
-
-
-
-
-
-
-require_once('db_tis.php');
-
-// Check if school_id is provided in the GET request
-if (isset($_GET['school_id'], $_GET['emp_no'])) {
-  // Your code to handle both school_id and emp_no
-  $selectedSchoolId = $_GET['school_id'];
-  $selectedEmpNo = $_GET['emp_no'];
- $_SESSION['selSchoolId']=$selectedSchoolId;
- $_SESSION['selEmNo']=$selectedEmpNo;
-
-
-   $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
-            FROM personal_info AS pi
-            INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
-            INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
-          
-            WHERE e.school_id = ? AND pp.emp_no =?";
-
-    if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
-        if ($stmt->execute()) {
-            $result = $stmt->get_result();
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $image = $row['image'];
-                    $imageUrl = "../heroes/admin/$image";
-                    $fname = $row['firstname'];
-                    $lname = $row['lastname'];
-                    $mname = $row['middlename'];
-                    // Output or process $imageUrl as needed
-                }
-            } else {
-                echo "No teachers found for the selected school.";
-            }
-
-            $stmt->close();
-        } else {
-            echo "Error in executing the SQL statement.";
-        }
-    } else {
-        echo "Error in preparing the SQL statement.";
-    }
-
-    // Close the database connection here if needed
-} else {
-    echo "No school_id provided in the GET request.";
-}
-
-
-
-
-
-
+$section = verify($_POST['section']);
+$address = verify($_POST['address']);
 
 
 
 
 // Ensure emp_no and schoolid are available in the session.
-if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'] )) {
+if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
 $emp_no = $_SESSION['emp_no'];
-
 $school_id = $_SESSION['schoolid'];
 
 mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$image','$emp_no', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
@@ -506,6 +444,58 @@ header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no
 echo "Emp_no and/or schoolid is not set in the session.";
 }
 }
+
+
+
+
+require_once('db_tis.php');
+
+// Check if school_id is provided in the GET request
+if (isset($_GET['school_id'], $_GET['emp_no'])) {
+// Your code to handle both school_id and emp_no
+$selectedSchoolId = $_GET['school_id'];
+$selectedEmpNo = $_GET['emp_no'];
+$_SESSION['selSchoolId']=$selectedSchoolId;
+$_SESSION['selEmNo']=$selectedEmpNo;
+
+
+$sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
+FROM personal_info AS pi
+INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
+INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
+WHERE e.school_id = ? AND pp.emp_no =?"; 
+
+if ($stmt = $conn->prepare($sql)) {
+$stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
+if ($stmt->execute()) {
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+while ($row = $result->fetch_assoc()) {
+    $image = $row['image'];
+    $imageUrl = "../heroes/admin/$image";
+    $fname = $row['firstname'];
+    $lname = $row['lastname'];
+    $mname = $row['middlename'];
+    // Output or process $imageUrl as needed
+}
+} else {
+echo "No teachers found for the selected school.";
+}
+
+$stmt->close();
+} else {
+echo "Error in executing the SQL statement.";
+}
+} else {
+echo "Error in preparing the SQL statement.";
+}
+
+// Close the database connection here if needed
+} else {
+echo "No school_id provided in the GET request.";
+}
+
 
 
 
@@ -671,7 +661,8 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $row['emp_no']; ?>"><?php echo $row['emp_no']; ?></option>
+                            <option value="<?php echo $_SESSION['image']; ?>"><?php echo $_SESSION['image']; ?></option>
+
 
                         </select>
 
@@ -684,7 +675,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo  $row['image']; ?>"><?php echo  $row['image']; ?></option>
+                            <option value="<?php echo $_SESSION['image']; ?>"><?php echo $_SESSION['image']; ?></option>
 
 
                             <!-- <option value="img src="<?php echo $row['image']; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
@@ -799,15 +790,15 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                        <?php while($row = mysqli_fetch_array($search_result)): ?>
+                        <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                            
-                            <td><?php echo $row['emp_no']?></td>
+                            <td><?php echo $fetch['emp_no']?></td>
                             
 
-                            <td><?php echo $imageUrl?></td>
-                            <td><?php echo $row['firstname']?></td>
-                            <td><?php echo $row['lastname']?></td>
+                            <td><?php echo $fetch['image']?></td>
+                            <td><?php echo $fetch['firstname']?></td>
+                            <td><?php echo $fetch['lastname']?></td>
 
 
                             <!--	<td><?php echo $fetch['section']?></td>
@@ -815,7 +806,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 						
 						<td><?php echo $fetch['address']?></td>-->
-                            <td><?php echo $row['date_created']?></td>
+                            <td><?php echo $fetch['date_created']?></td>
 
                             <!--	<td>
 
