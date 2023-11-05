@@ -124,8 +124,9 @@ if (isset($_POST['save'])) {
 
 
     // Ensure emp_no and schoolid are available in the session.
-    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
+    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
         $emp_no = $_SESSION['emp_no'];
+        $image = $_SESSION['image'];
         $school_id = $_SESSION['schoolid'];
         
         mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
