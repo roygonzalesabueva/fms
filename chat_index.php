@@ -437,7 +437,7 @@ if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
 $emp_no = $_SESSION['emp_no'];
 $school_id = $_SESSION['schoolid'];
 
-mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$trackid','$emp_no','$image', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
+mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 
 header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
 } else {
