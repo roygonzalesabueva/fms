@@ -117,8 +117,8 @@ if (isset($_POST['save'])) {
     $date_created = verify($_POST['date_created']);
     $firstname = verify($_POST['firstname']);
     $lastname = verify($_POST['lastname']);
-    $emp_no = verify($_POST['emp_no']);
-    $schoolid = verify($_POST['schoolid']);
+    // $section = verify($_POST['section']);
+    // $address = verify($_POST['address']);
 
 
 
