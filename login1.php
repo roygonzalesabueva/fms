@@ -108,8 +108,7 @@
       $row=mysqli_fetch_assoc($qry);
 
       $_SESSION['id']= $row['id'];
-      $_SESSION['emp_no']= $row['emp_no'];
-      $_SESSION['schoolid']= $row['schoolid'];
+      
       //$_SESSION['username']= $row['username'];
       $_SESSION['school_name']= $row['school_name'];
       $_SESSION['school_id']= $row['school_id'];
