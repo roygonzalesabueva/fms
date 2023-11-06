@@ -675,10 +675,9 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value=" <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;">
-"> <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;">
-</option>
+                            <option value=" img src="<?php echo $imageUrl; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;"><?php echo $imageUrl; ?></option>
                            
+                            
 
                             <!-- <option value="img src="<?php echo $row['image']; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 "> <img src="<?php echo $row['image']; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
