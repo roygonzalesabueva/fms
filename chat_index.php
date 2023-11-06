@@ -793,10 +793,12 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
                            
-                            <td><?php echo $fetch['emp_no']?></td>
+                            
                             
 
                             <td><?php echo $fetch['image']?></td>
+
+                            <td><?php echo $fetch['emp_no']?></td>
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
 
