@@ -795,7 +795,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <tr>
                            
                             
-                        <td><?php echo $fetch['emp_no']?></td>
+                        <td><?php echo $imageUrl?></td>
 
                             <td><?php echo $fetch['image']?></td>
 
