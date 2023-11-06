@@ -115,7 +115,7 @@ if (isset($_POST['save'])) {
     
     $emp_no = verify($_POST['emp_no']);
     $image = verify($_POST['image']);
-    
+   
     $firstname = verify($_POST['firstname']);
     $lastname = verify($_POST['lastname']);
 
@@ -145,7 +145,7 @@ if (isset($_POST['save'])) {
         
         $school_id = $_SESSION['schoolid'];
         
-        mysqli_query($conn, "INSERT INTO `chat` VALUES ('$emp_no','$image', '$firstname', '$lastname', '$date_created')") or die(mysqli_error());
+        mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$firstname', '$lastname', '$date_created')") or die(mysqli_error());
 
         header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
     } else {
