@@ -802,7 +802,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                             <td><?php echo $fetch['image']?></td> -->
 
-    >
+    
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
 
