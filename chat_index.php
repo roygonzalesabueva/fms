@@ -802,8 +802,11 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                             <td><?php echo $fetch['image']?></td>
 
-                           
-                            <td><?php echo $fetch['firstname']?></td>
+                                             
+                        <td>
+<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+</td>
+                            <!-- <td><?php echo $fetch['firstname']?></td> -->
                             <td><?php echo $fetch['lastname']?></td>
 
 
