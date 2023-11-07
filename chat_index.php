@@ -392,14 +392,16 @@ function myTimer() {
            <div class="card"> 
 
 
+           <img src="DAVAOSUR.png" width="140" height="70">
 
-           
-                <ul class="nav navbar-nav navbar-right">
-                <img src="DAVAOSUR.png" width="140" height="70">
-
-                <a href="#"><font color="Black"><B>
+           <a href="#"><font color="Black"><B>
              <p id="demo"></p>
          </B></font></a>
+           
+                <ul class="nav navbar-nav navbar-right">
+                
+
+             
 
                
 
