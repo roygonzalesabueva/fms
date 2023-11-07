@@ -730,6 +730,8 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                         <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 550px;" 
                             id="comment"> 
+
+                            <label>Messenger</label>
                     </div>
                 </form>
 
