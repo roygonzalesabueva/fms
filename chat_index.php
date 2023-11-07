@@ -504,13 +504,13 @@ echo "No school_id provided in the GET request.";
 
 
 
+   
+<label> <img src="DAVAOSUR.png" width="140" height="70"></label> 
 
 
 
 <ul class="nav navbar-nav navbar-right">
-                
-                <label> <img src="DAVAOSUR.png" width="140" height="70"></label> 
-
+             
 
 
 
