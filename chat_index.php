@@ -325,7 +325,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 115%;
+        width: 125%;
         padding: 0 300px;
     }
 
@@ -519,7 +519,7 @@ echo "No school_id provided in the GET request.";
            <label><p id="demo"></p></label>  
          <!-- </B></font></a> -->
 
-<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 643px;">
 
 
                     <a href="#"> <span
@@ -708,7 +708,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                     </div>
 
 
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-12  float-right mt-5">
                             <div class="col-lg-10"></div>
                             <div class="col-lg-2 justify-end ">
@@ -717,7 +717,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                                   </div>
 
 
-                        </div>
+                        </div> -->
 
                     </div>
 
