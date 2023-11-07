@@ -405,12 +405,10 @@ function myTimer() {
 
 
                     
-                    <a href="#"><font color="Black"><B>
+                   <font color="Black"><B>
                                 <p id="demo"></p>
                             </B></font>
-                            </a>
-
-                          
+                                                      
 
 
 
