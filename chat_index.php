@@ -519,7 +519,7 @@ echo "No school_id provided in the GET request.";
            <label><p id="demo"></p></label>  
          <!-- </B></font></a> -->
 
-<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 643px;">
+<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 
 
                     <a href="#"> <span
@@ -727,7 +727,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                                 <font color="Black"> Message</font></label>
                            
 
-                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 400px;" 
+                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 643px;" 
                             id="comment"> 
                     </div>
                 </form>
