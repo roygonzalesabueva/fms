@@ -728,7 +728,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                                 <font color="Black"> Message</font></label>
                             -->
 
-                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 600px;" 
+                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 620px;" 
                             id="comment"> 
                     </div>
                 </form>
