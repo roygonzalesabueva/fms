@@ -394,9 +394,7 @@ function myTimer() {
 
            <img src="DAVAOSUR.png" width="140" height="70">
 
-           <a href="#"><font color="Black"><B>
-             <p id="demo"></p>
-         </B></font></a>
+          
            
                 <ul class="nav navbar-nav navbar-right">
                 
@@ -517,7 +515,9 @@ echo "No school_id provided in the GET request.";
 
 
 <div class="topnav-right">
-
+<!-- <a href="#"><font color="Black"><B> -->
+             <p id="demo"></p>
+         <!-- </B></font></a> -->
 
 <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 
