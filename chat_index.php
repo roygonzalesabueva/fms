@@ -503,9 +503,9 @@ echo "No school_id provided in the GET request.";
 
 
 
-
+<!-- <img src="DAVAOSUR.png" width="140" height="70"> -->
    
-<label> <img src="DAVAOSUR.png" width="140" height="70"> <font size="6">Messenger</font></label> 
+<label>  <font size="6">Project DAVAOSUR Messenger</font></label> 
 
 
 
