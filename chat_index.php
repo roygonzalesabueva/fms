@@ -325,7 +325,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 120%;
+        width: 110%;
         padding: 0 300px;
     }
 
@@ -344,7 +344,7 @@ function myTimer() {
     /* Responsive columns */
     @media screen and (max-width: 600px) {
         .column {
-            width: 120%;
+            width: 110%;
             display: block;
             margin-bottom: 500px;
         }
@@ -728,7 +728,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                                 <font color="Black"> Message</font></label>
                             -->
 
-                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 500px;" 
+                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 600px;" 
                             id="comment"> 
                     </div>
                 </form>
