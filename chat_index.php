@@ -505,7 +505,7 @@ echo "No school_id provided in the GET request.";
 
 
    
-<label> <img src="DAVAOSUR.png" width="140" height="70"></label> 
+<label> <img src="DAVAOSUR.png" width="140" height="70"> Messenger</label> 
 
 
 
@@ -731,7 +731,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 550px;" 
                             id="comment"> 
 
-                            <label>Messenger</label>
+                            
                     </div>
                 </form>
 
