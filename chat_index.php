@@ -325,7 +325,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 115%;
+        width: 90%;
         padding: 0 300px;
     }
 
@@ -344,7 +344,7 @@ function myTimer() {
     /* Responsive columns */
     @media screen and (max-width: 600px) {
         .column {
-            width: 115%;
+            width: 90%;
             display: block;
             margin-bottom: 500px;
         }
