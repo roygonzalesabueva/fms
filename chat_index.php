@@ -401,7 +401,7 @@ function myTimer() {
 
                
 
-
+                <div class="topnav-right">
 
 
                     <li>
@@ -426,8 +426,6 @@ $image = verify($_POST['image']);
 $date_created = verify($_POST['date_created']);
 $firstname = verify($_POST['firstname']);
 $lastname = verify($_POST['lastname']);
-$section = verify($_POST['section']);
-$address = verify($_POST['address']);
 
 
 
@@ -437,7 +435,7 @@ if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
 $emp_no = $_SESSION['emp_no'];
 $school_id = $_SESSION['schoolid'];
 
-mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$image','$emp_no', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
+mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$image','$emp_no', '$date_created', '$firstname', '$lastname')") or die(mysqli_error());
 
 header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
 } else {
@@ -534,7 +532,7 @@ echo "No school_id provided in the GET request.";
                     <li> <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close</a></li>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
-                     
+</div>
                 </ul>
               
 
