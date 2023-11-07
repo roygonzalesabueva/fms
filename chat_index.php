@@ -401,13 +401,6 @@ function myTimer() {
 
                
 
-                <div class="topnav-right">
-
-
-                    
-                   <font color="Black"><B>
-                                <p id="demo"></p>
-                            </B></font>
                                                       
 
 
@@ -519,6 +512,13 @@ echo "No school_id provided in the GET request.";
 
 
 
+<div class="topnav-right">
+
+
+                    
+<font color="Black"><B>
+             <p id="demo"></p>
+         </B></font>
 
 
                     <a href="#"> <span
