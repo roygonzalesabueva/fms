@@ -708,7 +708,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                     </div>
 
 
-                    <!-- <div class="row">
+                    <div class="row">
                         <div class="col-lg-12  float-right mt-5">
                             <div class="col-lg-10"></div>
                             <div class="col-lg-2 justify-end ">
@@ -717,15 +717,15 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                                   </div>
 
 
-                        </div> -->
+                        </div>
 
                     </div>
 
                     <div class="form-group form-group form-group-lg ">
 
-                        <label>
+                        <!-- <label>
                                 <font color="Black"> Message</font></label>
-                           
+                            -->
 
                         <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 643px;" 
                             id="comment"> 
