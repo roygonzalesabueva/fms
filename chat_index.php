@@ -514,7 +514,9 @@ echo "No school_id provided in the GET request.";
 
 <div class="topnav-right">
 
-
+<a href="#"><font color="Black"><B>
+             <p id="demo"></p>
+         </B></font></a>
 <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 
 
@@ -527,9 +529,7 @@ echo "No school_id provided in the GET request.";
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
                     
-                      <a href="#"><font color="Black"><B>
-             <p id="demo"></p>
-         </B></font></a>
+                      
 </div>
                 </ul>
               
