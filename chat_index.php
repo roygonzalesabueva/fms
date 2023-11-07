@@ -392,13 +392,11 @@ function myTimer() {
            <div class="card"> 
 
 
-           <img src="DAVAOSUR.png" width="140" height="70">
-
+          
           
            
-                <ul class="nav navbar-nav navbar-right">
-                
-
+             
+ 
              
 
                
@@ -509,7 +507,9 @@ echo "No school_id provided in the GET request.";
 
 
 
-
+<ul class="nav navbar-nav navbar-right">
+                
+                <label> <img src="DAVAOSUR.png" width="140" height="70"></label> 
 
 
 
