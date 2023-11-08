@@ -560,7 +560,49 @@ echo "No school_id provided in the GET request.";
 
 
 
-                <?php
+
+
+
+
+
+                
+
+  <div class="form-group " style="display: none;">
+                        <label>Date/Time</label>
+                        <select type="text" name="date_created" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                            
+
+
+
+                        <option value="<?php echo " " . date("Y/m/d") . "";?>"><?php echo " " . date("Y/m/d") . "";?>
+                        </option>
+                        </select>
+
+
+
+
+
+                        <label>Emp_no</label>
+                        <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                            <option value="<?php echo $row['emp_no']; ?>"><?php echo $row['emp_no']; ?></option>
+
+
+                        </select>
+
+
+
+
+
+
+
+
+
+
+                        <?php
 require_once('db_tis.php');
 
 // Check if school_id is provided in the GET request
@@ -623,46 +665,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                
 
-  <div class="form-group " style="display: none;">
-                        <label>Date/Time</label>
-                        <select type="text" name="date_created" placeholder="" class="form-control" required="required"
-                            readonly />
-
-                            
-
-
-
-                        <option value="<?php echo " " . date("Y/m/d") . "";?>"><?php echo " " . date("Y/m/d") . "";?>
-                        </option>
-                        </select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <label>Emp_no</label>
-                        <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
-                            readonly />
-
-                            <option value="<?php echo $row['emp_no']; ?>"><?php echo $row['emp_no']; ?></option>
-
-
-                        </select>
 
 
 
@@ -673,19 +676,11 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $row['image']; ?>"><?php echo $row['image']; ?></option>
+                            <option value="<?php echo $fname." ".$mname." ".$lname; ?>"><?php echo $fname." ".$mname." ".$lname; ?></option>
 
-
+                           
 
                         </select>
-
-
-
-
-
-
-
-
 
 
 
