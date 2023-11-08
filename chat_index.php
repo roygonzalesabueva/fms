@@ -589,7 +589,7 @@ echo "No school_id provided in the GET request.";
                         <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $row['emp_no']; ?>"><?php echo $row['emp_no']; ?></option>
+                            <option value="<?php echo $row['lastname']; ?>"><?php echo $row['lastname']; ?></option>
 
 
                         </select>
@@ -785,7 +785,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
-                        <td><?php echo $fetch['pi']?></td>
+                        <td><?php echo $fetch['lastname']?></td>
                            
                         
                         <!-- <td><?php echo $fetch['image']?></td> -->
