@@ -94,7 +94,7 @@ if (isset($_POST['login1'])) {
 
     // Ensure that $_SESSION['emp_no'] and $_SESSION['schoolid'] are properly set.
 
-    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
+    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
         // Your login code successfully set emp_no and schoolid in the session.
     } else {
         // Handle the case where emp_no or schoolid is not set.
