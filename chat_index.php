@@ -556,7 +556,7 @@ echo "No school_id provided in the GET request.";
 
 
 
-                <form method="POST" action="chat_index_save.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>&image=<?php echo $image ?>">
+                <form method="POST" action="chat_index_save.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">
 
 
 
@@ -757,7 +757,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                     <thead class="alert-info">
                         <tr>
-                        <th>emp_no</th>
+                        <!-- <th>emp_no</th> -->
                             <!-- <th>image</th>  -->
                             
 
@@ -790,7 +790,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
-                        <td><?php echo $fetch['emp_no']?></td>
+                        <!-- <td><?php echo $fetch['emp_no']?></td> -->
                            
                         
                         <!-- <td><?php echo $fetch['image']?></td> -->
