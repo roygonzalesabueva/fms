@@ -186,17 +186,17 @@ function myTimer() {
 
     <style>
 .btn {
-  background-color: green;
+  background-color: Orange;
   border: none;
   color: white;
   padding: 12px 16px;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
 }
 
 /* Darker background on mouse-over */
 .btn:hover {
-  background-color: orange;
+  background-color: Red;
 }
 </style>
 
