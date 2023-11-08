@@ -457,7 +457,7 @@ INNER JOIN chat AS cc ON cc.emp_no = pp.emp_no
 WHERE e.school_id = ? AND pp.emp_no =?"; 
 
 if ($stmt = $conn->prepare($sql)) {
-$stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
+$stmt->bind_param("iii", $selectedSchoolId, $selectedEmpNo);
 if ($stmt->execute()) {
 $result = $stmt->get_result();
 
@@ -624,7 +624,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
             WHERE e.school_id = ? AND pp.emp_no =?";
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
+        $stmt->bind_param("iii", $selectedSchoolId, $selectedEmpNo);
         if ($stmt->execute()) {
             $result = $stmt->get_result();
 
