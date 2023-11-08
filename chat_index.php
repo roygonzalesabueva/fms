@@ -430,7 +430,7 @@ $image = $_SESSION['image'];
 
 mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$firstname', '$lastname' , '$date_created')") or die(mysqli_error());
 
-header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
+header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no . "&image=" . $image);
 } else {
 echo "Emp_no and/or schoolid is not set in the session.";
 }
@@ -459,7 +459,7 @@ INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
 WHERE e.school_id = ? AND pp.emp_no =?"; 
 
 if ($stmt = $conn->prepare($sql)) {
-$stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
+$stmt->bind_param("iii", $selectedSchoolId, $selectedEmpNo, $selectedimage);
 if ($stmt->execute()) {
 $result = $stmt->get_result();
 
@@ -627,7 +627,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'], $_GET['image'])) {
     WHERE e.school_id = ? AND pp.emp_no =?"; 
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
+        $stmt->bind_param("iii", $selectedSchoolId, $selectedEmpNo, $selectedimage);
         if ($stmt->execute()) {
             $result = $stmt->get_result();
 
