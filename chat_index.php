@@ -674,13 +674,11 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                             readonly />
 
                             <!-- <option value=" <?php echo $row['image']; ?> "> <?php echo $row['image']; ?></option> -->
-                           
-                            <option value="<?php echo $_SESSION['image'];?>"><?php echo $_SESSION['image'];?></option>
-                    
+                        
 
-                            <!-- <option value="img src="<?php echo $row['image']; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+                            <option value="img src="<?php echo $row['image']; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 "> <img src="<?php echo $row['image']; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
-</option> -->
+</option>
 
                         </select>
 
@@ -796,8 +794,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
-                        <td><?php echo $emp_no?></td> 
-
+                        <td><?php echo $fetch['emp_no']?></td>
                            
                         <td>
 <img src="<?php echo $imageUrl ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
