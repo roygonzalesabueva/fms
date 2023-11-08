@@ -743,7 +743,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                <table class="table table-bordered">
+                <table >
 
 
 
@@ -755,7 +755,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-                    <thead class="alert-info">
+                    <thead >
                         <tr>
                         <!-- <th>emp_no</th> -->
                             <!-- <th>image</th>  -->
