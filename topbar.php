@@ -46,7 +46,7 @@
 <nav class="navbar navbar-dark bg-dark fixed-top " style="padding:0;">
   <div class="container-fluid mt-1 mb-1">
   	
-  <img src="davsur2.png" width="220" height="60">
+  <img src="davsur2.png" width="200" height="50">
 			  <h6><font color="WHITE"><B>Memorandum in Electronic Media Online (M.E.M.O)</B></font></h6>
 
  
