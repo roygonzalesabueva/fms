@@ -678,7 +678,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                            
                       
-                            <option text=" <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;">"></option> 
+                            <option value="<?php echo $row['image']; ?>"><?php echo $row['image']; ?></option>
 
                         </select>
 
