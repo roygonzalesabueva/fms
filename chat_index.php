@@ -762,9 +762,9 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                     <thead class="alert-info">
                         <tr>
-                        <!-- <th>emp_no</th>
+                        <th>emp_no</th>
                             <th>image</th> 
-                             -->
+                            
 
 
                             <th>Sender</th>
@@ -795,24 +795,25 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
+                        <td><?php echo $fetch['emp_no']?></td> 
+
                            
-<!--                             
                         <td>
 <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 </td>
 
-                            <td><?php echo $fetch['image']?></td> -->
+                            <!-- <td><?php echo $fetch['image']?></td>  -->
 
     
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
 
 
-                            <!--	<td><?php echo $fetch['section']?></td>
+                        <!-- <td><?php echo $fetch['section']?></td>
 
 
 						
-						<td><?php echo $fetch['address']?></td>-->
+						<td><?php echo $fetch['address']?></td> -->
                             <td><?php echo $fetch['date_created']?></td>
 
                             <!--	<td>
