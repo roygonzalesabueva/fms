@@ -23,7 +23,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'], $_GET['image'])) {
     WHERE e.school_id = ? AND pp.emp_no =?"; 
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo, $selectedimage);
+        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
         if ($stmt->execute()) {
             $result = $stmt->get_result();
 
