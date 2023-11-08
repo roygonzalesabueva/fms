@@ -446,7 +446,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 // Your code to handle both school_id and emp_no
 $selectedSchoolId = $_GET['school_id'];
 $selectedEmpNo = $_GET['emp_no'];
-$selectedimage = $_GET['image'];
+// $selectedimage = $_GET['image'];
 $_SESSION['selSchoolId']=$selectedSchoolId;
 $_SESSION['selEmNo']=$selectedEmpNo;
 // $_SESSION['selimage']=$selectedimage;
@@ -614,7 +614,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
     // Your code to handle both school_id and emp_no
     $selectedSchoolId = $_GET['school_id'];
     $selectedEmpNo = $_GET['emp_no'];
-    $selectedimage = $_GET['image'];
+    // $selectedimage = $_GET['image'];
     $_SESSION['selSchoolId']=$selectedSchoolId;
     $_SESSION['selEmNo']=$selectedEmpNo;
     // $_SESSION['selimage']=$selectedimage;
