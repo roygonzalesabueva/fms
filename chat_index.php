@@ -586,7 +586,7 @@ echo "No school_id provided in the GET request.";
 
 
                         <label>Emp_no</label>
-                        <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
+                        <select type="text" name="fullname" placeholder="" class="form-control" required="required"
                             readonly />
 
                             <option value="<?php echo $row['fullname']; ?>"><?php echo $row['fullname']; ?></option>
