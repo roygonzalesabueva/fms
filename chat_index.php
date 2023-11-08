@@ -531,7 +531,7 @@ echo "No school_id provided in the GET request.";
         
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->   
                   
-                     <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font size="5" color="red"><B> X</B> </font>    </a>
+                     <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><i class='fas fa-power-off' style='font-size:48px;color:red'></i>    </a>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
                      
