@@ -520,21 +520,21 @@ echo "No school_id provided in the GET request.";
 
 <div class="topnav-right">
 <!-- <a href="#"><font color="Black"><B> -->
-           <label><p id="demo"></p></label>  
+           <label><p id="demo"></p></label>    | 
          <!-- </B></font></a> -->
 
-<img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 
 
                     <a href="#"> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a>
-                                
+                                <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+        
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->   |  
                   
-                     <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close              </a>
+                     <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font size="8" color="red"><B> X</B> </font>    </a>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
-                    
+                     
                       
 </div>
                 </ul>
