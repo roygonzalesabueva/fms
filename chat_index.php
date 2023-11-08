@@ -671,7 +671,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 
-
+<!-- 
                         <label>Sender</label>
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
@@ -680,7 +680,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                       
                             <option value="<?php echo $row['image']; ?>"><?php echo $row['image']; ?></option>
 
-                        </select>
+                        </select> -->
 
 
 
@@ -753,7 +753,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                     <thead class="alert-info">
                         <tr>
                         <th>emp_no</th>
-                            <th>image</th> 
+                            <!-- <th>image</th>  -->
                             
 
 
@@ -788,7 +788,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <td><?php echo $fetch['emp_no']?></td>
                            
                         
-                        <td><?php echo $fetch['image']?></td>
+                        <!-- <td><?php echo $fetch['image']?></td> -->
 
 
                            
