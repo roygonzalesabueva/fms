@@ -673,7 +673,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value=" <img src="<?php echo $row['image']; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">"><?php echo $imageUrl; ?></option>
+                            <option value=" <?php echo $row['image']; ?> "> <?php echo $row['image']; ?></option>
                            
                             
 
@@ -795,11 +795,11 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
-                        <td><?php echo $row['emp_no']; ?></td> 
+                        <td><?php echo $_SESSION['emp_no'];?></td> 
 
                            
                         <td>
-<img src="<?php echo $row['image']; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+<img src="<?php echo $imageUrl ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 </td>
 
                             <!-- <td><?php echo $fetch['image']?></td>  -->
