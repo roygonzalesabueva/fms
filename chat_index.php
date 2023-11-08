@@ -189,7 +189,7 @@ function myTimer() {
   background-color: Orange;
   border: none;
   color: white;
-  padding: 12px 16px;
+  padding: 10px 12px;
   font-size: 18px;
   cursor: pointer;
 }
