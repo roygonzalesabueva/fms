@@ -459,7 +459,7 @@ INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
 WHERE e.school_id = ? AND pp.emp_no =?"; 
 
 if ($stmt = $conn->prepare($sql)) {
-$stmt->bind_param("iii", $selectedSchoolId, $selectedEmpNo, $selectedimage);
+$stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo, $selectedimage);
 if ($stmt->execute()) {
 $result = $stmt->get_result();
 
@@ -627,7 +627,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'], $_GET['image'])) {
     WHERE e.school_id = ? AND pp.emp_no =?"; 
 
     if ($stmt = $conn->prepare($sql)) {
-        $stmt->bind_param("iii", $selectedSchoolId, $selectedEmpNo, $selectedimage);
+        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo, $selectedimage);
         if ($stmt->execute()) {
             $result = $stmt->get_result();
 
