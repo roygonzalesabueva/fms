@@ -190,13 +190,13 @@ function myTimer() {
   border: none;
   color: white;
   padding: 12px 16px;
-  font-size: 16px;
+  font-size: 24px;
   cursor: pointer;
 }
 
 /* Darker background on mouse-over */
 .btn:hover {
-  background-color: RoyalBlue;
+  background-color: orange;
 }
 </style>
 
