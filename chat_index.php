@@ -799,7 +799,8 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
                            
                         <td>
-<img src="<?php echo $imageUrl ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+<!-- <img src="<?php echo $imageUrl ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"> -->
+<option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
 </td>
 
                             <!-- <td><?php echo $fetch['image']?></td>  -->
