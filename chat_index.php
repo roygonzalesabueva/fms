@@ -659,7 +659,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $emp_no; ?>"><?php echo $emp_no; ?></option>
+                            <option value="<?php echo $row['emp_no']; ?>"><?php echo $row['emp_no']; ?></option>
 
 
                         </select>
