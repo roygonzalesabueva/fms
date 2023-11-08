@@ -47,7 +47,7 @@
   <div class="container-fluid mt-1 mb-1">
   	
   <img src="davsur2.png" width="220" height="60">
-			  <h5><font color="WHITE"><B>Memorandum in Electronic Media Online (M.E.M.O)</B></font></h5>
+			  <h4><font color="WHITE"><B>Memorandum in Electronic Media Online (M.E.M.O)</B></font></h4>
 
  
       
