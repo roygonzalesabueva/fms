@@ -700,8 +700,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                             readonly />
 
                         <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
-                        <!-- <option value=" <img src="<?php echo $imageUrl; ?> alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">"><?php echo $imageUrl; ?></option> -->
-                           
+                              
                         </select>
 
                     </div>
@@ -796,13 +795,11 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <tr>
                         <td><?php echo $fetch['emp_no']?></td>
                            
-                        <td>
-<img src="<?php echo $imageUrl ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+                        
+                        <td><?php echo $fetch['image']?></td>
 
-</td>
 
-                            <!-- <td><?php echo $imageUrl = "../heroes/admin/$image";?></td>   -->
-
+                           
     
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
