@@ -183,6 +183,31 @@ function myTimer() {
 
 
 
+
+    <style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
+
+
+
+
+
+
+
+
+
     <style>
     .dropbtn {
         background-color: #04AA6D;
