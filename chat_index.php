@@ -442,14 +442,14 @@ echo "Emp_no and/or schoolid is not set in the session.";
 require_once('db_tis.php');
 
 // Check if school_id is provided in the GET request
-if (isset($_GET['school_id'], $_GET['emp_no'], $_GET['image'])) {
+if (isset($_GET['school_id'], $_GET['emp_no'])) {
 // Your code to handle both school_id and emp_no
 $selectedSchoolId = $_GET['school_id'];
 $selectedEmpNo = $_GET['emp_no'];
 $selectedimage = $_GET['image'];
 $_SESSION['selSchoolId']=$selectedSchoolId;
 $_SESSION['selEmNo']=$selectedEmpNo;
-$_SESSION['selimage']=$selectedimage;
+// $_SESSION['selimage']=$selectedimage;
 
 
 $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
@@ -610,14 +610,14 @@ echo "No school_id provided in the GET request.";
 require_once('db_tis.php');
 
 // Check if school_id is provided in the GET request
-if (isset($_GET['school_id'], $_GET['emp_no'], $_GET['image'])) {
+if (isset($_GET['school_id'], $_GET['emp_no'])) {
     // Your code to handle both school_id and emp_no
     $selectedSchoolId = $_GET['school_id'];
     $selectedEmpNo = $_GET['emp_no'];
     $selectedimage = $_GET['image'];
     $_SESSION['selSchoolId']=$selectedSchoolId;
     $_SESSION['selEmNo']=$selectedEmpNo;
-    $_SESSION['selimage']=$selectedimage;
+    // $_SESSION['selimage']=$selectedimage;
     
     
     $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
