@@ -676,7 +676,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <select type="text" name="image" placeholder="" class="form-control" required="required"
                             readonly />
 
-                            <option value="<?php echo $_SESSION['emp_no'];?>"><?php echo $_SESSION['emp_no'];?></option>
+                            <option value="<?php echo $_SESSION['image'];?>"><?php echo $_SESSION['image'];?></option>
                       
                            
 
@@ -788,7 +788,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <td><?php echo $fetch['emp_no']?></td>
                            
                         
-                        <td><?php echo $imageUrl; ?></td>
+                        <td><?php echo $fetch['image']?></td>
 
 
                            
