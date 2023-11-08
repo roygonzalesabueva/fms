@@ -46,7 +46,7 @@ $schoolid = isset($_GET['school_id']) ? $_GET['school_id'] : null;
 $emp_no = isset($_GET['emp_no']) ? $_GET['emp_no'] : null;
 $image = isset($_GET['image']) ? $_GET['image'] : null;
 
-if ($schoolid !== null && $emp_no !== null) {
+if ($schoolid !== null && $emp_no !== null && $image !== null) {
     // Your code when the keys exist
     // ...
 } else {
