@@ -186,11 +186,11 @@ function myTimer() {
 
     <style>
 .btn {
-  background-color: DodgerBlue;
+  background-color: green;
   border: none;
   color: white;
   padding: 12px 16px;
-  font-size: 24px;
+  font-size: 14px;
   cursor: pointer;
 }
 
