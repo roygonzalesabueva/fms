@@ -186,7 +186,7 @@ function myTimer() {
 
     <style>
 .btn {
-  background-color: Orange;
+  background-color: gray;
   border: none;
   color: white;
   padding: 10px 12px;
