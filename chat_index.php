@@ -789,7 +789,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <td><?php echo $fetch['emp_no']?></td>
                            
                         
-                        <td><?php echo $fname." ".$mname." ".$lname; ?></td>
+                        <td><?php echo $fetch['image']?></td>
 
 
                            
