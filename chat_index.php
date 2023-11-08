@@ -430,7 +430,7 @@ $image = $_SESSION['image'];
 
 mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$firstname', '$lastname' , '$date_created')") or die(mysqli_error());
 
-header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no . "&image=" . $image);
+header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
 } else {
 echo "Emp_no and/or schoolid is not set in the session.";
 }
@@ -531,7 +531,7 @@ echo "No school_id provided in the GET request.";
                                 
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->   |  
                   
-                     <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>&image=<?php echo $image ?>">Close              </a>
+                     <a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">Close              </a>
                       <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
                 
                     
