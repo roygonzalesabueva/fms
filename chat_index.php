@@ -797,13 +797,13 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         <tr>
                         <td><?php echo $_SESSION['emp_no'];?></td> 
 
-<!--                            
+                           
                         <td>
 <img src="<?php echo $imageUrl ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
 
-</td> -->
+</td>
 
-                            <td><?php echo $imageUrl = "../heroes/admin/$image";?></td>  
+                            <!-- <td><?php echo $imageUrl = "../heroes/admin/$image";?></td>   -->
 
     
                             <td><?php echo $fetch['firstname']?></td>
