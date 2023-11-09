@@ -610,7 +610,7 @@ echo "No school_id provided in the GET request.";
                         </select>
 
 
-
+<br><br>
 
 
                         <label>Emp_no</label>
