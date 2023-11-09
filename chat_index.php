@@ -741,7 +741,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         </div>
 
                     </div>
-                    <br><br>
+                    <br>
                     <div class="form-group form-group form-group-lg ">
 
                         <!-- <label>
