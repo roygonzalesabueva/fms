@@ -95,9 +95,34 @@ if(isset($_POST['search']))
 
 ?>
 
+<?php
 
 
+if(isset($_POST['search']))
+{
+    $valueToSearch = $_POST['valueToSearch'];
+	$query = "SELECT * FROM `profile_pic` WHERE  CONCAT(`emp_no`)LIKE '%".$valueToSearch."%'";
+  //  $query = "SELECT * FROM `membertracking` WHERE  CONCAT(`mem_id`, `trackid`, `firstname`, `lastname`, `address`)LIKE '%".$valueToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+    else {
+        $query ="SELECT * FROM `profile_pic` ORDER BY id DESC";
+        $search_result = filterTable($query);
+        
+    }
+    
+    function filterTable($query)
+    {
+        $connect = mysqli_connect("localhost", "root", "@DavaosurDB2023", "tis");
+        $filter_Result = mysqli_query($connect, $query);
+        return $filter_Result;
+    }
+        
+    
+    
 
+?>
 
 
 
