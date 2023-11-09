@@ -610,7 +610,7 @@ echo "No school_id provided in the GET request.";
                         </select>
 
 
-<br><br>
+
 
 
                         <label>Emp_no</label>
@@ -741,7 +741,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
                         </div>
 
                     </div>
-
+                    <br><br>
                     <div class="form-group form-group form-group-lg ">
 
                         <!-- <label>
