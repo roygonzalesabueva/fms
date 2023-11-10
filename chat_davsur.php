@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
 $conn = mysqli_connect("localhost","root","@DavaosurDB2023","fms_db");
 $sql = "SELECT * FROM `chat` ORDER BY mem_id ASC";
@@ -27,6 +41,19 @@ header("refresh: $refreshDelay");
 
 
 
+<?php
+$schoolid = isset($_GET['school_id']) ? $_GET['school_id'] : null;
+$emp_no = isset($_GET['emp_no']) ? $_GET['emp_no'] : null;
+$image = isset($_GET['image']) ? $_GET['image'] : null;
+
+if ($schoolid !== null && $emp_no !== null ) {
+    // Your code when the keys exist
+    // ...
+} else {
+    // Handle the case when the keys are not present, for example, by displaying an error message or redirecting to another page.
+    echo "";
+}
+?>
 
 
 
@@ -67,6 +94,11 @@ if(isset($_POST['search']))
     
 
 ?>
+
+
+
+
+
 
 
 
@@ -145,6 +177,31 @@ function myTimer() {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <style>
+.btn {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: Red;
+}
+</style>
+
+
+
+
+
+
 
 
 
@@ -291,7 +348,7 @@ function myTimer() {
     /* Float four columns side by side */
     .column {
         float: left;
-        width: 100%;
+        width: 118%;
         padding: 0 300px;
     }
 
@@ -310,7 +367,7 @@ function myTimer() {
     /* Responsive columns */
     @media screen and (max-width: 600px) {
         .column {
-            width: 100%;
+            width: 118%;
             display: block;
             margin-bottom: 500px;
         }
@@ -355,29 +412,155 @@ function myTimer() {
 
 
 
-            <div class="card">
+           <div class="card"> 
+
+
+          
+          
+           
+             
+ 
+             
+
+               
+
+                                                      
 
 
 
-            <img src="DAVAOSUR.png" width="140" height="70">
 
-                <ul class="nav navbar-nav navbar-right">
+                            <?php
 
-                    <li>
-                    <a href="#"><font color="Black"><B>
-                                <p id="demo"></p>
-                            </B></font>
-                            </a></li>
-                    <li><a href="#"><i class="fa fa-fw fa-user"></i> <span
-                                class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a></li>
-                    <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->
+require_once 'conn.php';
 
-                    <li> <a href="home.php">Close</a></li>
+if (isset($_POST['save'])) {
+$trackid = verify($_POST['trackid']);
+$emp_no = verify($_POST['emp_no']);
+$image = verify($_POST['image']);
+
+$firstname = verify($_POST['firstname']);
+$lastname = verify($_POST['lastname']);
+$date_created = verify($_POST['date_created']);
+
+
+
+// Ensure emp_no and schoolid are available in the session.
+if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
+$emp_no = $_SESSION['emp_no'];
+$school_id = $_SESSION['schoolid'];
+$image = $_SESSION['image'];
+
+mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$firstname', '$lastname' , '$date_created')") or die(mysqli_error());
+
+header("location: chat_index.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
+} else {
+echo "Emp_no and/or schoolid is not set in the session.";
+}
+}
+
+
+
+
+require_once('db_tis.php');
+
+// Check if school_id is provided in the GET request
+if (isset($_GET['school_id'], $_GET['emp_no'])) {
+// Your code to handle both school_id and emp_no
+$selectedSchoolId = $_GET['school_id'];
+$selectedEmpNo = $_GET['emp_no'];
+// $selectedimage = $_GET['image'];
+$_SESSION['selSchoolId']=$selectedSchoolId;
+$_SESSION['selEmNo']=$selectedEmpNo;
+// $_SESSION['selimage']=$selectedimage;
+
+
+$sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
+FROM personal_info AS pi
+INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
+INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
+WHERE e.school_id = ? AND pp.emp_no =?"; 
+
+if ($stmt = $conn->prepare($sql)) {
+$stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
+if ($stmt->execute()) {
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+while ($row = $result->fetch_assoc()) {
+    $image = $row['image'];
+    $imageUrl = "../heroes/admin/$image";
+    $fname = $row['firstname'];
+    $lname = $row['lastname'];
+    $mname = $row['middlename'];
+    // Output or process $imageUrl as needed
+}
+} else {
+echo "No teachers found for the selected school.";
+}
+
+$stmt->close();
+} else {
+echo "Error in executing the SQL statement.";
+}
+} else {
+echo "Error in preparing the SQL statement.";
+}
+
+// Close the database connection here if needed
+} else {
+echo "No school_id provided in the GET request.";
+}
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <img src="DAVAOSUR.png" width="140" height="70"> -->
+   
+<button class="btn"><label> <i class="fa fa-bars"></i>Project DAVAO<font size="3" color="Orange">SUR</font> <font size="3" color="white">Messenger</font></label> </button>
+ 
+
+
+<ul class="nav navbar-nav navbar-right">
+             
+
+
+
+<div class="topnav-right">
+<!-- <a href="#"><font color="Black"><B> -->
+           <label><p id="demo"></p></label>    | 
+         <!-- </B></font></a> -->
+
+
+
+                    <a href="#"> <span
+                                class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a>
+                                <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+        
+                    <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->   
+                  
+                    <button class="btn"><a href="memoschool.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"> <font color="white"> <i class="fa fa-close"></i> </font> </a></button>
+                      <!-- <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="Close" />   -->
+                
+                     
+                      
+</div>
                 </ul>
-
-
-
-
+              
 
 
 
@@ -395,7 +578,14 @@ function myTimer() {
 
 
 
-                <form method="POST" action="chat_davsur_save.php">
+                <form method="POST" action="chat_index_save.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">
+
+
+
+
+
+
+
 
 
 
@@ -408,10 +598,117 @@ function myTimer() {
                         <select type="text" name="date_created" placeholder="" class="form-control" required="required"
                             readonly />
 
+                            
+
+
 
                         <option value="<?php echo " " . date("Y/m/d") . "";?>"><?php echo " " . date("Y/m/d") . "";?>
                         </option>
                         </select>
+
+
+
+
+
+                        <label>Emp_no</label>
+                        <select type="text" name="emp_no" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                            <option value="<?php echo $row['emp_no']; ?>"><?php echo $row['emp_no']; ?></option>
+
+
+                        </select>
+
+
+
+
+
+
+
+
+
+
+                        <?php
+require_once('db_tis.php');
+
+// Check if school_id is provided in the GET request
+if (isset($_GET['school_id'], $_GET['emp_no'])) {
+    // Your code to handle both school_id and emp_no
+    $selectedSchoolId = $_GET['school_id'];
+    $selectedEmpNo = $_GET['emp_no'];
+    // $selectedimage = $_GET['image'];
+    $_SESSION['selSchoolId']=$selectedSchoolId;
+    $_SESSION['selEmNo']=$selectedEmpNo;
+    // $_SESSION['selimage']=$selectedimage;
+    
+    
+    $sql = "SELECT pi.firstname, pi.lastname, pi.middlename, pi.emp_no, pp.image
+    FROM personal_info AS pi
+    INNER JOIN profile_pic AS pp ON pi.emp_no = pp.emp_no
+    INNER JOIN employment_record AS e ON pp.emp_no = e.emp_no
+    WHERE e.school_id = ? AND pp.emp_no =?"; 
+
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("ii", $selectedSchoolId, $selectedEmpNo);
+        if ($stmt->execute()) {
+            $result = $stmt->get_result();
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $image = $row['image'];
+                    $imageUrl = "../heroes/admin/$image";
+                    $fname = $row['firstname'];
+                    $lname = $row['lastname'];
+                    $mname = $row['middlename'];
+                    // Output or process $imageUrl as needed
+                }
+            } else {
+                echo "No teachers found for the selected school.";
+            }
+
+            $stmt->close();
+        } else {
+            echo "Error in executing the SQL statement.";
+        }
+    } else {
+        echo "Error in preparing the SQL statement.";
+    }
+
+    // Close the database connection here if needed
+} else {
+    echo "No school_id provided in the GET request.";
+}
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+                        <label>Sender</label>
+                        <select type="text" name="image" placeholder="" class="form-control" required="required"
+                            readonly />
+
+                           
+                      
+                            <option value="<?php echo $row['image']; ?>"><?php echo $row['image']; ?></option>
+
+                        </select> -->
+
 
 
 
@@ -422,12 +719,12 @@ function myTimer() {
                             readonly />
 
                         <option value="<?php echo $_SESSION['user'];?>"><?php echo $_SESSION['user'];?></option>
-
+                              
                         </select>
 
                     </div>
 
-
+                    <div class="form-group " style="display: none;">
                     <div class="row">
                         <div class="col-lg-12  float-right mt-5">
                             <div class="col-lg-10"></div>
@@ -438,17 +735,20 @@ function myTimer() {
 
 
                         </div>
+                        </div>
 
                     </div>
-
+                    <br>
                     <div class="form-group form-group form-group-lg ">
 
-                        <label>
+                        <!-- <label>
                                 <font color="Black"> Message</font></label>
-                           
+                            -->
 
-                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 643px;" 
+                        <input type="text" name="lastname" placeholder="Message.." class="form-control form-control-lg " style="width: 550px;" 
                             id="comment"> 
+
+                            
                     </div>
                 </form>
 
@@ -479,9 +779,16 @@ function myTimer() {
 
                     <thead class="alert-info">
                         <tr>
+                        <!-- <th>emp_no</th> -->
+                            <!-- <th>image</th>  -->
+                            
+
+
                             <th>Sender</th>
                             <th>Message</th>
-                            <th>Date/Time</th>
+                            <th>Date/Time</th> 
+
+
                             <!--<th>Transaction_ID</th>
 					
 						<th>Sender</th>
@@ -505,17 +812,23 @@ function myTimer() {
 
                         <?php while($fetch = mysqli_fetch_array($search_result)): ?>
                         <tr>
-                            <!--	<td><?php echo $fetch['trackid']?></td>-->
+                        <!-- <td><?php echo $fetch['emp_no']?></td> -->
+                           
+                        
+                        <!-- <td><?php echo $fetch['image']?></td> -->
 
+
+                           
+    
                             <td><?php echo $fetch['firstname']?></td>
                             <td><?php echo $fetch['lastname']?></td>
 
 
-                            <!--	<td><?php echo $fetch['section']?></td>
+                        <!-- <td><?php echo $fetch['section']?></td>
 
 
 						
-						<td><?php echo $fetch['address']?></td>-->
+						<td><?php echo $fetch['address']?></td> -->
                             <td><?php echo $fetch['date_created']?></td>
 
                             <!--	<td>
@@ -577,8 +890,8 @@ function myTimer() {
 
             </div>
 
-        </div>
-
+       
+             </div> 
 
         </center>
 
