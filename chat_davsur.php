@@ -543,14 +543,6 @@ echo "Error in preparing the SQL statement.";
 <div class="topnav-right">
 
 
-<?php
-            $schoolid = $_GET['school_id'];
-            $emp_no = $_GET['emp_no'];
-
-            //echo "School ID" .$schoolid;
-            //echo "Employee Number" .$emp_no;
-        ?>
-
 
 <!-- <a href="#"><font color="Black"><B> -->
            <label><p id="demo"></p></label>    | 
