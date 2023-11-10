@@ -119,7 +119,7 @@
       $_SESSION['department_id']= $row['department_id'];
 
       if ($_SESSION['department_id'] == 259) {
-        header("location: home.php");
+        header("location: home.php?school_id");
       }
 
       elseif ($_SESSION['department_id']) {
