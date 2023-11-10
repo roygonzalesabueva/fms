@@ -56,7 +56,7 @@
 
   			
         <font color="White" size="3"><B><a <p id="demo"></p></a> | </B></font> 
-        <a href="chat_davsur.php"><font color="White" size="3"><B>Chat Room</a> | </B></font>
+        <a href="chat_davsur.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font color="White" size="3"><B>Chat Room</a> | </B></font>
         <!-- <a href="chat_davsur.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font color="White" size="3"><B>Chat Room</a> | </B></font> -->
   	
 
