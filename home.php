@@ -338,7 +338,7 @@ body {
       <div class="row">
       <!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
           
-<form action="home.php" method="post" enctype="multipart/form-data">
+<form action="home.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>" method="post" enctype="multipart/form-data">
 <!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
  
                 
