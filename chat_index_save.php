@@ -129,16 +129,6 @@ if (isset($_POST['save'])) {
 
 
 
-
-
-
-
-
-
-
-
-
-
     // Ensure emp_no and schoolid are available in the session.
     if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
         $emp_no = $_SESSION['emp_no'];
