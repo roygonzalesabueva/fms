@@ -506,10 +506,10 @@ echo "Error in executing the SQL statement.";
 echo "Error in preparing the SQL statement.";
 }
 
-// Close the database connection here if needed
-} else {
-echo "No school_id provided in the GET request.";
-}
+// // Close the database connection here if needed
+// } else {
+// echo "No school_id provided in the GET request.";
+// }
 
 
 
