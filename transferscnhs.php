@@ -68,7 +68,7 @@
 		//mysqli_query($conn, "DELETE FROM `files` WHERE `id`='$id'") or die(mysqli_error());
 		
 		echo"<script>alert('Memorandum successfully uploaded to schools')</script>";
-		echo"<script>window.location='index.php?page=files2'</script>";
+		echo"<script>window.Location: home.php?school_id=" . $schoolid . "&emp_no=" . $emp_no'</script>";
 	}
 
 
