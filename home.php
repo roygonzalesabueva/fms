@@ -609,7 +609,7 @@ function upload(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferscnhs.php?id=" + data_id);        
+            window.location = ("transferscnhs.php?id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>" + data_id);        
         }
     })
 }
