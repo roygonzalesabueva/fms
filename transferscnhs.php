@@ -23,7 +23,7 @@ $emp_no = $_SESSION['emp_no'];
 $school_id = $_SESSION['schoolid'];
 $image = $_SESSION['image'];
 
-mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$firstname', '$lastname' , '$date_created')") or die(mysqli_error());
+mysqli_query($conn, "INSERT INTO `filesscnhs` VALUES ('','$emp_no','$image', '$firstname', '$lastname' , '$date_created')") or die(mysqli_error());
 
 header("location: chat_davsur.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
 } else {
