@@ -56,13 +56,13 @@
        
        
 
-        <!-- <?php
-            // $schoolid = $_GET['school_id'];
-            // $emp_no = $_GET['emp_no'];
+        <?php
+             $schoolid = $_GET['school_id'];
+             $emp_no = $_GET['emp_no'];
 
             //echo "School ID" .$schoolid;
             //echo "Employee Number" .$emp_no;
-        ?> -->
+        ?> 
 
 
 
