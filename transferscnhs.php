@@ -60,10 +60,8 @@
 
 
 
-		
 		echo"<script>alert('Memorandum successfully uploaded to schools')</script>";
-	
-		header("Location: home.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>");
+		echo"<script>window.location='index.php?page=files2'</script>";
 		
 	}
 
