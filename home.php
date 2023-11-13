@@ -43,6 +43,28 @@ include_once("session.php")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
 
 
@@ -333,6 +355,9 @@ body {
 
 
 
+
+
+
  
 
 
@@ -343,7 +368,8 @@ body {
 <!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
            
 <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data">
-   
+<!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
+
                 
                 <input type="file" name="myfile" >  
                 
@@ -428,8 +454,6 @@ body {
 <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmupload" data-toggle="modal">Upload to Schools</button> -->
 
 <a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a>
-
-
 
 
 
@@ -558,7 +582,6 @@ function upload(data_id) {
     })
 }
 </script>
-
 
 
 
