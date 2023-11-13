@@ -49,7 +49,9 @@
 		//mysqli_query($conn, "DELETE FROM `files` WHERE `id`='$id'") or die(mysqli_error());
 		
 		echo"<script>alert('Memorandum successfully uploaded to schools')</script>";
-		header("Location: home.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
+	
+		header("Location: http://202.137.126.59/fms/home.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
+		
 	}
 
 
