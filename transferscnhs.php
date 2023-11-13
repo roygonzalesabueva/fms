@@ -1,15 +1,5 @@
-<?php
-	require_once'db_connect.php';
-	
-	if(ISSET($_REQUEST['id'])){
-		$id=$_REQUEST['id'];
-		
-		$query=mysqli_query($conn, "SELECT * FROM `files` WHERE `id`='$id'") or die(mysqli_error());
-		$row=mysqli_fetch_array($query);
-		
-		$id=$row['id'];
-		$name=$row['name'];
-		$date_updated=$row['date_updated'];
+
+
 
 		
  <?php
@@ -61,12 +51,36 @@
 	 echo "No school_id provided in the GET request.";
  }
  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+	require_once'db_connect.php';
+	
+	if(ISSET($_REQUEST['id'])){
+		$id=$_REQUEST['id'];
+		
+		$query=mysqli_query($conn, "SELECT * FROM `files` WHERE `id`='$id'") or die(mysqli_error());
+		$row=mysqli_fetch_array($query);
+		
+		$id=$row['id'];
+		$name=$row['name'];
+		$date_updated=$row['date_updated'];
+
+
  
  
- 
- 
- <center><img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;"></center>
- <center><label><?php echo $fname." ".$mname." ".$lname; ?> </label></center> 
  
 	 mysqli_query($conn, "INSERT INTO `filesscnhs` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		
