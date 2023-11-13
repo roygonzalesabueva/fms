@@ -7,7 +7,13 @@
 
 
 
+<?php
+            $schoolid = $_GET['school_id'];
+            $emp_no = $_GET['emp_no'];
 
+            //echo "School ID" .$schoolid;
+            //echo "Employee Number" .$emp_no;
+        ?>
 
 
 
@@ -43,7 +49,7 @@
 		//mysqli_query($conn, "DELETE FROM `files` WHERE `id`='$id'") or die(mysqli_error());
 		
 		echo"<script>alert('Memorandum successfully uploaded to schools')</script>";
-		header("Location: memoschool.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
+		header("Location: home.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
 	}
 
 
