@@ -50,7 +50,7 @@
 		
 		echo"<script>alert('Memorandum successfully uploaded to schools')</script>";
 	
-		header("Location: http://202.137.126.59/fms/home.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
+		header("Location: http://202.137.126.59/fms/home.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>");
 		
 	}
 
