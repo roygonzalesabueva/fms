@@ -486,7 +486,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 <a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a>
 
 
-
+<button class="btn"><a href="home.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"> <font color="white"> <i class="fa fa-close"></i> </font> </a></button>
 
 
 </div>
