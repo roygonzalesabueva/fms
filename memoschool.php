@@ -376,7 +376,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 
 
 <center><img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 100px;"></center>
-<center><label>Welcome,<?php echo $fname." ".$mname." ".$lname; ?> </label></center> 
+<center><label>WELCOME, <?php echo $fname." ".$mname." ".$lname; ?> </label></center> 
 
 
 
