@@ -606,7 +606,7 @@ body {
                 
 <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="SCHOOL DASHBOARD" /> 
      
-<a href="home.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>" class="btn btn-primary btn-block btn-lg"> Administrator</a>   
+<a href="home.php" class="btn btn-primary btn-block btn-lg"> ADMINISTRATOR</a>   
             
                 
                <!-- <B> <label>PASSWORD</label></B>
