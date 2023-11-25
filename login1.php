@@ -297,7 +297,7 @@
     //getting the form data
     //  $username = verify($_POST['username']);
     //   $password = verify($_POST['password']);
-
+    $schoolid = $_SESSION['schoolid'];
     $username = $_SESSION['username'];
 
     require_once('conn.php');
