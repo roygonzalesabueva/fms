@@ -327,13 +327,13 @@ if(isset($_POST['login2'])){
 
     $username = $_SESSION['username'];
 
-    
+    require_once('conn.php');
 
     //sql statement
     $sql = "SELECT * FROM user_tbl2 WHERE username='$username'";
    
     //Db Connection
-    require_once('conn.php');
+   
 
     //qry
     $qry = mysqli_query ($conn, $sql) or die ("Login problem");
