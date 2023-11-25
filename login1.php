@@ -293,34 +293,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-    
-  }
-
-
-
-  
-
-?>  
-
-
-
-
-
-
-<?php
-
-
-if(isset($_POST['login2'])){
+  if(isset($_POST['login2'])){
     //getting the form data
     //  $username = verify($_POST['username']);
     //   $password = verify($_POST['password']);
@@ -378,7 +351,40 @@ if(isset($_POST['login2'])){
   }
 
 
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  }
+
+
+
+  
+
+?>  
+
+
+
+
 
 
 
