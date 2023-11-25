@@ -126,107 +126,55 @@
         header("Location: memoschool.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
         }
 
-      // elseif ($_SESSION['department_id'] == 194) {
-      //   header("location: filesscces.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 258) {
-      //   header("location: filessnhs.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 248) {
-      //   header("location: filespnhs.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 243) {
-      //   header("location: filesmnhs.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 249) {
-      //   header("location: filesfnhs.php");
-      // }
-      // elseif ($_SESSION['department_id'] == 1) {
-      //   header("location: 128810.php");
-      // }
-
-      //  elseif ($_SESSION['department_id'] == 259) {
-      //  header("location: home.php");
-      //  }
-
-      // elseif ($_SESSION['department_id'] == 2) {
-      //   header("location: 128811.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 3) {
-      //   header("location: 128812.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 4) {
-      //   header("location: 128813.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 5) {
-      //   header("location: 128814.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 6) {
-      //   header("location: 128815.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 7) {
-      //   header("location: 128816.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 8) {
-      //   header("location: 128817.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 9) {
-      //   header("location: 128818.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 10) {
-      //   header("location: 128819.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 11) {
-      //   header("location: 128820.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 12) {
-      //   header("location: 128821.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 13) {
-      //   header("location: 128822.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 14) {
-      //   header("location: 128823.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 15) {
-      //   header("location: 128824.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 16) {
-      //   header("location: 128825.php");
-      // }
-
-      // elseif ($_SESSION['department_id'] == 17) {
-      //   header("location: 128826.php");
-      // }
-
-
-      // elseif ($_SESSION['department_id'] == 229) {
-      //   header("location: 304275.php");
-      // }
-
-
-      //header("location: dashboard.php");
-      // header("location: index.php");
+     
       
     }
+
+
+
+
+    require_once('conn.php');
+
+    //sql statement
+    $sql = "SELECT * FROM user_tbl2 WHERE username='$username'";
+   
+    //Db Connection
+   
+
+    //qry
+    $qry = mysqli_query ($conn, $sql) or die ("Login problem");
+    $count = mysqli_num_rows($qry);
+    if($count==1)
+    {
+      $row=mysqli_fetch_assoc($qry);
+
+      $_SESSION['id']= $row['id'];
+      $_SESSION['username']= $row['username'];
+      $_SESSION['email']= $row['email'];
+      $_SESSION['password']= $row['password'];
+      $_SESSION['status']= $row['status'];
+      $_SESSION['role']= $row['role'];
+      $_SESSION['department_id']= $row['department_id'];
+
+      if ($_SESSION['department_id'] == 1) {
+        header("location: home.php");
+      }
+      elseif ($_SESSION['department_id'] == 2) {
+        header("location: filesscces.php");
+      }
+
+
+
+      
+    }
+
+
+
+
+
+
+
+
 
 
 
