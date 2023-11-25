@@ -293,7 +293,7 @@
 
 
 
-  if(isset($_POST['login2'])){
+  if(isset($_POST['login1'])){
     //getting the form data
     //  $username = verify($_POST['username']);
     //   $password = verify($_POST['password']);
@@ -686,7 +686,7 @@ body {
 
                 
 <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="SCHOOL DASHBOARD" /> 
-<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login2"  value="ADMIN" /> 
+<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="ADMIN" /> 
  
 <!-- <a href="home.php" class="btn btn-primary btn-block btn-lg"> ADMINISTRATOR</a>   
              -->
