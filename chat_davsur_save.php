@@ -3,12 +3,12 @@
 	
 	if(ISSET($_POST['save'])){
 		
-		$trackid=$_POST['trackid'];
+		// $trackid=$_POST['trackid'];
 		$date_created=$_POST['date_created'];
 		$firstname=$_POST['firstname'];
 		$lastname=$_POST['lastname'];
-		$section=$_POST['section'];
-		$address=$_POST['address'];
+		// $section=$_POST['section'];
+		// $address=$_POST['address'];
 		
 		
 		
