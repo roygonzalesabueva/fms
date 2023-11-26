@@ -94,12 +94,12 @@ if (isset($_POST['login1'])) {
 
     // Ensure that $_SESSION['emp_no'] and $_SESSION['schoolid'] are properly set.
 
-    // if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
-    //     // Your login code successfully set emp_no and schoolid in the session.
-    // } else {
-    //     // Handle the case where emp_no or schoolid is not set.
-    //     echo "Emp_no and/or schoolid is not set in the session.";
-    // }
+    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
+        // Your login code successfully set emp_no and schoolid in the session.
+    } else {
+        // Handle the case where emp_no or schoolid is not set.
+        echo "Emp_no and/or schoolid is not set in the session.";
+    }
 }
 
 
@@ -114,14 +114,14 @@ require_once 'conn.php';
 
 if (isset($_POST['save'])) {
     
-    // $emp_no = verify($_POST['emp_no']);
-    // $image = verify($_POST['image']);
+    $emp_no = verify($_POST['emp_no']);
+    $image = verify($_POST['image']);
     $date_created = verify($_POST['date_created']);
     $firstname = verify($_POST['firstname']);
     $lastname = verify($_POST['lastname']);
     
-    // $section = verify($_POST['section']);
-    // $address = verify($_POST['address']);
+    $section = verify($_POST['section']);
+    $address = verify($_POST['address']);
 
 
 
@@ -130,19 +130,19 @@ if (isset($_POST['save'])) {
 
 
     // Ensure emp_no and schoolid are available in the session.
-    // if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
-    //     $emp_no = $_SESSION['emp_no'];
+    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
+        $emp_no = $_SESSION['emp_no'];
         
-    //     $school_id = $_SESSION['schoolid'];
-    //     $image = $_SESSION['image'];
+        $school_id = $_SESSION['schoolid'];
+        $image = $_SESSION['image'];
         
-        mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$date_created', '$firstname', '$lastname')") or die(mysqli_error());
+        mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 
-        header("location: chat_davsur.php");
+        header("location: chat_davsur.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
     } else {
         echo "Emp_no and/or schoolid is not set in the session.";
     }
-
+}
 
 
 
