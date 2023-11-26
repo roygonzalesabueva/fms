@@ -136,7 +136,7 @@ if (isset($_POST['save'])) {
     //     $school_id = $_SESSION['schoolid'];
     //     $image = $_SESSION['image'];
         
-        mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
+        mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$date_created', '$firstname', '$lastname')") or die(mysqli_error());
 
         header("location: chat_davsur.php");
     } else {
