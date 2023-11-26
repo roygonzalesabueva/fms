@@ -57,13 +57,13 @@ require_once 'conn.php';
 if (isset($_POST['save'])) {
     
     $emp_no = verify($_POST['emp_no']);
-    $image = verify($_POST['image']);
+    // $image = verify($_POST['image']);
     $date_created = verify($_POST['date_created']);
     $firstname = verify($_POST['firstname']);
     $lastname = verify($_POST['lastname']);
     
-    $section = verify($_POST['section']);
-    $address = verify($_POST['address']);
+    // $section = verify($_POST['section']);
+    // $address = verify($_POST['address']);
 
 
 
