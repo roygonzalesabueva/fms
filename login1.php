@@ -362,7 +362,7 @@
         header("location: indexasds.php");
       }
       elseif ($_SESSION['department_id'] == 2) {
-        header("location: indexsds.php");
+        header("location: home.php");
       }
 
       elseif ($_SESSION['department_id'] == 3) {
