@@ -309,7 +309,7 @@
     //$sql = "SELECT * FROM users WHERE username='$username' ";
  
     //Db Connection
-    require_once('db.php');
+    require_once('conn.php');
 
     //qry
    // $qry = mysqli_query ($conn, $sql) or die ("Login problem");
