@@ -114,7 +114,7 @@ require_once 'conn.php';
 
 if (isset($_POST['save'])) {
     
-    $emp_no = verify($_POST['emp_no']);
+    // $emp_no = verify($_POST['emp_no']);
     // $image = verify($_POST['image']);
     $date_created = verify($_POST['date_created']);
     $firstname = verify($_POST['firstname']);
@@ -136,9 +136,9 @@ if (isset($_POST['save'])) {
     //     $school_id = $_SESSION['schoolid'];
     //     $image = $_SESSION['image'];
         
-        mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
+        mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$date_created', '$firstname', '$lastname')") or die(mysqli_error());
 
-        header("location: chat_davsur.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
+        header("location: chat_davsur.php");
     } 
 	// else {
     //     // echo "Emp_no and/or schoolid is not set in the session.";
