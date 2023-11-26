@@ -115,7 +115,7 @@ require_once 'conn.php';
 if (isset($_POST['save'])) {
     
     $emp_no = verify($_POST['emp_no']);
-    $image = verify($_POST['image']);
+    // $image = verify($_POST['image']);
     $date_created = verify($_POST['date_created']);
     $firstname = verify($_POST['firstname']);
     $lastname = verify($_POST['lastname']);
@@ -140,7 +140,8 @@ if (isset($_POST['save'])) {
 
         header("location: chat_davsur.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
     } else {
-        echo "Emp_no and/or schoolid is not set in the session.";
+        // echo "Emp_no and/or schoolid is not set in the session.";
+		header("location: chat_davsur.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
     }
 }
 
