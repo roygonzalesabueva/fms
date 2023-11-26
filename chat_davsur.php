@@ -552,7 +552,7 @@ echo "Error in preparing the SQL statement.";
 
                     <a href="#"> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a>
-                                <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+                                <!-- <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"> -->
         
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->   
                   
