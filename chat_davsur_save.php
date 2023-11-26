@@ -120,8 +120,8 @@ if (isset($_POST['save'])) {
     $firstname = verify($_POST['firstname']);
     $lastname = verify($_POST['lastname']);
     
-    $section = verify($_POST['section']);
-    $address = verify($_POST['address']);
+    // $section = verify($_POST['section']);
+    // $address = verify($_POST['address']);
 
 
 
