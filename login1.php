@@ -198,10 +198,10 @@
 
 
 
-  if(isset($_POST['login2'])){
-    //getting the form data
-     $username = verify($_POST['username']);
-    // //  $password = verify($_POST['password']);
+  // if(isset($_POST['login2'])){
+  //   //getting the form data
+  //    $username = verify($_POST['username']);
+  //   // //  $password = verify($_POST['password']);
     $schoolid = $_SESSION['schoolid'];
     $username = $_SESSION['username'];
 
@@ -254,17 +254,6 @@
     }
 
   }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -591,7 +580,7 @@ body {
 
                 
 <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="SCHOOL DASHBOARD" /> 
-<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login2"  value="ADMIN" /> 
+<input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" name ="login1"  value="ADMIN" /> 
  
 <!-- <a href="home.php" class="btn btn-primary btn-block btn-lg"> ADMINISTRATOR</a>   
              -->
