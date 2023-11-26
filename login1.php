@@ -365,6 +365,10 @@
         header("location: home.php");
       }
 
+      elseif ($_SESSION['department_id'] == 17) {
+        header("location: home.php");
+      }
+
       
       //header("location: dashboard.php");
       // header("location: index.php");
