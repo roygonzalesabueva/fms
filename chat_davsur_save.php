@@ -82,7 +82,7 @@ if (isset($_POST['save'])) {
 
         header("location: chat_davsur.php");
     } else {
-        echo "Emp_no and/or schoolid is not set in the session.";
+        header("location: chat_davsur.php");
     }
 }
 
