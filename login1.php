@@ -292,11 +292,13 @@
         header("location: indexasds.php");
       }
       elseif ($_SESSION['department_id'] == 2) {
-        header("location: home.php");
+        header("location: home.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
       }
 
       elseif ($_SESSION['department_id'] == 17) {
-        header("location: home.php");
+        header("location: home.php?school_id=" . $schoolid . "&emp_no=" . $emp_no);
+
+        // header("location: home.php");
       }
 
       
