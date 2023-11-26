@@ -94,12 +94,12 @@ if (isset($_POST['login1'])) {
 
     // Ensure that $_SESSION['emp_no'] and $_SESSION['schoolid'] are properly set.
 
-    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
-        // Your login code successfully set emp_no and schoolid in the session.
-    } else {
-        // Handle the case where emp_no or schoolid is not set.
-        echo "Emp_no and/or schoolid is not set in the session.";
-    }
+    // if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid']) && !empty($_SESSION['image'])) {
+    //     // Your login code successfully set emp_no and schoolid in the session.
+    // } else {
+    //     // Handle the case where emp_no or schoolid is not set.
+    //     echo "Emp_no and/or schoolid is not set in the session.";
+    // }
 }
 
 
@@ -120,8 +120,8 @@ if (isset($_POST['save'])) {
     $firstname = verify($_POST['firstname']);
     $lastname = verify($_POST['lastname']);
     
-    // $section = verify($_POST['section']);
-    // $address = verify($_POST['address']);
+    $section = verify($_POST['section']);
+    $address = verify($_POST['address']);
 
 
 
