@@ -13,7 +13,7 @@
 		
 		
 		//mysqli_query($conn, "INSERT INTO `membertracking` VALUES ('', '$trackid', '$firstname', '$lastname', '', '$address')") or die(mysqli_error());
-		mysqli_query($conn, "INSERT INTO `chat` VALUES ('',  '$date_created', '$firstname', '$lastname')") or die(mysqli_error());
+		mysqli_query($conn, "INSERT INTO `chat` VALUES ('', '$trackid', '$date_created', '$firstname', '$lastname')") or die(mysqli_error());
 		//mysqli_query($conn, "INSERT INTO `memberclient` (mem_id,trackid,firstname,lastname,section,address) VALUES('','$trackid','$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 		
 	
