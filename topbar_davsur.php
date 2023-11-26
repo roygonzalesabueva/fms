@@ -65,7 +65,7 @@
         <!-- <a href="chat_davsur.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font color="White" size="3"><B>Chat Room</a> | </B></font> -->
         <!-- <a href="chat_davsur.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font color="White" size="3"><B>Chat Room</a> | </B></font> -->
         <!-- <a href="chat_davsur.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font color="White" size="3"><B>Chat Room</a> | </B></font> -->
-        <a href="chat_davsur.php"><font color="White" size="3"><B>Chat Room</a> | </B></font>
+        <a href="chat_davsur.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>"><font color="White" size="3"><B>Chat Room</a> | </B></font>
   	
 
         <a href="#"><font color="WHITE " size="3"><i class="fa fa-fw fa-user"></i><B><?=$_SESSION['username']?></a> | </B></font>
