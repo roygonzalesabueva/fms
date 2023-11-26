@@ -365,57 +365,7 @@
         header("location: home.php");
       }
 
-      elseif ($_SESSION['department_id'] == 3) {
-        header("location: indexrecord.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 4) {
-        header("location: indexqueue.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 5) {
-        header("location: indexhrmo.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 6) {
-        header("location: indexsgod.php");
-      }
-      elseif ($_SESSION['department_id'] == 7) {
-        header("location: indexcid.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 8) {
-        header("location: indexacct.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 10) {
-        header("location: indexsupply.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 11) {
-        header("location: indexbudget.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 12) {
-        header("location: indexcashier.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 13) {
-        header("location: indexlegal.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 14) {
-        header("location: indexdpsu.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 15) {
-        header("location: index_trans.php");
-      }
-
-      elseif ($_SESSION['department_id'] == 16) {
-        header("location: index.php");
-      }
-
+      
       //header("location: dashboard.php");
       // header("location: index.php");
       
