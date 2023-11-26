@@ -505,11 +505,11 @@ echo "Error in executing the SQL statement.";
 } else {
 echo "Error in preparing the SQL statement.";
 }
-}
+
 // Close the database connection here if needed
-//  else {
-// echo "No school_id provided in the GET request.";
-// }
+} else {
+echo "No school_id provided in the GET request.";
+}
 
 
 
@@ -541,9 +541,6 @@ echo "Error in preparing the SQL statement.";
 
 
 <div class="topnav-right">
-
-
-
 <!-- <a href="#"><font color="Black"><B> -->
            <label><p id="demo"></p></label>    | 
          <!-- </B></font></a> -->
@@ -552,7 +549,7 @@ echo "Error in preparing the SQL statement.";
 
                     <a href="#"> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a>
-                                <!-- <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"> -->
+                                <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
         
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->   
                   
