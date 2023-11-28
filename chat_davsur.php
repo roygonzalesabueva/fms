@@ -494,10 +494,22 @@ while ($row = $result->fetch_assoc()) {
     $mname = $row['middlename'];
     // Output or process $imageUrl as needed
 }
-} 
-}}
+} else {
+echo "No teachers found for the selected school.";
 }
+
 $stmt->close();
+} else {
+echo "Error in executing the SQL statement.";
+}
+} else {
+echo "Error in preparing the SQL statement.";
+}
+
+// Close the database connection here if needed
+} else {
+echo "No school_id provided in the GET request.";
+}
 
 
 
