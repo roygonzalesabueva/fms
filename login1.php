@@ -611,16 +611,23 @@ h3 {
 </style>
 
 
+<style>
+body {
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+</style>
 
-
-
+<!-- 
 
 <style> 
   
 body {
   background-image: url("bg.png");
 }
-</style> 
+</style>  -->
 
 
 
