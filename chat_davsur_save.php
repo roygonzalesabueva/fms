@@ -73,20 +73,11 @@ if (isset($_POST['save'])) {
 
 
 
-    // Ensure emp_no and schoolid are available in the session.
-    if (!empty($_SESSION['emp_no']) && !empty($_SESSION['schoolid'])) {
-        $emp_no = $_SESSION['emp_no'];
-        
-        $school_id = $_SESSION['schoolid'];
-        $image = $_SESSION['image'];
-        
+   
         mysqli_query($conn, "INSERT INTO `chat` VALUES ('','$emp_no','$image', '$date_created', '$firstname', '$lastname', '$section','$address')") or die(mysqli_error());
 
-        header("location: chat_davsur.php?school_id=" . $school_id . "&emp_no=" . $emp_no);
-    } else {
-        echo "Emp_no and/or schoolid is not set in the session.";
-    }
-}
+        header("location: chat_davsur.php");
+    } 
 
 
 
