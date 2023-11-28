@@ -549,7 +549,7 @@ echo "No school_id provided in the GET request.";
 
                     <a href="#"> <span
                                 class="nav-profile-name"><?php echo $_SESSION['user'];?> </span></a>
-                                <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;">
+                                <!-- <img src="<?php echo $imageUrl; ?>" alt="Teacher's Picture" class="rounded-circle img-fluid" style="width: 40px;"> -->
         
                     <!--  <li><button type="button" class="btn cancel" onclick="closeForm()">Close</button></li>-->   
                   
@@ -578,7 +578,7 @@ echo "No school_id provided in the GET request.";
 
 
 
-                <form method="POST" action="chat_davsur_save.php?school_id=<?php echo $schoolid ?>&emp_no=<?php echo $emp_no ?>">
+                <form method="POST" action="chat_davsur_save.php">
 
 
 
