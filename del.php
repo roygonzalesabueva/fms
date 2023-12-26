@@ -7,6 +7,7 @@
 		$id=$_REQUEST['id'];
 		
 		$query=mysqli_query($conn, "SELECT * FROM `files` WHERE `id`='$id'") or die(mysqli_error());
+		$query=mysqli_query($conn, "SELECT * FROM `filesscnhs` WHERE `id`='$id'") or die(mysqli_error());
 		$row=mysqli_fetch_array($query);
 		
 		$id=$row['id'];
@@ -25,7 +26,8 @@
 		
 		//mysqli_query($conn, "INSERT INTO `filesrecords` (id,name,date_updated)VALUES('$id','$name', '$date_updated')") or die(mysqli_error());
 		
-		//mysqli_query($conn, "DELETE FROM `files` WHERE `id`='$id'") or die(mysqli_error());
+		mysqli_query($conn, "DELETE FROM `files` WHERE `id`='$id'") or die(mysqli_error());
+		mysqli_query($conn, "DELETE FROM `filesscnhs` WHERE `id`='$id'") or die(mysqli_error());
 
 
 
