@@ -535,36 +535,15 @@ function delete_data(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("del.php?id=" + data_id);        
-        }
-    })
-}
-</script>
-
-
-
-
-
-<!-- Supply alert -->
-<script>
-
-function upload(data_id) {
-    Swal.fire({
-        title: 'Are you sure?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, restore it!',
-        closeOnConfirm: false,
-        closeOnCancel: false
-    }).then((result) => {
-        if (result.isConfirmed) {
             window.location = ("transferrestore.php?id=" + data_id);        
         }
     })
 }
 </script>
+
+
+
+
 
 
 
