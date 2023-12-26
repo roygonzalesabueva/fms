@@ -530,7 +530,7 @@ function delete_data(data_id) {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!',
+        confirmButtonText: 'Yes, restore it!',
         closeOnConfirm: false,
         closeOnCancel: false
     }).then((result) => {
