@@ -91,12 +91,12 @@ include_once("session.php")
 if(isset($_POST['search']))
 {
     $valueToSearch = $_POST['valueToSearch'];
-    $query = "SELECT * FROM `files` WHERE  CONCAT(`id`, `name`,`date_updated`)LIKE '%".$valueToSearch."%'";
+    $query = "SELECT * FROM `stored` WHERE  CONCAT(`id`, `name`,`date_updated`)LIKE '%".$valueToSearch."%'";
     $search_result = filterTable($query);
     
 }
     else {
-        $query ="SELECT * FROM `files`ORDER BY id DESC";
+        $query ="SELECT * FROM `stored`ORDER BY id DESC";
         $search_result = filterTable($query);
         
     }
