@@ -355,7 +355,7 @@ body {
 
 <p>
 
-<h4> <B>Recylce Bin PAGE</B></h4><p>
+<h4> <B>History</B></h4><p>
 
  </center> 
 
@@ -375,21 +375,16 @@ body {
       <div class="row">
       <!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
           
-<form action="home.php" method="post" enctype="multipart/form-data">
+<form action="stored.php" method="post" enctype="multipart/form-data">
 <!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
            
 <!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
 <!-- <form action="home.php?school_id=<?=$_SESSION['selSchoolId']?>&emp_no=<?=$_SESSION['selEmNo']?>" method="post" enctype="multipart/form-data"> -->
 
                 
-                <input type="file" name="myfile" >  
-                
-                 <button type="submit" name="save"><i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload</button>
+               
                      
-       
-                     <br>
-                     
-                     <br>
+                   
        
        
                        <input type="text" name="valueToSearch"> 
