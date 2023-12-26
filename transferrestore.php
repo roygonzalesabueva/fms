@@ -60,7 +60,7 @@
 
 
 
-		echo"<script>alert('Memorandum successfully uploaded to schools')</script>";
+		echo"<script>alert('Memorandum successfully restored to schools')</script>";
 		echo"<script>window.location='index.php?page=files2'</script>";
 		
 	}
