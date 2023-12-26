@@ -448,32 +448,10 @@ body {
            
             <td><?php echo $row['date_updated'];?></td>
             
-	<td>
-
-<div class="dropdown">
-                    <a href="#" class="notification"><i class='far fa-bell' style='font-size:20px'></i><span class="badge">1</span></a>
-            
-                
-<div class="dropdown-content">
-<!--<a href="transferscnhs.php?id=<?php echo $row['id']?>">Upload to Schools</a>-->
-
-<!-- <button type="button" class="btn btn-link" data-target="#modal_confirmupload" data-toggle="modal">Upload to Schools</button> -->
-
-<a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a>
+	
 
 
 
-</div>
-</div>
-
-</td>		
-
-
-
-
-<td>
-<a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
-</td>
 
 <td>
 
