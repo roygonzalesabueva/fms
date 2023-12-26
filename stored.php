@@ -425,8 +425,7 @@ body {
         <th>REFERENCE NUMBER</th>
         <th>DESCRIPTION</th>
         <th>DATE UPLOADED</th>
-        <th>UPLOAD</th>
-        <th>DOWNLOAD</th>
+      
         <th>DELETE</th>
 
     </thead>
