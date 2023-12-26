@@ -426,7 +426,7 @@ body {
         <th>DESCRIPTION</th>
         <th>DATE UPLOADED</th>
       
-        <th>DELETE</th>
+        <th>RESTORE</th>
 
     </thead>
 
