@@ -455,7 +455,7 @@ body {
 <td>
 
 <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmdel" data-toggle="modal"><i class='far fa-trash-alt' style='font-size:12px;color:red'></i>DELETE</button> -->
-<a onclick="delete_data('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i><font color="white">DELETE</font></a>
+<a onclick="delete_data('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-danger"> <i class="fas fa-solid fa-trash"></i><font color="white">Restore</font></a>
 
 <!--delete-->
 
@@ -560,7 +560,7 @@ function upload(data_id) {
         closeOnCancel: false
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location = ("transferscnhs.php?id=" + data_id);        
+            window.location = ("transferrestore.php?id=" + data_id);        
         }
     })
 }
