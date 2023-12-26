@@ -355,7 +355,7 @@ body {
 
 <p>
 
-<h4> <B>History</B></h4><p>
+<h4> <B>Recycle Bin</B></h4><p>
 
  </center> 
 
