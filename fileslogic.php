@@ -30,14 +30,14 @@ if(isset($_POST['save']))
 
 	
 
-	/*if(!in_array($extension,['zip','pdf','png']))
+	if(!in_array($extension,['pdf','png','jpeg']))
 	{
 
-		echo "Your file extension must be .zip .pdf .png .jpeg";
+		echo "Your file extension must be .pdf .png .jpeg";
 	}
 
 	
-	else{*/
+	else{
 
 		if(move_uploaded_file($file,$destination))
 		{
@@ -56,7 +56,7 @@ if(isset($_POST['save']))
 				echo "failed to upload file";
 			}
 		}
-/*	}*/
+	}
 
 }
 
