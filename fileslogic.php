@@ -1,4 +1,3 @@
-
 <?php
 
 $conn = mysqli_connect('localhost', 'root', '@DavaosurDB2023', 'fms_db');
@@ -39,7 +38,11 @@ if (isset($_GET['file_id'])) {
     $filepath = 'assets/uploads/' . $file['name'];
 
     if (file_exists($filepath)) {
-        header('Content-Type: ' . mime_content_type($filepath));
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime = finfo_file($finfo, $filepath);
+        finfo_close($finfo);
+
+        header('Content-Type: ' . $mime);
         header('Content-Description: File Transfer');
         header('Content-Disposition: attachment; filename=' . basename($filepath));
         header('Expires: 0');
