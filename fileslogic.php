@@ -24,7 +24,7 @@ if(isset($_POST['save']))
 	$filename = $_FILES['myfile']['name'];
 	$destination ='assets\uploads/'. $filename;
 
-	$extension = pathinfo($filename,PATHINFO_EXTENSION);
+	//$extension = pathinfo($filename,PATHINFO_EXTENSION);
 
 	$file = $_FILES['myfile']['tmp_name'];
 
