@@ -14,15 +14,21 @@ if (isset($_POST['save'])) {
     $filename = $_FILES['myfile']['name'];
     $destination = 'assets/uploads/' . $filename;
 
-    $file = $_FILES['myfile']['tmp_name'];
+    $extension = pathinfo($filename, PATHINFO_EXTENSION);
 
-    if (move_uploaded_file($file, $destination)) {
-        $sql = "INSERT INTO files (name) VALUES ('$filename')";
+    if (!in_array($extension, ['zip', 'pdf', 'png', 'jpg', 'jpeg'])) {
+        echo "Your file extension must be .zip, .pdf, .png, .jpg, or .jpeg";
+    } else {
+        $file = $_FILES['myfile']['tmp_name'];
 
-        if (mysqli_query($conn, $sql)) {
-            // File uploaded successfully
-        } else {
-            echo "Failed to upload file";
+        if (move_uploaded_file($file, $destination)) {
+            $sql = "INSERT INTO files (name) VALUES('$filename')";
+
+            if (mysqli_query($conn, $sql)) {
+                // File uploaded successfully
+            } else {
+                echo "Failed to upload file";
+            }
         }
     }
 }
