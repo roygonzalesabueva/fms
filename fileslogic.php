@@ -12,27 +12,20 @@ $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 if (isset($_POST['save'])) {
     $filename = $_FILES['myfile']['name'];
-    $destination = 'assets\uploads/' . $filename;
+    $destination = 'assets/uploads/' . $filename;
 
-    $extension = pathinfo($filename, PATHINFO_EXTENSION);
+    $file = $_FILES['myfile']['tmp_name'];
 
-    if (!in_array($extension, ['zip', 'pdf', 'png', 'jpg', 'jpeg'])) {
-        echo "Your file extension must be .zip, .pdf, .png, .jpg, or .jpeg";
-    } else {
-        $file = $_FILES['myfile']['tmp_name'];
+    if (move_uploaded_file($file, $destination)) {
+        $sql = "INSERT INTO files (name) VALUES ('$filename')";
 
-        if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO files (name) VALUES('$filename')";
-
-            if (mysqli_query($conn, $sql)) {
-                // File uploaded successfully
-            } else {
-                echo "Failed to upload file";
-            }
+        if (mysqli_query($conn, $sql)) {
+            // File uploaded successfully
+        } else {
+            echo "Failed to upload file";
         }
     }
 }
-
 
 // Download code - last part entry get data
 
@@ -40,34 +33,31 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
     $sql = "SELECT * FROM files WHERE id=$id";
     $result = mysqli_query($conn, $sql);
+    $file = mysqli_fetch_assoc($result);
 
-    if ($result) {
-        $file = mysqli_fetch_assoc($result);
+    $filepath = 'assets/uploads/' . $file['name'];
 
-        $filepath = 'assets\uploads/' . $file['name'];
+    if (file_exists($filepath)) {
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime = finfo_file($finfo, $filepath);
+        finfo_close($finfo);
 
-        if (file_exists($filepath)) {
-            $finfo = finfo_open(FILEINFO_MIME_TYPE);
-            $mime = finfo_file($finfo, $filepath);
-            finfo_close($finfo);
+        header('Content-Type: ' . $mime);
+        header('Content-Description: File Transfer');
+        header('Content-Disposition: attachment; filename=' . basename($filepath));
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($filepath));
+        readfile($filepath);
 
-            header('Content-Type: ' . $mime);
-            header('Content-Description: File Transfer');
-            header('Content-Disposition: inline; filename=' . basename($filepath)); // 'inline' to open in the browser
-            header('Expires: 0');
-            header('Cache-Control: must-revalidate');
-            header('Pragma: public');
-            header('Content-Length: ' . filesize($filepath));
-            readfile($filepath);
+        $newCount = $file['downloads'] + 1;
+        $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
+        mysqli_query($conn, $updateQuery);
 
-            $newCount = $file['downloads'] + 1;
-
-            $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
-            mysqli_query($conn, $updateQuery);
-
-            exit;
-        }
+        exit;
     }
 }
-//end
+
+// End
 ?>
