@@ -30,14 +30,14 @@ if(isset($_POST['save']))
 
 	
 
-	/*if(!in_array($extension,['zip','pdf','png']))
+	if(!in_array($extension,['zip','pdf','png','JPG']))
 	{
 
-		echo "Your file extension must be .zip .pdf .png .jpeg";
+		echo "Your file extension must be .zip .pdf .png .JPG";
 	}
 
 	
-	else{*/
+	
 
 		if(move_uploaded_file($file,$destination))
 		{
@@ -47,7 +47,7 @@ if(isset($_POST['save']))
 			if(mysqli_query($conn,$sql))
 			{
 				
-				
+				echo "file upload successfully";
 		
 
 				
