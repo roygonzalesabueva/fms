@@ -61,6 +61,9 @@ if (isset($_GET['file_id'])) {
         $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
         mysqli_query($conn, $updateQuery);
 
+        // Provide a link to view the image
+        echo "<br><a href='$filepath' target='_blank'>View Image</a>";
+
         exit;
     }
 }
