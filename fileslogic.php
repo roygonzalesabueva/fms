@@ -12,7 +12,7 @@ $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 if (isset($_POST['save'])) {
     $filename = $_FILES['myfile']['name'];
-    $destination = 'assets/uploads/' . $filename;
+    $destination = 'assets\uploads/' . $filename;
 
     $extension = pathinfo($filename, PATHINFO_EXTENSION);
 
@@ -44,7 +44,7 @@ if (isset($_GET['file_id'])) {
     if ($result) {
         $file = mysqli_fetch_assoc($result);
 
-        $filepath = 'assets/uploads/' . $file['name'];
+        $filepath = 'assets\uploads/' . $file['name'];
 
         if (file_exists($filepath)) {
             $finfo = finfo_open(FILEINFO_MIME_TYPE);
