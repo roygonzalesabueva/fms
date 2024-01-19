@@ -30,10 +30,10 @@ if(isset($_POST['save']))
 
 	
 
-	if(!in_array($extension,['zip','pdf','png','JPG']))
+	if(!in_array($extension,['zip','pdf','png','jpg']))
 	{
 
-		echo "Your file extension must be .zip .pdf .png .JPG";
+		echo "Your file extension must be .zip .pdf .png .jpg";
 	}
 
 	
