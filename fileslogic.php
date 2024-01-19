@@ -40,34 +40,34 @@ if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];
     $sql = "SELECT * FROM files WHERE id=$id";
     $result = mysqli_query($conn, $sql);
-    $file = mysqli_fetch_assoc($result);
 
-    $filepath = 'assets/uploads/' . $file['name'];
+    if ($result) {
+        $file = mysqli_fetch_assoc($result);
 
-    if (file_exists($filepath)) {
-        $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        $mime = finfo_file($finfo, $filepath);
-        finfo_close($finfo);
+        $filepath = 'assets/uploads/' . $file['name'];
 
-        header('Content-Type: ' . $mime);
-        header('Content-Description: File Transfer');
-        header('Content-Disposition: attachment; filename=' . basename($filepath));
-        header('Expires: 0');
-        header('Cache-Control: must-revalidate');
-        header('Pragma: public');
-        header('Content-Length: ' . filesize($filepath));
-        readfile($filepath);
+        if (file_exists($filepath)) {
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            $mime = finfo_file($finfo, $filepath);
+            finfo_close($finfo);
 
-        $newCount = $file['downloads'] + 1;
-        $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
-        mysqli_query($conn, $updateQuery);
+            header('Content-Type: ' . $mime);
+            header('Content-Description: File Transfer');
+            header('Content-Disposition: inline; filename=' . basename($filepath)); // 'inline' to open in the browser
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($filepath));
+            readfile($filepath);
 
-        // Provide a link to view the image
-        echo "<br><a href='$filepath' target='_blank'>View Image</a>";
+            $newCount = $file['downloads'] + 1;
 
-        exit;
+            $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
+            mysqli_query($conn, $updateQuery);
+
+            exit;
+        }
     }
 }
-
 
 ?>
