@@ -427,7 +427,9 @@ h5 {
 <td>
 <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
 </td>
-
+<td>
+<a href="indexdownview.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-eye" style="font-size:12px"></i>VIEW </a>
+</td>
 <!-- <td> -->
 
 <!-- <button type="button" class="btn btn-link" data-target="#modal_confirmdel" data-toggle="modal"><i class='far fa-trash-alt' style='font-size:12px;color:red'></i>DELETE</button> -->
