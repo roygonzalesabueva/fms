@@ -12,22 +12,22 @@ $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
 
-// if (isset($_POST['save'])) {
-//     $filename = $_FILES['myfile']['name'];
-//     $destination = 'assets/uploads/' . $filename;
+if (isset($_POST['save'])) {
+    $filename = $_FILES['myfile']['name'];
+    $destination = 'assets/uploads/' . $filename;
 
-//     $file = $_FILES['myfile']['tmp_name'];
+    $file = $_FILES['myfile']['tmp_name'];
 
-//     if (move_uploaded_file($file, $destination)) {
-//         $sql = "INSERT INTO files (name) VALUES ('$filename')";
+    if (move_uploaded_file($file, $destination)) {
+        $sql = "INSERT INTO files (name) VALUES ('$filename')";
 
-//         if (mysqli_query($conn, $sql)) {
-//             // File uploaded successfully
-//         } else {
-//             echo "Failed to upload file";
-//         }
-//     }
-// }
+        if (mysqli_query($conn, $sql)) {
+            // File uploaded successfully
+        } else {
+            echo "Failed to upload file";
+        }
+    }
+}
 
 
 
@@ -35,99 +35,57 @@ $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // Download code - last part entry get data
 
-// if (isset($_GET['file_id'])) {
-//     $id = $_GET['file_id'];
-//     $sql = "SELECT * FROM files WHERE id=$id";
-//     $result = mysqli_query($conn, $sql);
-//     $file = mysqli_fetch_assoc($result);
+if (isset($_GET['file_id'])) {
+    $id = $_GET['file_id'];
+    $sql = "SELECT * FROM files WHERE id=$id";
+    $result = mysqli_query($conn, $sql);
+    $file = mysqli_fetch_assoc($result);
 
-//     $filepath = 'assets/uploads/' . $file['name'];
+    $filepath = 'assets/uploads/' . $file['name'];
 
-//     if (file_exists($filepath)) {
-//         // Determine file type based on extension
-//         $fileExtension = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
+    if (file_exists($filepath)) {
+        // Determine file type based on extension
+        $fileExtension = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
 
-//         // Set appropriate Content-Type for known file types
-//         switch ($fileExtension) {
-//             case 'jpg':
-//             case 'jpeg':
-//                 $contentType = 'image/jpeg';
-//                 break;
-//             case 'png':
-//                 $contentType = 'image/png';
-//                 break;
-//             case 'pdf':
-//                 $contentType = 'application/pdf';
-//                 break;
-//             case 'zip':
-//                 $contentType = 'application/zip';
-//                 break;
-//             default:
-//                 $contentType = 'application/octet-stream';
-//                 break;
-//         }
+        // Set appropriate Content-Type for known file types
+        switch ($fileExtension) {
+            case 'jpg':
+            case 'jpeg':
+                $contentType = 'image/jpeg';
+                break;
+            case 'png':
+                $contentType = 'image/png';
+                break;
+            case 'pdf':
+                $contentType = 'application/pdf';
+                break;
+            case 'zip':
+                $contentType = 'application/zip';
+                break;
+            default:
+                $contentType = 'application/octet-stream';
+                break;
+        }
 
-//         // Set headers for file download
-//         header('Content-Type: ' . $contentType);
-//         header('Content-Description: File Transfer');
-//         header('Content-Disposition: inline; filename=' . basename($filepath));
-//         header('Expires: 0');
-//         header('Cache-Control: must-revalidate');
-//         header('Pragma: public');
-//         header('Content-Length: ' . filesize($filepath));
-//         readfile($filepath);
+        // Set headers for file download
+        header('Content-Type: ' . $contentType);
+        header('Content-Description: File Transfer');
+        header('Content-Disposition: inline; filename=' . basename($filepath));
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($filepath));
+        readfile($filepath);
 
-//         // Update download count
-//         $newCount = $file['downloads'] + 1;
-//         $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
-//         mysqli_query($conn, $updateQuery);
+        // Update download count
+        $newCount = $file['downloads'] + 1;
+        $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
+        mysqli_query($conn, $updateQuery);
 
-//         exit;
-//     }
-// }
-
-
+        exit;
+    }
+}
 
 
-// if (isset($_GET['file_id'])) {
-//     $file_id = $_GET['file_id'];
 
-//     // Query the database to get file information
-//     $sql = "SELECT * FROM files WHERE id = $file_id";
-//     $result = mysqli_query($conn, $sql);
-
-//     if ($result) {
-//         $file = mysqli_fetch_assoc($result);
-
-//         $filepath = 'assets/uploads/' . $file['name'];
-
-//         if (file_exists($filepath)) {
-//             // Set headers for file download
-//             header('Content-Type: ' . mime_content_type($filepath));
-//             header('Content-Description: File Transfer');
-//             header('Content-Disposition: inline; filename=' . basename($filepath));
-//             header('Expires: 0');
-//             header('Cache-Control: must-revalidate');
-//             header('Pragma: public');
-//             header('Content-Length: ' . filesize($filepath));
-
-//             // Output the file
-//             readfile($filepath);
-
-//             // Update download count in the database
-//             $newCount = $file['downloads'] + 1;
-//             $updateQuery = "UPDATE files SET downloads = $newCount WHERE id = $file_id";
-//             mysqli_query($conn, $updateQuery);
-
-//             exit;
-//         } else {
-//             echo "File not found.";
-//         }
-//     } else {
-//         echo "Error fetching file information from the database.";
-//     }
-// }
-
-
-// End
 ?>
