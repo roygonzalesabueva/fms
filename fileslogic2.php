@@ -92,8 +92,9 @@ if (isset($_GET['file_id'])) {
         // Determine file type based on extension
         $fileExtension = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
 
-        // Allow downloading for JPEG, PNG, and PDF files
-        if ($fileExtension === 'jpg' || $fileExtension === 'jpeg' || $fileExtension === 'png' || $fileExtension === 'pdf') {
+        // Allow downloading for common image files (JPEG, PNG, GIF, etc.)
+        $allowedImageExtensions = array('jpg', 'jpeg', 'png', 'gif', 'bmp');
+        if (in_array($fileExtension, $allowedImageExtensions)) {
             // Set headers for file download
             header('Content-Type: ' . mime_content_type($filepath));
             header('Content-Description: File Transfer');
@@ -111,12 +112,10 @@ if (isset($_GET['file_id'])) {
 
             exit;
         } else {
-            echo "Invalid file type. Only JPEG, PNG, and PDF files are allowed for download.";
+            echo "Invalid file type. Only common image files (JPEG, PNG, GIF, BMP) are allowed for download.";
         }
     }
 }
-
-
 
 // End
 ?>
