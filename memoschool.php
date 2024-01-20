@@ -497,7 +497,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
 </td>
 <td>
-<a href="indexdownview.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-link"><i class="fa fa-download" style="font-size:12px"></i>VIEW </a>
+<a href="indexdownview.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>VIEW </a>
 </td>
 
 
