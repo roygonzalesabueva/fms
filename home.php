@@ -432,6 +432,7 @@ body {
         <th>DATE UPLOADED</th>
         <th>UPLOAD</th>
         <th>DOWNLOAD</th>
+        <th>VIEW</th>
         <th>DELETE</th>
 
     </thead>
@@ -479,6 +480,10 @@ body {
 <td>
 <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
 </td>
+<td>
+<a href="indexdownview.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-eye" style="font-size:12px"></i>VIEW </a>
+</td>
+
 
 <td>
 
