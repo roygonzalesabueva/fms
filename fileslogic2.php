@@ -10,22 +10,28 @@ $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // End download
 
-if (isset($_POST['save'])) {
-    $filename = $_FILES['myfile']['name'];
-    $destination = 'assets/uploads/' . $filename;
 
-    $file = $_FILES['myfile']['tmp_name'];
 
-    if (move_uploaded_file($file, $destination)) {
-        $sql = "INSERT INTO files (name) VALUES ('$filename')";
+// if (isset($_POST['save'])) {
+//     $filename = $_FILES['myfile']['name'];
+//     $destination = 'assets/uploads/' . $filename;
 
-        if (mysqli_query($conn, $sql)) {
-            // File uploaded successfully
-        } else {
-            echo "Failed to upload file";
-        }
-    }
-}
+//     $file = $_FILES['myfile']['tmp_name'];
+
+//     if (move_uploaded_file($file, $destination)) {
+//         $sql = "INSERT INTO files (name) VALUES ('$filename')";
+
+//         if (mysqli_query($conn, $sql)) {
+//             // File uploaded successfully
+//         } else {
+//             echo "Failed to upload file";
+//         }
+//     }
+// }
+
+
+
+
 
 // Download code - last part entry get data
 
@@ -81,20 +87,18 @@ if (isset($_POST['save'])) {
 // }
 
 if (isset($_GET['file_id'])) {
-    $id = $_GET['file_id'];
-    $sql = "SELECT * FROM files WHERE id=$id";
+    $file_id = $_GET['file_id'];
+
+    // Query the database to get file information
+    $sql = "SELECT * FROM files WHERE id = $file_id";
     $result = mysqli_query($conn, $sql);
-    $file = mysqli_fetch_assoc($result);
 
-    $filepath = 'assets\uploads/' . $file['name'];
+    if ($result) {
+        $file = mysqli_fetch_assoc($result);
 
-    if (file_exists($filepath)) {
-        // Determine file type based on extension
-        $fileExtension = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
+        $filepath = 'assets/uploads/' . $file['name'];
 
-        // Allow downloading for common image files (JPEG, PNG, GIF, etc.)
-        $allowedImageExtensions = array('jpg', 'jpeg', 'png', 'gif', 'bmp');
-        if (in_array($fileExtension, $allowedImageExtensions)) {
+        if (file_exists($filepath)) {
             // Set headers for file download
             header('Content-Type: ' . mime_content_type($filepath));
             header('Content-Description: File Transfer');
@@ -103,19 +107,24 @@ if (isset($_GET['file_id'])) {
             header('Cache-Control: must-revalidate');
             header('Pragma: public');
             header('Content-Length: ' . filesize($filepath));
+
+            // Output the file
             readfile($filepath);
 
-            // Update download count
+            // Update download count in the database
             $newCount = $file['downloads'] + 1;
-            $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
+            $updateQuery = "UPDATE files SET downloads = $newCount WHERE id = $file_id";
             mysqli_query($conn, $updateQuery);
 
             exit;
         } else {
-            echo "Invalid file type. Only common image files (JPEG, PNG, GIF, BMP) are allowed for download.";
+            echo "File not found.";
         }
+    } else {
+        echo "Error fetching file information from the database.";
     }
 }
+
 
 // End
 ?>
