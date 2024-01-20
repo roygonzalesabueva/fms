@@ -38,8 +38,31 @@ if (isset($_GET['file_id'])) {
     $filepath = 'assets/uploads/' . $file['name'];
 
     if (file_exists($filepath)) {
+        // Determine file type based on extension
+        $fileExtension = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
+
+        // Set appropriate Content-Type for known file types
+        switch ($fileExtension) {
+            case 'jpg':
+            case 'jpeg':
+                $contentType = 'image/jpeg';
+                break;
+            case 'png':
+                $contentType = 'image/png';
+                break;
+            case 'pdf':
+                $contentType = 'application/pdf';
+                break;
+            case 'zip':
+                $contentType = 'application/zip';
+                break;
+            default:
+                $contentType = 'application/octet-stream';
+                break;
+        }
+
         // Set headers for file download
-        header('Content-Type: application/octet-stream');
+        header('Content-Type: ' . $contentType);
         header('Content-Description: File Transfer');
         header('Content-Disposition: inline; filename=' . basename($filepath));
         header('Expires: 0');
@@ -56,4 +79,5 @@ if (isset($_GET['file_id'])) {
         exit;
     }
 }
+// End
 ?>
