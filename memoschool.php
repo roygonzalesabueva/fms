@@ -443,8 +443,10 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
         <th>REFERENCE NUMBER</th>
         <th>DESCRIPTION</th>
         <th>DATE UPLOADED</th>
-         <th>NOTIFICATION</th> 
+         <th>NOTIFICATION</th>
+
         <th>DOWNLOAD</th>
+        <th>VIEW</th>
         <!-- <th>DELETE</th> -->
 
     </thead>
@@ -480,7 +482,7 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 <!-- <a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a> -->
 
 <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-link"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
-
+<a href="indexdownview.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-link"><i class="fa fa-download" style="font-size:12px"></i>VIEW </a>
 
 
 
