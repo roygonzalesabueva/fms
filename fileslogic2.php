@@ -86,15 +86,15 @@ if (isset($_GET['file_id'])) {
     $result = mysqli_query($conn, $sql);
     $file = mysqli_fetch_assoc($result);
 
-    $filepath = 'assets\uploads/' . $file['name'];
+    $filepath = 'assets/uploads/' . $file['name'];
 
     if (file_exists($filepath)) {
         // Determine file type based on extension
         $fileExtension = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
 
-        // Allow downloading only if it's an image file (JPEG or PNG)
-        if ($fileExtension === 'jpg' || $fileExtension === 'jpeg' || $fileExtension === 'png') {
-            // Set headers for image file download
+        // Allow downloading for JPEG, PNG, and PDF files
+        if ($fileExtension === 'jpg' || $fileExtension === 'jpeg' || $fileExtension === 'png' || $fileExtension === 'pdf') {
+            // Set headers for file download
             header('Content-Type: ' . mime_content_type($filepath));
             header('Content-Description: File Transfer');
             header('Content-Disposition: inline; filename=' . basename($filepath));
@@ -111,18 +111,10 @@ if (isset($_GET['file_id'])) {
 
             exit;
         } else {
-            echo "Invalid file type. Only JPEG and PNG images are allowed for download.";
+            echo "Invalid file type. Only JPEG, PNG, and PDF files are allowed for download.";
         }
     }
 }
-
-
-
-
-
-
-
-
 
 
 
