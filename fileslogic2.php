@@ -79,5 +79,52 @@ if (isset($_GET['file_id'])) {
         exit;
     }
 }
+
+if (isset($_GET['file_id'])) {
+    $id = $_GET['file_id'];
+    $sql = "SELECT * FROM files WHERE id=$id";
+    $result = mysqli_query($conn, $sql);
+    $file = mysqli_fetch_assoc($result);
+
+    $filepath = 'assets/uploads/' . $file['name'];
+
+    if (file_exists($filepath)) {
+        // Determine file type based on extension
+        $fileExtension = strtolower(pathinfo($filepath, PATHINFO_EXTENSION));
+
+        // Allow downloading only if it's an image file (JPEG or PNG)
+        if ($fileExtension === 'jpg' || $fileExtension === 'jpeg' || $fileExtension === 'png') {
+            // Set headers for image file download
+            header('Content-Type: ' . mime_content_type($filepath));
+            header('Content-Description: File Transfer');
+            header('Content-Disposition: inline; filename=' . basename($filepath));
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($filepath));
+            readfile($filepath);
+
+            // Update download count
+            $newCount = $file['downloads'] + 1;
+            $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
+            mysqli_query($conn, $updateQuery);
+
+            exit;
+        } else {
+            echo "Invalid file type. Only JPEG and PNG images are allowed for download.";
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 // End
 ?>
