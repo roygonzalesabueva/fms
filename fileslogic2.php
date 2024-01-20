@@ -38,33 +38,22 @@ if (isset($_GET['file_id'])) {
     $filepath = 'assets/uploads/' . $file['name'];
 
     if (file_exists($filepath)) {
-        // Check if the file is an image (JPEG)
-        $finfo = finfo_open(FILEINFO_MIME_TYPE);
-        $mime = finfo_file($finfo, $filepath);
-        finfo_close($finfo);
+        // Set headers for file download
+        header('Content-Type: application/octet-stream');
+        header('Content-Description: File Transfer');
+        header('Content-Disposition: inline; filename=' . basename($filepath));
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($filepath));
+        readfile($filepath);
 
-        if ($mime === 'image/jpeg') {
-            // Set headers for image download
-            header('Content-Type: ' . $mime);
-            header('Content-Description: File Transfer');
-            header('Content-Disposition: inline; filename=' . basename($filepath));
-            header('Expires: 0');
-            header('Cache-Control: must-revalidate');
-            header('Pragma: public');
-            header('Content-Length: ' . filesize($filepath));
-            readfile($filepath);
+        // Update download count
+        $newCount = $file['downloads'] + 1;
+        $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
+        mysqli_query($conn, $updateQuery);
 
-            // Update download count
-            $newCount = $file['downloads'] + 1;
-            $updateQuery = "UPDATE files SET downloads=$newCount WHERE id=$id";
-            mysqli_query($conn, $updateQuery);
-
-            exit;
-        } else {
-            echo "File is not an image (JPEG).";
-        }
+        exit;
     }
 }
-// End
-// End
 ?>
