@@ -86,7 +86,7 @@ if (isset($_GET['file_id'])) {
     $result = mysqli_query($conn, $sql);
     $file = mysqli_fetch_assoc($result);
 
-    $filepath = 'assets/uploads/' . $file['name'];
+    $filepath = 'assets/uploads' . $file['name'];
 
     if (file_exists($filepath)) {
         // Determine file type based on extension
