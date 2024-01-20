@@ -377,6 +377,7 @@ h5 {
         <th>DATE UPLOADED</th>
          <th>NOTIFICATION</th> 
         <th>DOWNLOAD</th>
+        <th>VIEW</th>
         <!-- <th>DELETE</th> -->
 
     </thead>
