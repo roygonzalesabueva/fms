@@ -482,7 +482,6 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 <!-- <a onclick="upload('<?php echo $row['id']; ?>')" class=" btn btn-sm btn-link"> <i class="fa fa-upload" style="font-size:14px;color:blue"></i>Upload to Schools</a> -->
 
 <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-link"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
-<a href="indexdownview.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-link"><i class="fa fa-download" style="font-size:12px"></i>VIEW </a>
 
 
 
@@ -497,6 +496,10 @@ if (isset($_GET['school_id'], $_GET['emp_no'])) {
 <td>
 <a href="indexdown.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-success"><i class="fa fa-download" style="font-size:12px"></i>DOWNLOAD </a>
 </td>
+<td>
+<a href="indexdownview.php?file_id=<?php echo $row['id']?>" class=" btn btn-sm btn-link"><i class="fa fa-download" style="font-size:12px"></i>VIEW </a>
+</td>
+
 
 <!-- <td> -->
 
