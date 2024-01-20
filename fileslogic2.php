@@ -86,44 +86,47 @@ $files = mysqli_fetch_all($result, MYSQLI_ASSOC);
 //     }
 // }
 
-if (isset($_GET['file_id'])) {
-    $file_id = $_GET['file_id'];
 
-    // Query the database to get file information
-    $sql = "SELECT * FROM files WHERE id = $file_id";
-    $result = mysqli_query($conn, $sql);
 
-    if ($result) {
-        $file = mysqli_fetch_assoc($result);
 
-        $filepath = 'assets/uploads/' . $file['name'];
+// if (isset($_GET['file_id'])) {
+//     $file_id = $_GET['file_id'];
 
-        if (file_exists($filepath)) {
-            // Set headers for file download
-            header('Content-Type: ' . mime_content_type($filepath));
-            header('Content-Description: File Transfer');
-            header('Content-Disposition: inline; filename=' . basename($filepath));
-            header('Expires: 0');
-            header('Cache-Control: must-revalidate');
-            header('Pragma: public');
-            header('Content-Length: ' . filesize($filepath));
+//     // Query the database to get file information
+//     $sql = "SELECT * FROM files WHERE id = $file_id";
+//     $result = mysqli_query($conn, $sql);
 
-            // Output the file
-            readfile($filepath);
+//     if ($result) {
+//         $file = mysqli_fetch_assoc($result);
 
-            // Update download count in the database
-            $newCount = $file['downloads'] + 1;
-            $updateQuery = "UPDATE files SET downloads = $newCount WHERE id = $file_id";
-            mysqli_query($conn, $updateQuery);
+//         $filepath = 'assets/uploads/' . $file['name'];
 
-            exit;
-        } else {
-            echo "File not found.";
-        }
-    } else {
-        echo "Error fetching file information from the database.";
-    }
-}
+//         if (file_exists($filepath)) {
+//             // Set headers for file download
+//             header('Content-Type: ' . mime_content_type($filepath));
+//             header('Content-Description: File Transfer');
+//             header('Content-Disposition: inline; filename=' . basename($filepath));
+//             header('Expires: 0');
+//             header('Cache-Control: must-revalidate');
+//             header('Pragma: public');
+//             header('Content-Length: ' . filesize($filepath));
+
+//             // Output the file
+//             readfile($filepath);
+
+//             // Update download count in the database
+//             $newCount = $file['downloads'] + 1;
+//             $updateQuery = "UPDATE files SET downloads = $newCount WHERE id = $file_id";
+//             mysqli_query($conn, $updateQuery);
+
+//             exit;
+//         } else {
+//             echo "File not found.";
+//         }
+//     } else {
+//         echo "Error fetching file information from the database.";
+//     }
+// }
 
 
 // End
