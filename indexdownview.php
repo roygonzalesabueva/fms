@@ -31,7 +31,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <form action="indexdown.php" method="post" enctype="multipart/form-data">
+            <form action="indexdownview.php" method="post" enctype="multipart/form-data">
              <!--   <h3>Upload Files </h3>
                     <input type="file" name="myfile"><br>
                     <button type="submit" name="save">Upload</button>-->
@@ -79,7 +79,7 @@
 
 
                         <td>
-                            <a href="indexdown.php?file_id=<?php echo $row['id']?>">DOWNLOAD </a>
+                            <a href="indexdownview.php?file_id=<?php echo $row['id']?>">DOWNLOAD </a>
                         </td>
                     </tr>
 
