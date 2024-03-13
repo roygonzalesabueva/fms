@@ -1,3 +1,8 @@
+
+
+
+
+
 <?php
 
 $conn = mysqli_connect('localhost', 'root', '@DavaosurDB2023', 'fms_db');
@@ -37,7 +42,8 @@ if (isset($_GET['file_id'])) {
 
     $filepath = 'assets/uploads/' . $file['name'];
 
-    if (file_exists($filepath)) {
+    // Check if the file exists and is one of the allowed file types (JPEG, PDF, PNG)
+    if (file_exists($filepath) && (exif_imagetype($filepath) === IMAGETYPE_JPEG || strtolower(pathinfo($filepath, PATHINFO_EXTENSION)) === 'pdf' || exif_imagetype($filepath) === IMAGETYPE_PNG)) {
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         $mime = finfo_file($finfo, $filepath);
         finfo_close($finfo);
@@ -56,8 +62,13 @@ if (isset($_GET['file_id'])) {
         mysqli_query($conn, $updateQuery);
 
         exit;
+    } else {
+        echo "File not found or not one of the allowed file types (JPEG, PDF, PNG).";
     }
 }
 
 // End
 ?>
+
+
+
